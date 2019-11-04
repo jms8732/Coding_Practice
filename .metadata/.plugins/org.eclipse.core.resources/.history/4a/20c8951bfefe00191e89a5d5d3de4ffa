@@ -1,0 +1,25 @@
+package programmers;
+
+//전화 번호 목록
+public class problem_26 {
+	public static void main(String[] args) {
+
+	}
+
+	public static boolean solution(String[] phone_book) {
+		boolean answer = true;
+		for(int i =0 ; i< phone_book.length ; i++) {
+			for(int j = i+1 ; j< phone_book.length ; j++) {
+				//비교할 길이만큼 자른다.
+				String sub = phone_book[j].substring(0,phone_book[i].length());
+				
+				if(phone_book[i].equals(sub)) {
+					//접두어가 존재 할 경우
+					return !answer;
+				}
+			}
+		}
+		
+		return answer;
+	}
+}
