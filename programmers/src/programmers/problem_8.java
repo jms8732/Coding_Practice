@@ -1,0 +1,27 @@
+package programmers;
+//주식 가격
+public class problem_8 {
+	public static void main(String[] args) {
+		int []t  = {1, 2, 3, 2, 3};
+		int [] result = solution(t);
+		for(int tt : result) {
+			System.out.print(tt + " ");
+		}
+	}
+	public static int[] solution(int[] prices) {
+		int[] array = new int[prices.length];
+		for(int i = 0; i < prices.length ; i++) {
+			for(int j = i+1 ; j <prices.length ; j++) {
+				if(prices[j] < prices[i]) { //다음 값이 이전 값보다 작을 경우
+					array[i] = j-i; //초 넣는다.
+					break;
+				}
+				else
+					array[i] = j-i;
+			}
+		}
+		
+		return array;
+	}
+	
+}

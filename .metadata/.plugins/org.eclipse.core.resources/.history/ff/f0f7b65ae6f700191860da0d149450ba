@@ -1,0 +1,88 @@
+package programmers;
+
+import java.sql.Timestamp;
+//[1차] 추석 트레픽
+import java.util.*;
+
+public class problem_11 {
+	public static void main(String[] args) {
+		String[] tmp = { "2016-09-15 20:59:57.421 0.351s", "2016-09-15 20:59:58.233 1.181s",
+				"2016-09-15 20:59:58.299 0.8s", "2016-09-15 20:59:58.688 1.041s", "2016-09-15 20:59:59.591 1.412s",
+				"2016-09-15 21:00:00.464 1.466s", "2016-09-15 21:00:00.741 1.581s", "2016-09-15 21:00:00.748 2.31s",
+				"2016-09-15 21:00:00.966 0.381s", "2016-09-15 21:00:02.066 2.62s" };
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(String[] lines) {
+		Vector<TimeStamp> waitingArray = new Vector<>();
+		Vector<TimeStamp> processingArray = new Vector<>();
+		
+		int big = 0;
+		double start = 1000000000, end = 0;
+		for (int i = 0; i < lines.length; i++) {
+			String[] tmp = lines[i].split(" "); // 공백으로 자른다.
+			TimeStamp ts = makeTime(tmp[1], tmp[2]);
+			start = Math.min(start, (double) ts.start);
+			end = Math.max(end, (double) ts.end);
+			waitingArray.add(ts); // 만들어서 추가
+		}
+		
+		for (double i = start; i < end; i += 0.001) {
+			for(TimeStamp ts : waitingArray) {
+				if(i >= ts.start)
+				{
+					processingArray.add(ts); //진행중으로 변환
+					waitingArray.remove(ts); //대기중에서 삭제
+				}
+			}
+			
+			int count = 0;
+			
+			//1초안에 얼만큼 겹쳐있나 확인
+			for(TimeStamp outerTs : processingArray) {
+				double startTime = outerTs.start+1;
+				for(TimeStamp innerTs : waitingArray) {
+					if(startTime >= innerTs.start)
+						count++;
+				}
+				outerTs.count = (int)Math.max(outerTs.count, count);
+				big = (int)Math.max(outerTs.count, big);
+			}
+			
+			for(TimeStamp ts : processingArray) {
+				if(i <= ts.end)
+					processingArray.remove(ts);
+			}
+			
+		}
+		return big;
+	}
+
+	public static TimeStamp makeTime(String time, String duration) {
+
+		StringBuilder sb = new StringBuilder(duration);
+		sb = sb.deleteCharAt(duration.length() - 1); // s문자 제거
+		double sec = Double.parseDouble(sb.toString()); // string to double
+
+		time = time.replaceAll(":", ""); // 시간 단위 없앰
+		double tmpTime = Double.parseDouble(time);
+		double start = tmpTime - sec + 0.001;
+		double end = tmpTime;
+
+		return new TimeStamp(start, end, false, 1);
+	}
+}
+
+class TimeStamp {
+	double start, end;
+	boolean status;
+	int count;
+
+	public TimeStamp(double start, double end, boolean status, int count) {
+		this.start = start;
+		this.end = end;
+		this.status = status;
+		this.count = count;
+	}
+}

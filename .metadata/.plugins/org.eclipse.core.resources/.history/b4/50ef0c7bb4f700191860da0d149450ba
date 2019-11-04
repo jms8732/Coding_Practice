@@ -1,0 +1,96 @@
+package programmers;
+
+//N으로 표현 28.6
+import java.util.*;
+
+public class problem_10 {
+	public static void main(String[] args) {
+		int result = solution(2, 11);
+		System.out.println(result);
+	}
+
+	public static int solution(int N, int number) {
+		HashSet<Integer> set = new HashSet<>();
+		HashSet<Integer> tmpSet = new HashSet<>();
+		HashSet<Integer> totalSet = new HashSet<>();
+		char[] operator = { '+', '-', 'x', '/' };
+		// int count = 1;
+		for (int count = 1; count < 8; count++) {
+			// 개수 증가
+			tmpSet.addAll(set);
+			totalSet.addAll(set); // 전체 개수
+			set.clear();
+			for (int i = 0; i < operator.length; i++) {
+				Iterator it = tmpSet.iterator();
+				int nTmp = N;
+				switch (operator[i]) {
+				case '+':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						int tmp1 = tmp;
+						tmp += N; // 값 더함, left + right
+						nTmp += tmp1; // right + left;
+						if (!totalSet.contains(tmp))
+							set.add(tmp); // 값 추가
+						if (!totalSet.contains(nTmp))
+							set.add(nTmp);
+					}
+					break;
+				case '-':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						int tmp1 = tmp;
+						tmp -= N; // 값 뻄 //left - right
+						nTmp -= tmp1; // right - left
+						if (!totalSet.contains(tmp))
+							set.add(tmp); // 값 추가
+						if (!totalSet.contains(nTmp))
+							set.add(nTmp);
+					}
+					break;
+				case 'x':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						int tmp1 = tmp;
+						tmp *= N; // left*right
+						nTmp *= tmp1; // right* left
+						if (!totalSet.contains(tmp)) 
+							set.add(tmp); // 값 추가
+						if(!totalSet.contains(nTmp))
+							set.add(nTmp);
+					}
+					break;
+				case '/':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						int tmp1 = tmp;
+						tmp /= N; // 값 나눔
+						if (tmp1 != 0)
+							nTmp /= tmp1;
+						if (!totalSet.contains(tmp)) 
+							set.add(tmp); // 값 추가
+						if(!totalSet.contains(nTmp))
+							set.add(nTmp);
+					}
+					break;
+
+				}
+			}
+			if (count > 1) { // N으로만 이루워진 숫자
+				int tmp = 0;
+				for (int i = 0; i < count; i++) {
+					tmp += N * (int) Math.pow(10, i);
+				}
+				set.add(tmp);
+			} else {
+				set.add(N); // count가 1일 경우
+				if (N == number)
+					return count;
+			}
+			if (set.contains(number))
+				return count;
+			tmpSet.clear();
+		}
+		return -1;
+	}
+}

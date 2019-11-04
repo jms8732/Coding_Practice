@@ -1,0 +1,28 @@
+package dp;
+import java.util.*;
+
+public class problem_11057 {
+	static int [][] dp;
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int N = scanner.nextInt();
+		dp = new int[1001][1001];
+		for(int [] tmp : dp)
+		{
+			Arrays.fill(tmp, -1);
+		}
+		int result = f(0,N);
+		System.out.println(result);
+	}
+	static int f(int k , int N) {
+		if(N < 0 )
+			return 1;
+		if(dp[k][N] != -1)
+			return dp[k][N];
+		
+		int result = f(k,N-1);
+		result += f(k+1,N);
+		dp[k][N] = result;
+		return result;
+	}
+}

@@ -1,0 +1,150 @@
+package samsung;
+
+import java.util.*;
+
+public class problem_13460 {
+	static char[][] board;
+	static int[] ud = { -1, 0, 1, 0 };
+	static int[] rl = { 0, 1, 0, -1 };
+	static boolean[][][][] visited;
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int N = scanner.nextInt();
+		int M = scanner.nextInt();
+		visited = new boolean[N][M][N][M]; // R의 x,y 좌표, B의 x,y 좌표
+		int rx = 0, ry = 0, bx = 0, by = 0, count = 0;
+		List<Pair> list = new Vector<Pair>();
+		int gx, gy;
+		scanner.nextLine();
+		board = new char[N][M];
+		for (int i = 0; i < N; i++) {
+			String tmp = scanner.nextLine();
+			for (int j = 0; j < tmp.length(); j++) {
+				if (tmp.charAt(j) == 'R') {
+					rx = i;
+					ry = j;
+				} else if (tmp.charAt(j) == 'B') {
+					bx = i;
+					by = j;
+				} else if (tmp.charAt(j) == 'O') {
+					gx = i;
+					gy = j;
+				}
+				board[i][j] = tmp.charAt(j);
+			}
+		} // 좌표 설정 및 보드판에 채워 넣기
+		int tmpRX = rx, tmpRY = ry;
+		int tmpBX = bx, tmpBY = by;
+		Pair p = new Pair(rx, ry, bx, by, count);
+		list.add(p);
+		while (!list.isEmpty()) {
+			p = list.get(0);
+			list.remove(0);
+			if (p.count > 10) {
+				System.out.println("-1");
+				break;
+			}
+			if (board[p.bx][p.by] == 'O') {
+				System.out.println("-1");
+				break;
+			}
+			if (board[p.rx][p.ry] == 'O') {
+				System.out.println(p.count);
+				break;
+			}
+			visited[p.rx][p.ry][p.bx][p.by] = true;
+			for (int i = 0; i < 4; i++) {
+				tmpRX = p.rx;
+				tmpRY = p.ry;
+				tmpBX = p.bx;
+				tmpBY = p.by;
+				boolean rc = false, bc = false;
+				int ix = ud[i];
+				int iy = rl[i];
+				while (true) {
+					// 빨간색 구슬
+					tmpRX += ix;
+					tmpRY += iy;
+					if (board[tmpRX][tmpRY] == '#') {
+						tmpRX -= ix;
+						tmpRY -= iy;
+						break;
+					} else if (board[tmpRX][tmpRY] == 'O') {
+						rc = true;
+						break;
+					}
+				}
+				while (true) {
+					// 파란색 구슬
+					tmpBX += ix;
+					tmpBY += iy;
+					if (board[tmpBX][tmpBY] == '#') {
+						tmpBX -= ix;
+						tmpBY -= iy;
+						break;
+					} else if (board[tmpBX][tmpBY] == 'O') {
+						bc = true;
+						break;
+					}
+				}
+
+				// 위치 변경
+				if (!rc && !bc) {
+					if (tmpRX == tmpBX && tmpBY == tmpRY) {
+						int diffBX = Math.abs(bx - tmpBX);
+						int diffBY = Math.abs(by - tmpBY);
+						int diffRX = Math.abs(rx - tmpRX);
+						int diffRY = Math.abs(ry - tmpRY);
+						if (diffBY == 0 && diffRY == 0) {
+							if (diffRX > diffBX) {
+								tmpRX -= ix;
+							} else
+								tmpBX -= ix;
+						} else if (diffBX == 0 && diffRX == 0) {
+							if (diffRY > diffBY) {
+								tmpRY -= iy;
+							} else
+								tmpBY -= iy;
+						}
+
+					}
+				}
+				/*
+				 * board[rx][ry] = '.'; board[tmpRX][tmpRY] = 'R'; rx = tmpRX; ry = tmpRY;
+				 * 
+				 * board[bx][by] = '.'; board[tmpBX][tmpBY] = 'B'; bx = tmpBX; by = tmpBY;
+				 */
+				// show();
+				if (!visited[tmpRX][tmpRY][tmpBX][tmpBY]) // 안갔던 곳일 경우
+				{
+					int tmpC = p.count;
+					tmpC++;
+					Pair pp = new Pair(tmpRX, tmpRY, tmpBX, tmpBY, tmpC);
+					list.add(pp);
+				}
+			}
+		}
+	}
+
+	static void show() {
+		for (int i = 0; i < board.length; i++) {
+			for (int j = 0; j < board[i].length; j++) {
+				System.out.print(board[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+class Pair {
+	int rx, ry, bx, by, count;
+
+	Pair(int rx, int ry, int bx, int by, int count) {
+		this.rx = rx;
+		this.ry = ry;
+		this.bx = bx;
+		this.by = by;
+		this.count = count;
+	}
+}

@@ -1,0 +1,37 @@
+package programmers;
+//큰수 만들기
+
+public class problem_13 {
+	public static void main(String[] args) {
+		String result = solution("1231234",3);
+		System.out.println(result);
+	}
+	public static String solution(String number, int k) {
+		int big =0 ;
+		for(int i =0 ; i <number.length() ; i++) {
+			StringBuilder sb = new StringBuilder(number);
+			sb = sb.deleteCharAt(i);
+			int tmp = dfs(number, sb.toString(),k,i+1);
+			big = Math.max(tmp, big);
+		}
+		
+		return Integer.toString(big);
+    }
+	public static int dfs(String number, String previous, int k , int idx) {
+		int big = 0;
+		
+		if(idx == k)
+		{
+			int tmp = Integer.parseInt(previous);
+			return tmp;
+		}
+		
+		for(int i = idx ; i< previous.length() ; i++) {
+			StringBuilder sb = new StringBuilder(previous);
+			sb = sb.deleteCharAt(i);
+			int tmp =dfs(number,sb.toString(),k,idx+1);
+			big = Math.max(tmp, big);
+		}
+		return big;
+	}
+}

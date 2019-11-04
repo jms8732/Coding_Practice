@@ -1,0 +1,35 @@
+package dp;
+
+import java.util.*;
+
+public class problem_10844 {
+	static int [] array;
+	static int [][] dp;
+	static int impossible = -2;
+	static int N ;
+	public static void main(String[] args) {
+		Scanner scanner=  new Scanner(System.in);
+		N = scanner.nextInt();
+		array = new int[N];
+		dp = new int[10][N+1];
+		for(int [] tmp : dp){
+			Arrays.fill(tmp, -1);
+		}
+		int result = f(0,N);
+		System.out.println(result);
+	}
+	
+	static int f(int n ,int k) {
+		if(k == 1)
+			return 1;
+		if(n > 9)
+			return n;
+		if(dp[n][k] != -1)
+			return dp[n][k];
+		int result = f(n,k-1);
+		result = Math.abs(result - f(n+1,k)) == 1 ? 1 : impossible;
+		
+		dp[n][k] = result;
+		return result;
+	}
+}

@@ -1,0 +1,26 @@
+package dp;
+import java.util.*;
+
+public class problem_11057 {
+	static int [][] dp;
+	static int N;
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		N = scanner.nextInt();
+		dp = new int[1001][1001];
+		int result = f(0,1);
+		System.out.println(result);
+	}
+	static int f(int k , int n) {
+		if(n > N)
+			return 0;
+		if(k > 9)
+			return 1;
+		if(dp[k][n-1] != 0)
+			return dp[k][n-1];
+		int result = f(k+1,n);
+		result += dp[k][n-1]; 
+		dp[k][n] = result;
+		return result;
+	}
+}

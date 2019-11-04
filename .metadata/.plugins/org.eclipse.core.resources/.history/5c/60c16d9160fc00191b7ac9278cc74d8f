@@ -1,0 +1,46 @@
+package programmers;
+
+//2016³â
+import java.util.*;
+
+public class problem_22 {
+	public static void main(String[] args) {
+		String result = solution(5,26);
+		System.out.println(result);
+	}
+
+	public static String solution(int a, int b) {
+		Calendar cal = Calendar.getInstance();
+		cal.set(2016, a, b);
+		int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+		String name = null;
+		switch(dayOfWeek) {
+		case 1:
+			name = "THU";
+			break;
+		case 2:
+			name = "FRI";
+			break;
+		case 3:
+			name = "SAT";
+			break;
+		case 4:
+			name = "SUN";
+			break;
+		case 5:
+			name = "MON";
+			break;
+		case 6:
+			name = "TUE";
+			break;
+		case 7:
+			name = "WED";
+			break;
+			
+		}
+		
+		
+		return name;
+	}
+
+}

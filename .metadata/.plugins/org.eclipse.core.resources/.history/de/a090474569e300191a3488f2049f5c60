@@ -1,0 +1,76 @@
+package samsung;
+
+import java.util.*;
+
+public class problem_13460 {
+	static char[][] board;
+	static int N, M;
+	static int[] rl = { 0, 1, 0, -1 };
+	static int[] ud = { -1, 0, 1, 0 };
+	static int gX = 0, gY = 0;
+	static int tmpRX =0 , tmpRY = 0;
+	public static void main(String[] args) {
+		int rX = 0, rY = 0;
+		int bX = 0, bY = 0;
+
+		Scanner scanner = new Scanner(System.in);
+		N = scanner.nextInt();
+		M = scanner.nextInt();
+		int count = 0;
+		int x = 0, y = 0;
+		board = new char[N][M];
+		for (int i = 0; i < N; i++) {
+			String tmp = scanner.nextLine();
+			char[] tmpp = tmp.toCharArray();
+			for (int j = 0; j < tmpp.length; j++) {
+				board[i][j] = tmpp[j];
+				if (tmpp[j] == 'R') {
+					rX = i;
+					rY = j;
+				} else if (tmpp[j] == 'B') {
+					bX = i;
+					bY = j;
+				} else if (tmpp[j] == 'O') {
+					gX = i;
+					gY = j;
+				}
+			}
+
+		}
+		int result = 10000;
+		for (int i = 0; i < rl.length; i++) {
+			int nxD = ud[i];
+			int nyD = rl[i];
+			result = rF(rX, rY, nxD, nyD,result);
+		} // 위치 결정
+		//현재 위치와 거리 게산
+		
+
+	}
+
+	static int rF(int x, int y, int nxD, int nyD,int result) {
+		int nx = 0;
+		int ny = 0 ;
+
+		while (true) {
+			nx = x + nxD;
+			ny = y + nyD;
+
+			if (board[nx][ny] != '#') {
+				x = nx;
+				y = ny;
+			} else
+				break;
+
+		}
+		nx -= nxD;
+		ny -= nyD;
+		int tmp = Math.abs(gX - nx) + Math.abs(gY - ny);
+		if(result > tmp) {
+			tmpRX = nx;
+			tmpRY = ny;
+			return tmp;
+		}
+		return result;
+	}
+}

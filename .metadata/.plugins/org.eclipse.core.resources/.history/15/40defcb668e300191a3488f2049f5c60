@@ -1,0 +1,43 @@
+package samsung;
+
+import java.util.*;
+
+public class problem_13460 {
+	static char[][] board;
+	static int N, M;
+	static int[] rl = { 0, 1, 0, -1 };
+	static int[] ud = { -1, 0, 1, 0 };
+
+	public static void main(String[] args) {
+		int rX = 0, rY = 0;
+		int bX = 0, bY= 0;
+		int gX =0 ,gY = 0;
+		Scanner scanner = new Scanner(System.in);
+		N = scanner.nextInt();
+		M = scanner.nextInt();
+		int x = 0, y = 0;
+		board = new char[N][M];
+		for (int i = 0; i < N; i++) {
+			String tmp = scanner.nextLine();
+			char[] tmpp = tmp.toCharArray();
+			for (int j = 0; j < tmpp.length; j++) {
+				board[i][j] = tmpp[j];
+				if(tmpp[j] == 'R')
+				{
+					rX = i;
+					rY = j;
+				}
+				else if(tmpp[j] =='B')
+				{
+					bX = i;
+					bY = j;
+				}else if(tmpp[j] == 'O') {
+					gX = i;
+					gY = j;
+				}
+			}
+			
+		}
+
+	}
+}

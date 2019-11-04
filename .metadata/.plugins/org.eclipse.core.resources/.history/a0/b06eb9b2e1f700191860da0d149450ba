@@ -1,0 +1,87 @@
+package programmers;
+
+import java.sql.Timestamp;
+//[1차] 추석 트레픽
+import java.util.*;
+
+public class problem_11 {
+	public static void main(String[] args) {
+		String[] tmp = { "2016-09-15 20:59:57.421 0.351s", "2016-09-15 20:59:58.233 1.181s",
+				"2016-09-15 20:59:58.299 0.8s", "2016-09-15 20:59:58.688 1.041s", "2016-09-15 20:59:59.591 1.412s",
+				"2016-09-15 21:00:00.464 1.466s", "2016-09-15 21:00:00.741 1.581s", "2016-09-15 21:00:00.748 2.31s",
+				"2016-09-15 21:00:00.966 0.381s", "2016-09-15 21:00:02.066 2.62s" };
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(String[] lines) {
+		Queue<TimeStamp> waitingArray = new LinkedList<>();
+		Queue<TimeStamp> processingArray = new LinkedList<>();
+		StringBuilder sb = new StringBuilder();
+		int big = 0;
+		double start = 0, end = 0;
+		int count = 0;
+		for (int i = 0; i < lines.length; i++) {
+			String[] tmp = lines[i].split(" "); // 공백으로 자른다.
+			TimeStamp ts = makeTime(tmp[1], tmp[2]);
+			if (i == 0)
+				start = (double) ts.start;
+			if (i == lines.length - 1)
+				end = (double) ts.end;
+			waitingArray.add(ts); // 만들어서 추가
+		}
+
+		for (double i = start; i < end; i += 0.001) {
+			TimeStamp tmp = (TimeStamp) waitingArray.peek();
+			if (i == tmp.start) {
+				waitingArray.poll(); // 꺼냄
+				processingArray.add(tmp); // 진행중 상태
+			}
+
+			for (TimeStamp outerTs : processingArray) {
+				double startTime = outerTs.start + 1;
+				if (!outerTs.status) {
+					for (TimeStamp innerTs : waitingArray) {
+						if (startTime > innerTs.start) {
+							outerTs.count += 1; // 개수 증가
+							big = Math.max(big, outerTs.count); // 개수 비교
+						}
+					}
+				}
+				outerTs.status = true; //한번 계산됬으면 종료
+			}
+
+			tmp = (TimeStamp) processingArray.peek();
+			if (tmp.end == i)
+				processingArray.poll(); // 시간이 지나면 진행중 제거
+		}
+		return big;
+	}
+
+	public static TimeStamp makeTime(String time, String duration) {
+
+		StringBuilder sb = new StringBuilder(duration);
+		sb = sb.deleteCharAt(duration.length() - 1); // s문자 제거
+		double sec = Double.parseDouble(sb.toString()); // string to double
+
+		time = time.replaceAll(":", ""); // 시간 단위 없앰
+		double tmpTime = Double.parseDouble(time);
+		double start = tmpTime - sec + 0.001;
+		double end = tmpTime;
+
+		return new TimeStamp(start, end, false, 1);
+	}
+}
+
+class TimeStamp {
+	double start, end;
+	boolean status;
+	int count;
+
+	public TimeStamp(double start, double end, boolean status, int count) {
+		this.start = start;
+		this.end = end;
+		this.status = status;
+		this.count = count;
+	}
+}

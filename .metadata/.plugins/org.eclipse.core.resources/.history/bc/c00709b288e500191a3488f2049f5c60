@@ -1,0 +1,91 @@
+package samsung;
+
+import java.util.Scanner;
+
+public class problem_12100 {
+	static int[][] map;
+	static int[] ud = { -1, 0, 1, 0 };
+	static int[] rl = { 0, 1, 0, -1 };
+	static int N;
+	static int[][] tmpMap;
+	static int result;
+	static int big;
+	static int count;
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		N = scanner.nextInt();
+		map = new int[N][N];
+		tmpMap = new int[N][N];
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				int tmp = scanner.nextInt();
+				map[i][j] = tmp;
+			}
+		} // map Ã¤¿ò
+		copyMap(tmpMap, map);
+		dfs();
+		System.out.println(big);
+	}
+
+	static void dfs() {
+		if(count > 5) {
+			count--;
+			return;
+		}
+		for (int i = 0; i < rl.length; i++) {
+			int nx = ud[i];
+			int ny = rl[i];
+			for (int j = 0; j < N; j++) {
+				for (int k = 0; k < N; k++) {
+					if(map[j][k] != 0)
+						move(j, k, nx, ny);
+				}
+			}
+			isBig();
+			copyMap(tmpMap,map);
+			count++;
+			dfs();
+			copyMap(map,tmpMap);
+		}
+	}
+	static void isBig() {
+		for(int i= 0 ; i<  N ; i++) {
+			for(int j =0 ; j < N ; j++) {
+				big = Math.max(big, map[i][j]);
+			}
+		}
+	}
+
+	static void move(int x, int y, int ud, int rl) {
+		int cx = x;
+		int cy = y;
+		int tmp  =map[cx][cy];
+		int nx = 0, ny = 0;
+		while (true) {
+			nx = x + ud;
+			ny = y + rl;
+			if (nx < 0 || nx > map.length || ny < 0 || ny > map[nx].length) {
+				nx -= ud;
+				ny -= rl;
+				break;
+			} else if (map[x][y] == map[nx][ny] || map[nx][ny] == 0) {
+				x = nx;
+				y = ny;
+			} else
+				break;
+		}
+		if (map[cx][cy] == map[nx][ny])
+		{
+			map[cx][cy] = 0;
+			map[nx][ny] += tmp;
+		}
+	}
+
+	static void copyMap(int[][] des, int[][] src) {
+		for (int i = 0; i < src.length; i++) {
+			for (int j = 0; j < src[i].length; j++) {
+				des[i][j] = src[i][j];
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+package programmers;
+import java.sql.Timestamp;
+//[1차] 추석 트레픽
+import java.util.*;
+
+public class problem_11 {
+	public static void main(String[] args) {
+		
+	}
+	public static int solution(String[] lines) {
+		ArrayList<TimeStamp> array= new ArrayList<>();
+	      StringBuilder sb = new StringBuilder();
+	      for(int i = 0; i < lines.length ; i++) {
+	    	  String[] tmp = lines[i].split(" "); //공백으로 자른다.
+	    	  
+	    	  
+	      }
+	  }
+	
+	public static TimeStamp parseDouble(String time, String duration) {
+		
+		StringBuilder sb = new StringBuilder();
+		sb = sb.deleteCharAt(duration.length()-1); //s문자 제거
+		double sec = Double.parseDouble(sb.toString()); //string to double
+		Timestamp ts = Timestamp.valueOf(time);
+		
+		ts
+		
+		
+		return  new TimeStamp(,,sec); 
+	}
+}
+class TimeStamp{
+	double start, end, duration;
+	public TimeStamp(double start, double end, double duration) {
+		this.start = start;
+		this.end =end;
+		this.duration = duration;
+	}
+}

@@ -1,0 +1,38 @@
+package dp;
+
+import java.util.*;
+
+public class problem_10844 {
+	static int [] array;
+	static int [][] dp;
+	static int impossible = -2;
+	static int N ;
+	public static void main(String[] args) {
+		Scanner scanner=  new Scanner(System.in);
+		N = scanner.nextInt();
+		array = new int[N];
+		dp = new int[101][101];
+		for(int [] tmp : dp){
+			Arrays.fill(tmp, -1);
+		}
+		int result = f(0,0,1);
+		System.out.println(result);
+	}
+	
+	static int f(int n ,int m, int k)
+	{
+		if(k == 3 )
+			return Math.abs(n-m)== 1 ? 0 : impossible;
+		if(n == 9)
+			return n;
+		if(dp[n][m] != -1)
+			return dp[n][m];
+		int result = f(n+1,n+1,k);
+	
+		n = 0;
+		result = f(n+1,result,k+1);
+		dp[n][m] = result;
+		
+		return result;
+	}
+}

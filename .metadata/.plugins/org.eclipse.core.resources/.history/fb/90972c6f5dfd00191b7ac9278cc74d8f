@@ -1,0 +1,75 @@
+package programmers;
+
+public class problem_23 {
+	static int count = Integer.MAX_VALUE;
+	public static void main(String[] args) {
+		int result = solution("JAN");
+		System.out.println(result);
+	}
+
+	public static int solution(String name) {
+		boolean visited[] = new boolean[name.length()];
+		StringBuilder sb = new StringBuilder("");
+		for(int i =0 ; i< name.length() ; i++) {
+			sb.append("A");
+		}
+		
+		for(int i =0 ; i< 2 ; i++) {
+			//왼쪽 오른쪽
+			dfs(sb,name,visited,0,0);
+		}
+		
+		return count ;
+	}
+	
+	public static void dfs(StringBuilder sb,String name, boolean visited[] , int currentIdx,int count) {
+		int tmp = count;
+		boolean check = false;
+		for(int i =0 ; i < visited.length ; i++) {
+			if(!visited[i]) { //모든 곳을 방문했는지 안했는지판단
+				check = true;
+				break;
+			}
+		}
+		
+		if(!check) {
+			//모두 방문을 했을 경우
+			count = Math.min(tmp, count); //현재 개수 반환
+			return;
+		}
+		if(sb.charAt(currentIdx) != name.charAt(currentIdx)) {
+			//현재 위치에 값이 다를 경우
+			int tmpC = 0;
+			for (int j = 'B'; j <= 'Z'; j++) {
+				tmpC++;
+				if (j == name.charAt(currentIdx)) {
+					sb.replace(currentIdx, currentIdx+1,Character.toString((char)j)); //위치 변경
+					break;
+				}
+			}
+			int tmpcount = Integer.MAX_VALUE;
+			tmpcount = Math.min(tmpC, tmpcount);
+
+			tmpC = 0;
+			for (int j = 'Z'; j >= 'A'; j--) {
+				tmpC++;
+				if (j == name.charAt(currentIdx))
+					break;
+			}
+			tmpcount = Math.min(tmpcount, tmpC);
+			tmp += tmpcount;
+		}
+		
+		//왼쪽
+		int nextIdx = currentIdx +1;
+		visited[currentIdx] = true;
+		dfs(sb,name,visited,nextIdx,tmp+1);
+		
+		//오른쪽
+		nextIdx = (name.length() + (currentIdx -1)) % name.length();
+		dfs(sb,name,visited,nextIdx,tmp+1);
+		visited[currentIdx] = false;
+		
+		
+	}
+}

@@ -1,0 +1,83 @@
+package programmers;
+
+//N으로 표현 28.6
+import java.util.*;
+
+public class problem_10 {
+	public static void main(String[] args) {
+		int result = solution(5, 74);
+		System.out.println(result);
+	}
+
+	public static int solution(int N, int number) {
+		HashSet<Integer> set = new HashSet<>();
+		HashSet<Integer> tmpSet = new HashSet<>();
+		char[] operator = { '+', '-', 'x', '/' };
+		int count = 1;
+		while (true) {
+			// 개수 증가
+			tmpSet.addAll(set);
+			if (count > 8)
+				return -1;
+			for (int i = 0; i < operator.length; i++) {
+				Iterator it = tmpSet.iterator();
+				switch (operator[i]) {
+				case '+':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						tmp += N; // 값 더함
+						if (tmp == number)
+							return count;
+						if (tmp > 0)
+							set.add(tmp); // 값 추가
+					}
+					break;
+				case '-':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						tmp -= N; // 값 뻄
+						if (tmp == number)
+							return count;
+						if (tmp > 0)
+							set.add(tmp); // 값 추가
+					}
+					break;
+				case 'x':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						tmp *= N; // 값 곱함
+						if (tmp == number)
+							return count;
+						if (tmp > 0)
+							set.add(tmp); // 값 추가
+					}
+					break;
+				case '/':
+					while (it.hasNext()) {
+						int tmp = (int) it.next();
+						tmp /= N; // 값 나눔
+						if (tmp == number)
+							return count;
+						if (tmp > 0)
+							set.add(tmp); // 값 추가
+					}
+					break;
+
+				}
+			}
+			if (count > 1) { // N으로만 이루워진 숫자
+				int tmp = 0;
+				for (int i = 0; i < count; i++) {
+					tmp += N * (int) Math.pow(10, i);
+				}
+				set.add(tmp);
+			} else {
+				set.add(N); // count가 1일 경우
+				if (N == number)
+					return count;
+			}
+			count++;// 개수 증가
+			tmpSet.clear();
+		}
+	}
+}

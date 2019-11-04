@@ -1,0 +1,32 @@
+package dp;
+
+import java.util.*;
+
+public class problem_10844 {
+	static int [] array;
+	static int [][] dp;
+	static int impossible = -2;
+	static int N ;
+	public static void main(String[] args) {
+		Scanner scanner=  new Scanner(System.in);
+		N = scanner.nextInt();
+		array = new int[N];
+		dp = new int[N+1][N+1];
+		for(int [] tmp : dp){
+			Arrays.fill(tmp, -1);
+		}
+		int result = f(1,0);
+		System.out.println(result);
+	}
+	
+	static int f(int n,int k) {
+		if(n > 9)
+			return 0;
+		int result = f(n+1, k);
+		int result1 = f(n,k+1);
+		
+		dp[n][k] = result;
+		
+		return result;
+	}
+}

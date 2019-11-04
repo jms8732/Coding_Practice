@@ -1,0 +1,80 @@
+package programmers;
+
+public class problem_23 {
+	public static void main(String[] args) {
+		int result = solution("ABABAAAAAAAB");
+		System.out.println(result);
+	}
+
+	public static int solution(String name) {
+		StringBuilder sb = new StringBuilder("");
+		for (int i = 0; i < name.length(); i++) {
+			sb.append("A");
+		}
+		int totalCount = 0;
+		//글자 내에서 다른 문자를 찾고 윗방향, 아랫방향 중 가장 작은 방향을 선택
+		for (int i = 0; i < name.length(); i++) {
+			if (sb.charAt(i) != name.charAt(i)) {
+				// 다른 부분 발생
+				int tmp = 0;
+				for (int j = 'B'; j <= 'Z'; j++) {
+					tmp++;
+					if (j == name.charAt(i))
+						break;
+				}
+				int count = Integer.MAX_VALUE;
+				count = Math.min(tmp, count);
+
+				tmp = 0;
+				for (int j = 'Z'; j >= 'A'; j--) {
+					tmp++;
+					if (j == name.charAt(i))
+						break;
+				}
+				count = Math.min(count, tmp);
+				totalCount += count;
+			}
+		}
+		
+		int leftIdx = 0;
+		int rightIdx =0;
+		for(int i = 1; i < name.length() ; i++) {
+			if(sb.charAt(i) != name.charAt(i))
+				leftIdx = i; //왼쪽의 최종적으로 다른 문자의 인덱스
+		}
+		
+		for(int i = name.length()-1 ; i>= 1 ; i--) {
+			if(sb.charAt(i) != name.charAt(i))
+				rightIdx =i ;  //오른쪽의 최종적으로 다른 문자의 인덱스
+		}
+		
+		int leftCount = leftIdx;
+		int rightCount = name.length() - rightIdx;
+		//좌측, 우측 중 가장 적은 방향 값
+		int minMove= Math.min(leftCount, rightCount);
+
+
+		int another = 0;
+		int count = 0;
+		//오른쪽으로 갔다가 왼쪽으로 가는 방향
+		for(int i =1 ; i< name.length() ; i++) {
+			int idx = 0;
+			if(name.charAt(i) != sb.charAt(i) && leftIdx != i && rightIdx != i) {
+				//문자가 다르면서 문자가 다른 가장 끝점이 아닌 곳
+				int currentIdx = i;
+				while(currentIdx != leftIdx) {
+					currentIdx = (name.length() + (currentIdx - 1)) % name.length();
+					count++;
+				}
+				minMove = Math.min(minMove ,count);
+				count =0;
+			}
+			else 
+				count++; //이동 횟수
+			
+		}
+		
+		totalCount += minMove;
+		return totalCount;
+	}
+}
