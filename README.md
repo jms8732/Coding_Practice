@@ -1,5 +1,7 @@
 # Coding_Practice
 코딩 테스트 연습
+언어: Java
+환경: Eclipse
 
 Programmers
 --------
