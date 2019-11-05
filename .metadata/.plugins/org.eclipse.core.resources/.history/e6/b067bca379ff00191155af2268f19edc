@@ -1,0 +1,35 @@
+package programmers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+//H-index
+public class problem_27 {
+	public static void main(String[] args) {
+		int tmp[] = { 3, 0, 6, 5, 1 };
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] citations) {
+		ArrayList<Integer> tmp = new ArrayList<>();
+		for (int i = 0; i < citations.length; i++) {
+			tmp.add(citations[i]);
+		}
+		Collections.sort(tmp);
+		int answer = 0;
+		int currentIdx = 0;
+		for(int i =0  ; i< tmp.size() ; i++) {
+			int h = tmp.get(i);
+			int upRest = tmp.size() -i;
+			int downRest = currentIdx +1;
+			if(upRest >= h && h >= downRest)
+				answer = Math.max(answer, h);
+			currentIdx = downRest;
+		}
+
+		return answer;
+	}
+}
