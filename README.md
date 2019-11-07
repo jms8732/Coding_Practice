@@ -61,6 +61,10 @@ Programmers
 
 [H-Index](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_27.java)
 
+[네트워크](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_28.java)
+
+[타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
+
 BackJun
 -------
 [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
