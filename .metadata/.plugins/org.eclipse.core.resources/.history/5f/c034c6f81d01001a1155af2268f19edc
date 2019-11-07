@@ -1,0 +1,72 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+
+	public static void main(String[] args) {
+		String tmp[] = { "HaEaLaLaObWORLDb", "SpIpGpOpNpGJqOqA", "AxAxAxAoBoBoB", "oAxAxAxAoBbB", "HEaLLOaWORLD",
+				"HELaLaOWORLD", "HELLaLaOaWORLD", "aIaAM", "baHELLOabWORLD", "aHbEbLbLbOacWdOdRdLdDc", "bAaOb",
+				"oGOaOaGaLaEo", "aHELLOa bWORLDb", "HaEaLaLObWORLDb", "aHELLOWORLDa", "HaEaLaLaOWaOaRaLaD",
+				"abHELLObaWORLD", "aAbBbCa", "aAbBcCa", "abABCba", "Aa", "aAAaAbA", "aGgGaGbGbGG", "tB" };
+
+		for (int i = 0; i < tmp.length; i++) {
+			String result = solution(tmp[i]);
+			System.out.println(result);
+		}
+	}
+
+	public static String solution(String sentence) {
+		boolean doubleAlpha[] = new boolean[26];
+		Object countAlpha[][] = new Object[2][26];
+		StringBuilder result = new StringBuilder();
+
+		// 소문자의 개수를 먼저 확인하여 규칙1인지 2인지 파악
+		for (int i = 0; i < sentence.length(); i++) {
+			if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z') {
+				// 소문자가 있을 경우
+				countAlpha[0][sentence.charAt(i) % 'a']= (int)countAlpha[0][sentence.charAt(i) % 'a'] + 1;
+				
+			}
+		}
+		for(int i =0 ; i< countAlpha[0].length ; i++) {
+			if((int)countAlpha[0][i] != 2 && (int)countAlpha[0][i] != 0)
+				countAlpha[1][i] = "RULE1";
+			else if((int)countAlpha[0][i] == 2 && (int)countAlpha[0][i] != 0)
+				countAlpha[1][i] = "RULE2";
+		}
+		int rule1 = 0;
+		int rule2 = 0;
+		for (int i = 0; i < sentence.length(); i++) {
+			// 문자을 돌리면서 파악한다.
+			char value = sentence.charAt(i);
+			if(value >= 'a' && value <= 'z') {
+				//소문자인 경우
+				int count = (int)countAlpha[0][value % 'a'];
+				count -= 1;
+				countAlpha[0][value % 'a'] = count;
+				if((int)countAlpha[0][value %'a'] == 0) {
+					if(countAlpha[1][value %'a'].equals("RULE1")) {
+						//규칙 1
+						int next= i+1;
+						result.append(sentence.charAt(next)); //다음값 넣기
+						result.append(" ");
+						i = next;
+						
+					}else {
+						//규칙 2
+						result.append(" ");
+						
+					}
+						
+				}
+				
+			}else
+				result.append(value);
+		}
+
+		return result.toString();
+
+	}
+}

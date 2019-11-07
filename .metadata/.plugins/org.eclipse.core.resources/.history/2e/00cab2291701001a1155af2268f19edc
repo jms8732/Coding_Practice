@@ -1,0 +1,37 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+	static HashMap<Character, Boolean> map;
+
+	public static void main(String[] args) {
+		String tmp[] = { "HaEaLaLaObWORLDb","SpIpGpOpNpGJqOqA", 
+				"AxAxAxAoBoBoB","oAxAxAxAoBbB",
+				"HEaLLOaWORLD","HELaLaOWORLD",
+				"HELLaLaOaWORLD",
+				"aIaAM",  
+				"baHELLOabWORLD", 
+				"aHbEbLbLbOacWdOdRdLdDc",
+				"bAaOb",
+				"oGOaOaGaLaEo",
+				"aHELLOa bWORLDb",
+				"HaEaLaLObWORLDb","aHELLOWORLDa",
+				"HaEaLaLaOWaOaRaLaD",
+				"abHELLObaWORLD","aAbBbCa",  "aAbBcCa", "abABCba",
+				"Aa","aAAaAbA","aGgGaGbGbGG","tB"
+		};
+
+		for (int i = 0; i < tmp.length; i++) {
+			String result = solution(tmp[i]);
+			System.out.println(result);
+		}
+	}
+
+	public static String solution(String sentence) {
+		map = new HashMap<>();
+		String answer = null;
+		
+	}
+}

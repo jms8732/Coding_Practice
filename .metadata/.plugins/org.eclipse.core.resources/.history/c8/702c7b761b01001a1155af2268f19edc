@@ -1,0 +1,58 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+
+	public static void main(String[] args) {
+		String tmp[] = { "HaEaLaLaObWORLDb", "SpIpGpOpNpGJqOqA", "AxAxAxAoBoBoB", "oAxAxAxAoBbB", "HEaLLOaWORLD",
+				"HELaLaOWORLD", "HELLaLaOaWORLD", "aIaAM", "baHELLOabWORLD", "aHbEbLbLbOacWdOdRdLdDc", "bAaOb",
+				"oGOaOaGaLaEo", "aHELLOa bWORLDb", "HaEaLaLObWORLDb", "aHELLOWORLDa", "HaEaLaLaOWaOaRaLaD",
+				"abHELLObaWORLD", "aAbBbCa", "aAbBcCa", "abABCba", "Aa", "aAAaAbA", "aGgGaGbGbGG", "tB" };
+
+		for (int i = 0; i < tmp.length; i++) {
+			String result = solution(tmp[i]);
+			System.out.println(result);
+		}
+	}
+
+	public static String solution(String sentence) {
+		boolean doubleAlpha[] = new boolean[26];
+		int countAlpha[] = new int[26];
+		Arrays.fill(countAlpha, 1); // 초기값 1
+		StringBuilder result = new StringBuilder();
+
+		// 소문자의 개수를 먼저 확인하여 규칙1인지 2인지 파악
+		for (int i = 0; i < sentence.length(); i++) {
+			if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z') {
+				// 소문자가 있을 경우
+				countAlpha[ sentence.charAt(i) % 'a'] += 1;
+			}
+		}
+		
+		int rule1 = 0;
+		int rule2 = 0;
+		for (int i = 0; i < sentence.length(); i++) {
+			// 문자을 돌리면서 파악한다.
+			char value = sentence.charAt(i);
+			if(value == ' ') //공백이 존재하는 경우
+				return "invalid";
+			
+			if (value >= 'a' && value <= 'z') {
+				// 소문자 인 경우
+				int rules = countAlpha[value % 'a'];
+				countAlpha[value % 'a'] -= 1; // 개수를 줄인다.
+				if(countAlpha[value % 'a'] == 0) {
+					//0개 인 경우, 한 단어가 발생함 
+					
+				}
+
+			} else
+				result.append(value); // 대문자인 경우
+		}
+
+		return result.toString();
+
+	}
+}

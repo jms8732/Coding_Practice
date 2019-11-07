@@ -1,0 +1,158 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+
+	public static void main(String[] args) {
+		String tmp[] = { "HaEaLaLaObWORLDb", "SpIpGpOpNpGJqOqA", "AxAxAxAoBoBoB", "oAxAxAxAoBbB", "HEaLLOaWORLD",
+				"HELaLaOWORLD", "HELLaLaOaWORLD", "aIaAM", "baHELLOabWORLD", "aHbEbLbLbOacWdOdRdLdDc", "bAaOb",
+				"oGOaOaGaLaEo", "aHELLOa bWORLDb", "HaEaLaLObWORLDb", "aHELLOWORLDa", "HaEaLaLaOWaOaRaLaD",
+				"abHELLObaWORLD", "aAbBbCa", "aAbBcCa", "abABCba", "Aa", "aAAaAbA", "aGgGaGbGbGG", "tB" };
+
+		for (int i = 0; i < tmp.length; i++) {
+			String result = solution(tmp[i]);
+			System.out.println(result);
+		}
+	}
+
+	public static String solution(String sentence) {
+		boolean doubleAlpha[] = new boolean[26]; // 중복 사용 파악
+		StringBuilder result = new StringBuilder();
+		int countAlpha[] = new int[26]; // 개수를 파악
+
+		for (int i = 0; i < sentence.length(); i++) {
+			if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z') {
+				countAlpha[sentence.charAt(i) % 'a'] += 1; // 해당 알파벳 개수 증가
+			}
+		}
+
+		for (int i = 0; i < sentence.length(); i++) {
+			char value = sentence.charAt(i); // 현재 문자
+			if (value == ' ') // 공백이 존재하는 경우
+				return "invalid";
+
+			if (value >= 'a' && value <= 'z') {
+				// 소문자 인 경우
+				if(!doubleAlpha[value % 'a']) {
+					doubleAlpha[value % 'a'] = true;
+				}
+				else
+					return "invalid"; 
+				
+				int count = countAlpha[value % 'a'];
+				if (count == 2) {
+					// 개수가 두개인 경우 (규칙 2)
+					int nextIdx = i + 1;
+					if (sentence.charAt(nextIdx) >= 'a' && sentence.charAt(nextIdx) <= 'z') {
+						// 소문자 다음에 바로 소문자가 나온 경우, 규칙 2에서 바로 소문자가 또 나온 경우
+						return "invalid";
+					} else {
+						//소문자가 아닌 경우, 규칙 2(소문자 두개이므로 그 사이에있는 값은 단어가 된다)
+						StringBuilder sb = new StringBuilder();
+						for (int j = i; j < sentence.length(); j++) {
+							if (sentence.charAt(j) == value) {
+								// 현재 같은 문자를 만날 경우
+								sb.append(sentence.charAt(j));
+								break;
+							}
+						}
+						String tmp = sb.toString();
+						tmp = tmp.replaceAll(Character.toString(value), "");
+						if(tmp.matches(".*[a-z].*")) {
+							//만들어진 단어 내에 다른 소문자가 존재한다.
+							int firstIdx = 0;
+							char innerValue = '\0';
+							for(int j =0 ; j< tmp.length() ; j++) {
+								if(tmp.charAt(j) >= 'a' && tmp.charAt(j) <='z') {
+									//소문자를 찾는다.
+									firstIdx = j;
+									innerValue = tmp.charAt(j);
+									break;
+								}
+							}
+							
+							if(doubleAlpha[innerValue % 'a'])
+								return "invalid";
+							else {
+								doubleAlpha[innerValue % 'a'] = true;
+								tmp = tmp.replaceAll(Character.toString(innerValue), ""); //소문자 제거
+								result.append(tmp);
+								result.append(" ");
+							}
+						}
+					}
+				} else {
+					// 그외 나머지 (규칙 1)
+				}
+
+			} else {
+				// 현재 문자가 대문자인 경우
+				char nextValue = sentence.charAt(i + 1); // 다음 문자
+				if (nextValue >= 'a' && nextValue <= 'z') {
+					// 다음 문자가 소문자인 경우
+					if (!doubleAlpha[nextValue % 'a']) {
+						// 소문자가 처음 사용 되는 경우
+						doubleAlpha[nextValue % 'a'] = true;
+						int count = countAlpha[nextValue % 'a']; // 개수 가져옴
+						if (count == 2) {
+							// 개수가 2개인 경우
+							result.append(value); // 현재 문자를 붙임
+							result.append(" "); // 공백을 붙임
+						} else {
+							// 그 외의 경우
+							StringBuilder sb = new StringBuilder(); // 임시 단어를 생성하기 위한 변수
+							int currentIdx = i;
+							int nextIdx = 0;
+							int diff = 0;
+							for (int j = currentIdx + 1; i < sentence.length(); j++) {
+								if (sentence.charAt(j) == value) {
+									// 다음 소문자가와 그 다다음 소문자의 값이 같은 경우
+									diff = j - currentIdx; // 간격을 알아낸다
+									break;
+								}
+							}
+							nextIdx = currentIdx + diff;// 다음 값
+							while (nextIdx < sentence.length()) {
+								if (sentence.charAt(currentIdx) == sentence.charAt(nextIdx)) {
+									for (int j = currentIdx + 1; j <= nextIdx; j++) {
+										// 순환하면서 대문자 값들 삽입
+										sb.append(sentence.charAt(j));
+									}
+									currentIdx = nextIdx;
+									nextIdx = currentIdx + diff;
+								} else
+									break;
+							}
+							int nnextIdx = nextIdx + 1;
+							if (sentence.charAt(nnextIdx) >= 'a' && sentence.charAt(nnextIdx) <= 'z')
+								return "invalid"; // 다음 값이 소문자 인경우
+							else
+								sb.append(sentence.charAt(nnextIdx)); // 다음 대문자까지 붙인다.
+
+							String tmp = sb.toString();
+							if (tmp.matches(".*[a-z].*")) {
+								// 같은 규칙이 존재할 경우
+								return "invalid";
+							} else {
+								result.append(tmp);
+								result.append(" ");
+							}
+							i = nnextIdx; // 다음 탐색을 위한 인덱스 위치 변경
+						}
+					} else
+						return "invalid";
+
+				} else {
+					// 다음 문자가 대문자인 경우
+					result.append(nextValue);
+
+				}
+			}
+		}
+
+		return result.toString();
+
+	}
+}

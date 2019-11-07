@@ -1,0 +1,36 @@
+package programmers;
+
+//네트워크
+public class problem_28 {
+	static boolean visited[][];
+
+	public static void main(String[] args) {
+		int tmp [][] = {{1,1,0},{1,1,0},{0,0,1}};
+		int result = solution(3,tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[][] computers) {
+		visited = new boolean[n][n];
+		int count = 0;
+		for (int i = 0; i < computers.length; i++) {
+			for (int j = 0; j < computers[i].length; j++) {
+				if (!visited[i][j] && computers[i][j] != 0) {
+					visited[[i][j] = true;
+					dfs(computers,j, i);
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	public static void dfs(int[][] computers, int x, int y) {
+		for(int i = x ; i < computers.length ; i++) {
+			if(!visited[i][y] && computers[i][y] != 0) {
+				visited[i][y] = true;
+				dfs(computers,y,i);
+			}
+		}
+	}
+}

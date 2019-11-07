@@ -1,0 +1,128 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+	static HashMap<Character, Boolean> map;
+
+	public static void main(String[] args) {
+		String result = solution("HaEaLaLaObWORLDb");
+		System.out.println(result);
+	}
+
+	public static String solution(String sentence) {
+		map = new HashMap<>();
+		StringBuilder sb = new StringBuilder();
+		StringBuilder s = new StringBuilder(sentence);
+		int status = 3;
+		String answer= parsing(sb,s,status);
+		return answer;
+	}
+
+	// status가 1이면 규칙1, 2면 규칙 2, 3이면 적용 x
+	public static String parsing(StringBuilder sb, StringBuilder sentence, int status) {
+		char small = '0';
+		boolean check = false;
+		int idx = 0;
+		for (int i = 0; i < sentence.length(); i++) {
+			if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z') { // 문장에 소문자가 있을 경우
+				small = sentence.charAt(i);
+				idx = i; // 현재 소문자의 맨 처음 위치
+				check = true;
+				break;
+			}
+		}
+
+		if (check) {
+			if (map.get(small) == null) {
+				// map에 없는 경우
+				map.put(small, true); // map에 추가
+				int count = 0; // 누적횟수
+				int tmpStatus = 2; // 규칙의 종류를 알려주는 변수
+				for (int i = 0; i < sentence.length(); i++) {
+					if (sentence.charAt(i) == small)
+						count++;
+					if (count > 2) { // 2이상이다 => 규칙 1
+						tmpStatus = 1;
+						break;
+					}
+				}
+				if ((tmpStatus == 1 && status == 1) || (tmpStatus ==2 && status ==2)) { // 현재 단어에 동일한 규칙이 두번 적용된 경우
+					return "invalid";
+				} else if (tmpStatus == 1) {
+					// 현재 단어에 규칙 1이 한번만 적용된 경우
+					int nextIdx = 0;
+					for (int i = idx + 1; i < sentence.length(); i++) {
+						if (sentence.charAt(i) == small) {
+							nextIdx = i; // 그 다음 같은 소문자가 나타난 위치
+							break;
+						}
+					}
+
+					int diff = nextIdx - idx; // 차이
+					int pre = idx-1; //소문자 이전 위치
+					int tmpCurrentIdx= idx;
+					int tmpNextIdx = tmpCurrentIdx + diff;
+					while (true) {
+						if(sentence.charAt(idx) == sentence.charAt(tmpNextIdx)) {
+							//소문자가 맞을 경우
+							tmpCurrentIdx = tmpNextIdx;
+							tmpNextIdx = tmpCurrentIdx + diff;
+						}
+						else
+							break; //아니면 멈춤
+					}
+					String tmpParse = sentence.substring(pre,tmpNextIdx); //자름
+					sentence = sentence.delete(pre, tmpNextIdx);
+					String restSentence = sentence.toString();
+					tmpParse = tmpParse.replaceAll(Character.toString(small), ""); //해당 소문자를 빈칸으로 바꿈
+					if(!restSentence.matches("[a-z]*$")) {
+						//남은 문장에 소문자가 없는 경우
+						sb.append(" ");
+						sb.append(sentence);
+					}
+					sb.append(tmpParse);
+					String tmp = parsing(sb,sentence,tmpStatus);
+					if(tmp.equals("invalid"))
+						return "invalid";
+					else {
+						sb.append(" ");
+						sb.append(tmp);
+					}
+				}else if(tmpStatus == 2) {
+					//규칙 2인 경우
+					int nextIdx = 0;
+					for(int i = idx+1 ; i< sentence.length() ; i++) {
+						if(sentence.charAt(i) == small) {
+							nextIdx = i;
+							break;
+						}
+					}
+					
+					String tmpParse = sentence.substring(idx,nextIdx);
+					sentence = sentence.delete(idx, nextIdx);
+					tmpParse = tmpParse.replaceAll(Character.toString(small), "");
+					String restSentence = sentence.toString();
+					if(!restSentence.matches("[a-z]*$")) {
+						sb.append(" ");
+						sb.append(sentence);
+					}
+					sb.append(tmpParse);
+					String tmp = parsing(sb,sentence,tmpStatus);
+					if(tmp.equals("invalid"))
+						return "invalid";
+					else {
+						sb.append(" ");
+						sb.append(tmp);
+					}
+					
+				}
+			} else
+				return "invalid";
+		}else
+			return sb.toString(); //모두 대문자인 경우
+		return null;
+	}
+
+}

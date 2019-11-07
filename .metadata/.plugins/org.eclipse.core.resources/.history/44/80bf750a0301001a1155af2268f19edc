@@ -1,0 +1,182 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+	static HashMap<Character, Boolean> map;
+
+	public static void main(String[] args) {
+		String tmp[] = { "HaEaLaLaObWORLDb", "aHELLOaWbObRbLbD", "aHELLOabWORLDb", "HaEaLaLaOWbObRbLbD",
+				"SpIpGpOpNpGJqOqA", "HaEaLaLaO", "aHELLOa", "HELLOaWORLDa", "HELLOWaOaRaLaD", "aHELLOaWORLD",
+				"HaEaLaLaOWORLD", "aHbEbLbLbOacWdOdRdLdDc", "aAbAa","SpIpGpOpNpGJqOqAkBr","oBoBo","TRIP"};
+
+		for (int i = 0; i < tmp.length; i++) {
+			String result = solution(tmp[i]);
+			System.out.println(result);
+		}
+	}
+
+	public static String solution(String sentence) {
+		map = new HashMap<>();
+		String answer = null;
+		if (sentence.contains(" "))
+			return "invalid";
+
+		StringBuilder sb = new StringBuilder();
+		parsing(sb, sentence); // 이어져 있는 문장을 단어단위로 나눔
+
+		return sb.toString().trim();
+
+	}
+
+	public static void parsing(StringBuilder s, String sentence) {
+		if (sentence.isEmpty())
+			return;
+
+		int firstIdx = 0;
+		int nextIdx = 0;
+		char value = ' ';
+
+		boolean check = false;
+		for (int i = 0; i < sentence.length(); i++) {
+			if (sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z') {
+				firstIdx = i;
+				value = sentence.charAt(i);
+				check = true;
+				break;
+			}
+		}
+		if (map.get(value) == null && check) {
+			StringBuilder targetString = null; // 타겟
+			StringBuilder restString = null; // 자른 나머지
+			// 맨 처음으로 나오는 소문자 찾기
+			map.put(value, true); // 소문자 넣음
+			int status = 0;
+			// 그 소문자를 기준으로 자르기
+
+			int count = 0;
+			for (int i = 0; i < sentence.length(); i++) {
+				if (value == sentence.charAt(i))
+					count++;
+				if (count > 2)
+					break;
+			}
+			if (count == 2)
+				status = 2;
+			else
+				status = 1;
+
+			if (status == 1) {
+				if (firstIdx == 0) {
+					s.delete(0, s.length());
+					s.append("invalid");
+					return;
+				}
+				for (int i = firstIdx + 1; i < sentence.length(); i++) {
+					if (sentence.charAt(i) == value) {
+						nextIdx = i;
+						break;
+					}
+				}
+
+				int diff = nextIdx - firstIdx; // 차이
+				int tmpCurrentIdx = firstIdx;
+				int tmpNextIdx = tmpCurrentIdx + diff;
+				while (tmpNextIdx < sentence.length()) {
+					if (sentence.charAt(tmpCurrentIdx) == sentence.charAt(tmpNextIdx)) {
+						tmpCurrentIdx = tmpNextIdx;
+						tmpNextIdx = tmpCurrentIdx + diff;
+					} else
+						break;
+				}
+				if (tmpNextIdx >= sentence.length())
+					tmpNextIdx = sentence.length();
+				targetString = new StringBuilder(sentence.substring(firstIdx - 1, tmpNextIdx)); // 자름
+				String forward = sentence.substring(0, firstIdx - 1);
+				if (!forward.isEmpty()) {
+					s.append(forward);
+					s.append(" ");
+				}
+				StringBuilder sb = new StringBuilder(sentence);
+				restString = sb.delete(firstIdx - 1, tmpNextIdx);
+				restString = sb.delete(0, firstIdx - 1);
+			} else {
+				// 규칙 2인 경우
+				for (int i = firstIdx + 1; i < sentence.length(); i++) {
+					if (sentence.charAt(i) == value) {
+						nextIdx = i;
+						break;
+					}
+				}
+
+				targetString = new StringBuilder(sentence.substring(firstIdx, nextIdx + 1));
+
+				if (firstIdx != 0) {
+					String forword = sentence.substring(0, firstIdx);
+					s.append(forword);
+					s.append(" ");
+
+				}
+				StringBuilder sb = new StringBuilder(sentence);
+				restString = sb.delete(firstIdx, nextIdx + 1);
+				restString = sb.delete(0, firstIdx);
+
+			}
+			String tmp = targetString.toString();
+			tmp = tmp.replaceAll(Character.toString(value), ""); // 소문자 없앰
+			if (tmp.matches(".*[a-z].*")) {
+				// 또 다른 규칙이 존재하는 경우
+				tmp = anotherRules(tmp, status);
+
+			}
+			if (tmp.equals("invalid")) {
+				s.delete(0, s.length());
+				s.append("invalid");
+				return;
+			} else {
+				targetString = new StringBuilder(tmp);
+				s.append(targetString);
+				s.append(" ");
+			}
+			parsing(s, restString.toString()); // 나머지를 파싱
+		} else {
+			// 소문자가 중복되는 경우
+			if (!check) {
+				s.append(sentence); // 모든 문자가 대문자인 경우
+				s.append(" ");
+			} else {
+				s.delete(0, s.length());
+				s.append("invalid");
+			}
+		}
+	}
+
+	public static String anotherRules(String tmp, int previousStatus) {
+		int firstIdx = 0;
+		int nextIdx = 0;
+		String targetString;
+		char value = '\0';
+		for (int i = 0; i < tmp.length(); i++) {
+			if (tmp.charAt(i) >= 'a' && tmp.charAt(i) <= 'z') {
+				value = tmp.charAt(i);
+				firstIdx = i;
+				break;
+			}
+		}
+
+		if (firstIdx == 0) {
+			// 규칙이 2이지만 확실하지 않음
+			if (previousStatus == 2) {
+				// 규칙 2인데 이전 규칙도 2인경우
+				return "invalid";
+			}
+		} else {
+			if (previousStatus == 1)
+				return "invalid";
+		}
+		tmp = tmp.replaceAll(Character.toString(value), ""); // 소문자 없앰
+		targetString = tmp;
+		return targetString;
+	}
+}

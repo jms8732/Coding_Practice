@@ -1,0 +1,66 @@
+package programmers;
+
+//브라이언의 고민
+import java.util.*;
+
+public class problem_28 {
+
+	public static void main(String[] args) {
+		String tmp[] = { "HaEaLaLaObWORLDb", "SpIpGpOpNpGJqOqA", "AxAxAxAoBoBoB", "oAxAxAxAoBbB", "HEaLLOaWORLD",
+				"HELaLaOWORLD", "HELLaLaOaWORLD", "aIaAM", "baHELLOabWORLD", "aHbEbLbLbOacWdOdRdLdDc", "bAaOb",
+				"oGOaOaGaLaEo", "aHELLOa bWORLDb", "HaEaLaLObWORLDb", "aHELLOWORLDa", "HaEaLaLaOWaOaRaLaD",
+				"abHELLObaWORLD", "aAbBbCa", "aAbBcCa", "abABCba", "Aa", "aAAaAbA", "aGgGaGbGbGG", "tB" };
+
+		for (int i = 0; i < tmp.length; i++) {
+			String result = solution(tmp[i]);
+			System.out.println(result);
+		}
+	}
+
+	public static String solution(String sentence) {
+		boolean doubleAlpha[] = new boolean[26];
+		StringBuilder result = new StringBuilder();
+		int countAlpha[] = new int[26];
+		String ruleAlpha[] = new String[26];
+		
+		for(int i =0 ; i< sentence.length() ; i++) {
+			//소문자의 개수
+			if(sentence.charAt(i) >= 'a' && sentence.charAt(i) <= 'z')
+			{
+				countAlpha[sentence.charAt(i) % 'a'] +=1;
+			}
+		}
+		
+		for(int i =0; i< countAlpha.length ; i++) {
+			if(countAlpha[i] == 2)
+				ruleAlpha[i] = "RULE2";
+			else
+				ruleAlpha[i] = "RULE1";
+		}
+
+
+		for(int i =0 ; i< sentence.length() ; i++) {
+			char value = sentence.charAt(i);
+			if(value >= 'a' && value <= 'z') {
+				//소문자인 경우
+				countAlpha[value %'a'] -= 1;
+				if(countAlpha[value %'a'] == 0) {
+					if(ruleAlpha[value %'a'].equals("RULE1")) {
+						//규칙 1인 경우
+						doubleAlpha[value %'a'] =true;
+					}else {
+						//규칙 2인 경우
+						
+					}
+						
+				}
+			}
+			else
+				result.append(value);
+			
+		}
+		
+		return result.toString();
+
+	}
+}

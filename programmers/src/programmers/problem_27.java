@@ -8,7 +8,7 @@ import java.util.List;
 //H-index
 public class problem_27 {
 	public static void main(String[] args) {
-		int tmp[] = {5,0};
+		int tmp[] = {0,1,1,1,1};
 		int result = solution(tmp);
 		System.out.println(result);
 	}
