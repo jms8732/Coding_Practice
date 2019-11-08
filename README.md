@@ -65,6 +65,8 @@ Programmers
 
 [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
 
+[타일 장식물](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_30.java)
+
 BackJun
 -------
 [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
