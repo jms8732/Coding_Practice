@@ -57,19 +57,13 @@
 * [2016년](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_22.java)
 * [괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 
-BackJun
--------
-[13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
-
-[13460_구슬탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13460.java)
-
-[14500_테트로미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14500.java)
-
-[14501_퇴사](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14501.java)
-
-[14502_연구소](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14502.java)
-
-[3190_뱀](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_3190.java)
+# BackJun
+* [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
+* [13460_구슬탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13460.java)
+* [14500_테트로미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14500.java)
+* [14501_퇴사](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14501.java)
+* [14502_연구소](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14502.java)
+* [3190_뱀](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_3190.java)
 
 
 
