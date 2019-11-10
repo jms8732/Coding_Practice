@@ -1,0 +1,52 @@
+package programmers;
+//구명 보트 정확성 75점
+import java.util.*;
+import java.util.stream.Collectors;
+public class problem_32 {
+	public static void main(String[] args) {
+		int [] tmp = {70,50,80,50};
+		int limit = 100;
+		int result = solution(tmp,limit);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] people, int limit) {
+		int result = 0;
+		HashMap<Integer,Integer> map = new HashMap<>();
+		for(int i =0 ; i< people.length; i++) {
+			if(map.get(people[i]) == null)
+				map.put(people[i], 1);
+			else {
+				int tmp = map.get(people[i]);
+				map.put(people[i], tmp+1); //개수 증가
+			}
+				
+		}
+		int currentlimit = limit;
+		for(int i = 0;  i< people.length ; i++) {
+			int count = map.get(people[i]);
+	
+			if(count == 2) {
+				if(currentlimit- people[i] * count >= 0) { //개수가 두 개여도 무게가 안넘을 경우
+					map.put(people[i], 0);
+					result++;
+					continue;
+				}
+			}
+			count -= 1;
+			map.put(people[i], count); //갱신된 갯수
+			for(int j = (currentlimit - people[i] ); j >= 40 ; j--) {
+				//최소 무게가 40 이므로
+				if(map.get(j) != null && map.get(j) != 0) {
+					//남은 무게에 맞는 무게가 있는 경우
+					int tCount = map.get(j);
+					tCount -=1;
+					map.put(j, tCount);
+				}
+			}
+			result++;
+			currentlimit = limit;
+		}
+		return result;
+	}
+}

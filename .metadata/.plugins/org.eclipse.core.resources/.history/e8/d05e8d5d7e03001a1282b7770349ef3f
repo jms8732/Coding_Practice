@@ -1,0 +1,45 @@
+package programmers;
+
+//구명 보트
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class problem_32 {
+	public static void main(String[] args) {
+		int [] tmp = {70,50,80,50};
+		int limit = 100;
+		int result = solution(tmp,limit);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] people, int limit) {
+		int result = 0;
+		boolean[] passed = new boolean[people.length];
+		ArrayList<Integer> list  = new ArrayList<>(Arrays.stream(people).boxed().collect(Collectors.toList()));
+		Collections.reverse(list); // 내림차순으로 정렬
+
+		Integer[] tmp = list.toArray(new Integer[list.size()]);
+		int ride[] = new int[2];
+		int currentidx = 0;
+		int currentlimit = limit; // 배의 무게
+		
+		for(int i= 0 ; i< tmp.length ;i++) {
+			passed[i] = true;
+			ride[currentidx] = (int)tmp[i]; //현재 배에 탑승
+			currentlimit -= (int)tmp[i]; //배가 버틸수있는 무게 감소
+			currentidx++;
+			for(int j = i+1 ; j < tmp.length ; j++) {
+				//다음 탑승객
+				if(!passed[j] && (currentlimit >= (int)tmp[j])){
+					passed[j] = true;
+					result++; //배의 이동횟수 증가
+					currentidx=0;
+					break;
+				}
+			}
+			
+		}
+
+		return result;
+	}
+}

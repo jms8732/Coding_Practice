@@ -1,0 +1,41 @@
+package programmers;
+
+//구명 보트 정확성 75점
+import java.util.*;
+
+public class problem_32 {
+	public static void main(String[] args) {
+		int[] tmp = { 70, 50, 80, 50 };
+		int limit = 100;
+		int result = solution(tmp, limit);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] people, int limit) {
+		Deque<Integer> queue = new ArrayDeque<>();
+		
+		Arrays.sort(people); //오름차순으로 정렬
+		for(int i = people.length - 1; i >= 0 ; i--) {
+			queue.add(people[i]); //내림 차순으로 값 삽입
+		}
+		int currentlimit = limit;
+		int result = 0;
+		while(!queue.isEmpty()) {
+			int first = queue.pollFirst();
+			currentlimit -= first;
+			if(currentlimit >= 40) {
+				//무게가 40 이상인 경우
+				while(!queue.isEmpty()) {
+					int last = queue.peekLast();
+					if(currentlimit >= last) {
+						queue.pollLast();
+						break;
+					}
+				}
+			}
+			result++;
+		}
+		
+		return result;
+	}
+}

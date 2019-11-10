@@ -1,0 +1,64 @@
+package programmers;
+
+//구명 보트 정확성 75점
+import java.util.*;
+
+public class problem_32 {
+	public static void main(String[] args) {
+		int[] tmp = { 70, 50, 80, 50 };
+		int limit = 100;
+		int result = solution(tmp, limit);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] people, int limit) {
+		  int result = 0;
+			Arrays.sort(people);
+			List<Integer> v = new LinkedList<>();
+
+			for (int i = people.length - 1; i >= 0; i--)
+				v.add(people[i]);
+
+			int currentidx = 0;
+			int currentlimit = limit; // 배의 무게
+
+			while (!v.isEmpty()) {
+				currentlimit -= v.get(0);
+				currentidx++;
+				v.remove(0); // 첫번째인덱스 삭제
+				if (currentlimit >= 40) {
+					int mid = v.size() / 2;
+					if(v.get(mid) <= currentlimit) {
+						//중간 값보다 남은 값이 더 큰 경우
+						for(int i =0 ; i< v.size() ; i++) {
+							if(currentlimit >= v.get(i)) {
+								currentidx =0 ;
+								result++;
+								v.remove(i);
+								break;
+							}
+						}
+					}
+					else {
+						for(int i = v.size() -1; i >= 0 ; i--) {
+							if(currentlimit >= v.get(i)) {
+								currentidx =0 ;
+								result++;
+								v.remove(i);
+								break;
+							}
+						}
+					}
+					if (currentidx != 0) {
+						result++;
+						currentidx = 0;
+					}
+					currentlimit = limit;
+				} else {
+					result++;
+					currentlimit = limit;
+				}
+			}
+			return result;
+	}
+}

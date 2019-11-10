@@ -1,0 +1,28 @@
+package programmers;
+//카펫
+public class problem_33 {
+	public static void main(String[] args) {
+		
+	}
+    public static int[] solution(int brown, int red) {
+        int[] answer = {};
+        int result = 0;
+        for(int i= 1; i <= red/2 ; i++) {
+        	if(i%red == 0) {
+        		//나머지가 없을 경우
+        		int row = i;
+            	int col = i/red;
+            	result = row*2 + col*2 +4;
+            	if(result == brown)
+            	{
+            		answer[0] = col+2;
+            		answer[1] = col;
+            		break;
+            	}
+            	result = 0;
+        	}
+        }
+        
+        return answer;
+    }
+}
