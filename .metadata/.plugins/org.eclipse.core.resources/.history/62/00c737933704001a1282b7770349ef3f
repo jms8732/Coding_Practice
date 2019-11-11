@@ -11,14 +11,14 @@ public class problem_31 {
 	}
 
 	public static int solution(int n, int[][] costs) {
-		List<NNode> queue = new ArrayList<>();
+		List<Node> queue = new ArrayList<>();
 		for (int i = 0; i < costs.length; i++) {
-			NNode nn = new NNode(costs[i][0], costs[i][1], costs[i][2]);
+			Node nn = new Node(costs[i][0], costs[i][1], costs[i][2]);
 			queue.add(nn);
 		}
-		queue.sort(new Comparator<NNode>() {// 오름 차순으로 정렬
+		queue.sort(new Comparator<Node>() {// 오름 차순으로 정렬
 			@Override
-			public int compare(NNode arg0, NNode arg1) {
+			public int compare(Node arg0, Node arg1) {
 				// TODO Auto-generated method stub
 				if (arg0.cost > arg1.cost)
 					return 1;
@@ -35,7 +35,7 @@ public class problem_31 {
 		}
 		int totalCost = 0;
 		for (int i = 0; i < queue.size(); i++) {
-			NNode nTmp = queue.get(i);
+			Node nTmp = queue.get(i);
 			int b = nTmp.b;
 			int a = nTmp.a;
 			
@@ -68,10 +68,10 @@ public class problem_31 {
 	}
 }
 
-class NNode {
+class Node {
 	int a, b, cost;
 
-	public NNode(int a, int b, int cost) {
+	public Node(int a, int b, int cost) {
 		this.a = a;
 		this.b = b;
 		this.cost = cost;
