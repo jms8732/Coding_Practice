@@ -32,12 +32,15 @@
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
 * [모의고사](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_18.java)
+* [카펫](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_33.java)
+* [숫자 야구](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_34.java)
 
 ## 탐욕법(Greedy)
 * [큰 수 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_13.java)
 * [체육복](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_19.java)
 * [조이스틱](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_23.java)
 * [섬 연결하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_31.java)
+* [구명보트](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_32.java)
 
 ## 동적 계획법(Dynamic Programming)
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
