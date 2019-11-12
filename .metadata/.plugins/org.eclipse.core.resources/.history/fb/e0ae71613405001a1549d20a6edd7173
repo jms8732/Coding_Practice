@@ -21,16 +21,12 @@ public class problem_38 {
 		for (int i = 1; i < (1 << col); i++) {
 			// 컬럼의 종류 생성
 			int bitmask = i;
-			
-			if(minmum(bitmask,list))
-				continue;
 
 			if (Unique(bitmask, relation)) // 유일성에 만족 할 경우
 				list.add(bitmask);
-			
-			
 		}
-		return list.size();
+
+		return 0;
 	}
 
 	public static boolean Unique(int bitmask, String[][] relation) {
@@ -38,30 +34,20 @@ public class problem_38 {
 		int col = relation[0].length;
 
 		HashSet<String> set = new HashSet<>();
-		for (int i = 0; i < row; i++) {
+		for (int i = 0; i < col; i++) {
 			// 컬럼으로 반복문 수행
-			StringBuilder sb = new StringBuilder();
-			for (int j = 0; j < col; j++) {
-				if ((bitmask & (1<<j)) == (1<<j)) {
+			System.out.println(Integer.toBinaryString(1<<i));
+			for (int j = 0; j < row; j++) {
+				if ((bitmask & (1<<i)) == (1<<i)) {
 					// 해당 비트 마스크가 값보다 크면
-					String tmp = relation[i][j];
-					sb.append(tmp);
+					String tmp = relation[j][i];
+					if (set.contains(tmp))
+						return false; // 값이 이미 존재할 경우 유일성에 배제
+					set.add(tmp);
 				}
 			}
-			String tmp = sb.toString();
-			if (set.contains(tmp))
-				return false; // 값이 이미 존재할 경우 유일성에 배제
-			set.add(tmp);
 		}
 
 		return true;
-	}
-	public static boolean minmum(int bitmask, List<Integer> list) {
-		for(int tmp : list) {
-			if((bitmask & tmp) == tmp)
-				return true;		
-		}
-		
-		return false;
 	}
 }

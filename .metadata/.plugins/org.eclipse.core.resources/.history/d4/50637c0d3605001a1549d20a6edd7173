@@ -21,16 +21,14 @@ public class problem_38 {
 		for (int i = 1; i < (1 << col); i++) {
 			// 컬럼의 종류 생성
 			int bitmask = i;
-			
-			if(minmum(bitmask,list))
-				continue;
 
 			if (Unique(bitmask, relation)) // 유일성에 만족 할 경우
 				list.add(bitmask);
-			
-			
 		}
-		return list.size();
+		for(int i  : list) {
+			System.out.println(i);
+		}
+		return 0;
 	}
 
 	public static boolean Unique(int bitmask, String[][] relation) {
@@ -55,13 +53,5 @@ public class problem_38 {
 		}
 
 		return true;
-	}
-	public static boolean minmum(int bitmask, List<Integer> list) {
-		for(int tmp : list) {
-			if((bitmask & tmp) == tmp)
-				return true;		
-		}
-		
-		return false;
 	}
 }
