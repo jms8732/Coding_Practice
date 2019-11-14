@@ -63,6 +63,7 @@
 * [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
 * [[1차] 비밀지도](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_35.java)
 * [2019 KAKAO BLIND 후보키](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_38.java)
+* [무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
 
 # BackJun
 * [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
