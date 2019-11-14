@@ -1,0 +1,81 @@
+package programmers;
+
+//무지의 먹방 라이브 16.5점
+
+import java.util.*;
+
+public class problem_39 {
+	public static void main(String[] args) {
+		int[] food_times = { 3, 1, 1, 1, 2, 4, 3 };
+		int k = 12;
+		int result = solution(food_times, k);
+
+		System.out.println(result);
+	}
+
+	public static int solution(int[] food_times, long k) {
+		List<Node> list = new ArrayList<Node>();
+		for (int i = 0; i < food_times.length; i++) {
+			list.add(new Node(food_times[i], i));
+		}
+
+		list.sort(new Comparator<Node>() {
+			@Override
+			public int compare(Node o1, Node o2) {
+				// TODO Auto-generated method stub
+				if (o1.count < o2.count) // 남은 시간으로 오름차순 정렬
+					return -1;
+				else
+					return 1;
+			}
+		});
+
+		while (!list.isEmpty()) {
+			long currentCount = list.get(0).count;
+			int size = list.size();
+
+			if (k > currentCount * size) {
+				k -= currentCount * size; // 시간을 뻄
+				int idx = 0;
+				for (int i = 1; i < list.size(); i++) {
+					if (currentCount != list.get(i).count)
+						break;
+					idx = i;
+				}
+				for (int i = 0; i <= idx; i++) {
+					list.remove(0); // 앞에 위치 지움
+				}
+			} else {
+				// 값이 작을 경우
+				list.sort(new Comparator<Node>() {
+					@Override
+					public int compare(Node o1, Node o2) {
+						// TODO Auto-generated method stub
+						if (o1.idx < o2.idx) //인덱스를 오름차순으로 정렬
+							return -1;
+						else
+							return 1;
+
+					}
+				});
+				
+				long idx = k % list.size();
+				int startIdx = list.get(0).idx;
+				return list.get(startIdx + (int)idx).idx+1;
+			}
+		}
+
+		return -1;
+
+	}
+
+	public static class Node {
+		long count;
+		int idx;
+
+		public Node(long count, int idx) {
+			this.count = count;
+			this.idx = idx;
+		}
+	}
+}

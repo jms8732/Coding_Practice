@@ -1,0 +1,81 @@
+package programmers;
+
+//무지의 먹방 라이브 16.5점
+
+import java.util.*;
+
+public class problem_39 {
+	public static void main(String[] args) {
+		int[] food_times = { 3, 1, 2 };
+		int k = 7;
+		int result = solution(food_times, k);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] food_times, long k) {
+		List<Node> list = new ArrayList<>();
+		for (int i = 0; i < food_times.length; i++) {
+			problem_39.Node tmp = new problem_39.Node(food_times[i], i);
+			list.add(tmp);
+		}
+
+		list.sort(new Comparator<Node>() {
+			@Override
+			public int compare(Node o1, Node o2) {
+				// TODO Auto-generated method stub
+				if (o1.count < o2.count) // 시간 순으로 정렬
+					return 1;
+				else
+					return -1;
+			}
+		});
+		
+		for(int i =0 ; i< list.size() ; i++) {
+			Node tmp = list.get(i);
+			int idx =0 ;
+			int currentCount = tmp.count;
+			int totalCount = currentCount * (list.size()-i);
+			if(totalCount <= k){
+				//k값 이내에 존재 할 경우
+				k -= totalCount; //시간을 뺀다.
+				for(int j =i+1 ; j < list.size() ; j++) {
+					Node innerTmp = list.get(j); //다음 노드를 가져 온다
+					if(innerTmp.count != currentCount)
+						break; //다를 경우 
+					idx =j; //다음 인덱스 위치
+				}
+			}
+			else {
+				List<Node> tmpList = new ArrayList<>();
+				for(int j = i ; j < list.size(); j++) {
+					tmpList.add(list.get(j)); //나머지 애들 넣기
+				}
+				tmpList.sort(new Comparator<Node>() {
+					@Override
+					public int compare(Node o1, Node o2) { //인덱스로 정렬
+						if(o1.idx < o2.idx)
+							return 1;
+						else
+							return -1;
+					}
+				});
+				
+				int iidx = (int)k % tmpList.size();
+				int index = tmpList.get(iidx).idx+1;
+				return index;
+				
+			}
+			i = idx;
+		}
+		return -1;
+	}
+
+	public class Node {
+		int count, idx;
+
+		public Node(int count, int idx) {
+			this.count = count;
+			this.idx = idx;
+		}
+	}
+}

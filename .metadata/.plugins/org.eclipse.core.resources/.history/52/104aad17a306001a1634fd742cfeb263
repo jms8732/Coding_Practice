@@ -1,0 +1,45 @@
+package programmers;
+
+//무지의 먹방 라이브 16.5점
+
+import java.util.*;
+
+public class problem_39 {
+	public static void main(String[] args) {
+		int [] food_times = {3,1,2};
+		int k = 5;
+		int result = solution(food_times,k);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] food_times, long k) {
+		long q = k / food_times.length; //몫
+		long r = k % food_times.length; //나머지
+		
+		HashMap<Integer,Integer> map = new HashMap<>(); //기록
+		
+		for(int i =0 ; i< food_times.length ; i++) {
+			int remain = food_times[i] - (int)q; //남은 개수
+			if(remain > 0)
+				map.put(i+1,remain); //0보다 클 경우만 map 추가
+			
+		}
+		
+		Iterator it= map.keySet().iterator();
+		
+		while(it.hasNext()) {
+			int key = (int)it.next();
+			int count = map.get(key)-1;
+			if(count > 0)
+				map.put(key, count);
+			else
+				map.remove(key);
+		}
+		
+		if(map.isEmpty())
+			return -1;
+		
+		return 0;
+		
+	}
+}

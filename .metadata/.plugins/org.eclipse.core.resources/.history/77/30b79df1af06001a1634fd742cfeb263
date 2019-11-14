@@ -1,0 +1,33 @@
+package programmers;
+
+//무지의 먹방 라이브 16.5점
+
+import java.util.*;
+
+public class problem_39 {
+	public static void main(String[] args) {
+		int[] food_times = { 3, 1, 2 };
+		int k = 7;
+		int result = solution(food_times, k);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] food_times, long k) {
+		
+	}
+	
+	class Node implements Comparator<Node>{
+		int count, idx;
+		public Node(int count , int idx) {
+			this.count = count;
+			this.idx = idx;
+		}
+		@Override
+		public int compare(Node arg0, Node arg1) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		
+	}
+}
