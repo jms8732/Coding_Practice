@@ -65,8 +65,8 @@
 * [[2019 KAKAO BLIND] 후보키](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_38.java)
 * [[2019 KAKAO BLIND] 무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
 * [[2018 KAKAO BLIND] 뉴스 클러스터링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java) 
-* [[2018 KAKAO BLIND] [1차] 캐시](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_41.java)
-* [[2019 서머/윈터코딩] 종이접기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java
+* [[2018 KAKAO BLIND] [1차] 캐시](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_42.java)
+* [[2019 서머/윈터코딩] 종이접기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_41.java
 )
 
 # BackJun
