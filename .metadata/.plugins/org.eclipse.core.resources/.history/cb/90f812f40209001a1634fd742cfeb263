@@ -1,0 +1,27 @@
+package programmers;
+
+//멀쩡한 사각형
+public class problem_42 {
+	public static void main(String[] args) {
+		int w = 8;
+		int h = 12;
+		long result = solution(w,h);
+		System.out.println(result);
+	}
+
+	public static long solution(int w, int h) {
+		long width = w*h;
+		int min =0;
+		if(width % 2 == 0) {
+			//짝수 인 경우
+			min = Math.min(w, h);
+			min = 2*min;
+		}
+		else {
+			min = Math.min(w,h);
+			min = 2*min +1;
+		}
+		long answer = width - min;
+		return answer;
+	}
+}

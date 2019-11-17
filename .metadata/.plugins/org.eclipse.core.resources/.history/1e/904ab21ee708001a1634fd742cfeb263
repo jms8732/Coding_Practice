@@ -92,7 +92,7 @@ public class problem_40 {
 		}
 		union = totalCount- interaction;
 		if(union == 0)
-			return 65536; //합집합이 0인 경우
+			return 65536;
 		
 		int result = (int) (65536 * (double) interaction / (double) union);
 		return result;
