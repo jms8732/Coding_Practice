@@ -57,7 +57,7 @@
 )
 
 ## Kakao
-* [[2018 KAKAO BLIND] 뉴스 클러스터링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java) 
+* [[2018 KAKAO BLIND] [1차] 뉴스 클러스터링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java) 
 * [[2018 KAKAO BLIND] [1차] 캐시](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_42.java)
 * [[2018 KAKAO BLIND] [1차] 프렌즈4블록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_43.java)
 * [[2018 KAKAO BLIND] [1차] 비밀지도](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_35.java)
