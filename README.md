@@ -66,13 +66,13 @@
 * [[2019 KAKAO BLIND] 무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
 * [[2019 KAKAO BLIND] 길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
 * [[2020 KAKAO BLIND] 문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
+* [[2020 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 ## 그 외
 
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
 * [2xn 타일링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_12.java)
 * [카카오 프렌즈 컬러링 북](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_20.java)
 * [2016년](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_22.java)
-* [괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 * [실패율](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_37.java)
 * [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
 
