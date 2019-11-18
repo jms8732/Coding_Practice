@@ -1,0 +1,50 @@
+package programmers;
+//단어 변환
+
+import java.util.*;
+
+public class problem_45 {
+	public static void main(String[] args) {
+
+	}
+
+	public static int solution(String begin, String target, String[] words) {
+		Set<String> set = new HashSet<>();
+		for (int i = 0; i < words.length; i++) {
+			set.add(words[i]); // 집합에 값 넣음
+		}
+
+		List<Node> list = new ArrayList<>();
+		boolean check = false; // 문자가 한개만 다른지 판단
+		int count = 0;
+
+		Iterator it = set.iterator();
+
+		while (list.isEmpty()) {
+			while (it.hasNext()) {
+				String value = (String) it.next();
+				for (int i = 0; i < begin.length(); i++) {
+					if (value.charAt(i) != begin.charAt(i))
+						count++; // 다른 문자 개수 판단.
+				}
+				if (count == 1) {
+					// 한개가 다른 경우
+					Set<String> tmp = new HashSet<>();
+					tmp.add(value);
+					set.removeAll(tmp); //차집합
+					System.out.println();
+				}
+			}
+		}
+	}
+
+	public static class Node {
+		Set<String> set; // 다음 넘어가야될 목록들
+		String current;
+
+		public Node(Set<String> set, String c) {
+			this.current = c;
+			set = new HashSet<>(set);
+		}
+	}
+}
