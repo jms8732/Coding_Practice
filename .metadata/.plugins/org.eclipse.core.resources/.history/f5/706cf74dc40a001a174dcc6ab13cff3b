@@ -99,7 +99,7 @@ public class problem_46 {
 					}
 				}
 			}
-			if (last != null) { //마지막은 순회가 안됬기 때문에 넣어준다.
+			if (last != null) {
 				result = last.result;
 				result[last.idx] = last.departure;
 				result[last.idx + 1] = last.destination;

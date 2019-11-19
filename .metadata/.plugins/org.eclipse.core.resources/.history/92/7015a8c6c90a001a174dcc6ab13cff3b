@@ -1,0 +1,27 @@
+package programmers;
+
+//단속 카메라
+import java.util.*;
+
+public class problem_47 {
+	public static void main(String[] args) {
+		int [][] tmp = {{-20,15},{-14,-5},{-18,-13},{-5,-3}};
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(int[][] routes) {
+		int answer= 0;
+		Arrays.sort(routes, (a,b) -> Integer.compare(a[1], b[1]));
+		return answer;
+	}
+
+	private static class Node {
+		int start, end;
+
+		public Node(int s, int e) {
+			this.start = s;
+			this.end = e;
+		}
+	}
+}
