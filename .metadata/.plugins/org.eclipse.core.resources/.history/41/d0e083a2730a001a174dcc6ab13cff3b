@@ -1,0 +1,97 @@
+package programmers;
+//여행 경로
+
+import java.util.*;
+
+public class problem_46 {
+	public static void main(String[] args) {
+		String [][] tmp = {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
+		String [] result = solution()
+	}
+
+	public static String[] solution(String[][] tickets) {
+		Set<Set<String>> totalSet = new LinkedHashSet<>();
+
+		// 출발지와 도착지를 집합으로 묶어서 큰 집합에 넣는다.
+		for (int i = 0; i < tickets.length; i++) {
+			Set<String> tmpSet = new LinkedHashSet<>();
+			tmpSet.add(tickets[i][0]);
+			tmpSet.add(tickets[i][1]);
+			totalSet.add(tmpSet);
+		}
+
+		List<Node> headList = new ArrayList<>(); // 출발지점
+
+		for (int i = 0; i < tickets.length; i++) {
+			String depart = tickets[i][0]; // 출발지점
+			String dest = tickets[i][1]; // 도착지점
+
+			if (depart.equals("ICN")) {
+				// 맨 처음이 ICN일 경우
+				Set<Set<String>> tmpTotal = new LinkedHashSet<>(totalSet);
+				Set<String> tmpSet = new LinkedHashSet<>();
+				tmpSet.add(depart);
+				tmpSet.add(dest);
+
+				tmpTotal.removeAll(tmpSet); // 차집합 이용해서 남은 항공권 구함
+				headList.add(new Node(depart, dest, tmpTotal));
+			}
+		}
+
+		headList.sort(new Comparator<Node>() {
+
+			@Override
+			public int compare(Node o1, Node o2) {
+				// TODO Auto-generated method stub
+				if (o1.destination.compareTo(o2.destination) < 0) // 목적지 순으로 정렬
+					return -1;
+				else
+					return 1;
+
+			}
+
+		});
+		Queue<Node> queue = new LinkedList<>();
+		queue.add(headList.get(0));
+		int idx = 0;
+		String[] result = new String[tickets.length + 1];
+		while (!queue.isEmpty()) {
+			Node tmp = queue.poll();
+			String depart = tmp.departure;
+			String dest = tmp.destination;
+
+			Iterator it = tmp.totalSet.iterator();
+			while (it.hasNext()) {
+				Set<String> innerSet = (Set) it.next();
+				Iterator innerIt = innerSet.iterator();
+				String innerDepart = (String) innerIt.next();
+				String innerDest = (String) innerIt.next();
+
+				if (dest.equals(innerDepart)) {
+					// 목적지와 출발지가 같다면
+					Set<Set<String>> tmpTotal = new LinkedHashSet<>(tmp.totalSet);
+					Set<String> tmpSet = new LinkedHashSet<>();
+					tmpSet.add(innerDepart);
+					tmpSet.add(innerDest);
+					result[idx++] = depart;
+					tmpTotal.removeAll(tmpSet); // 차집합 이용해서 남은 항공권 구함
+					queue.add(new Node(innerDepart, innerDest, tmpTotal));
+				}
+			}
+		}
+		
+		return result;
+	}
+
+	public static class Node {
+		String departure;
+		String destination;
+		Set<Set<String>> totalSet;
+
+		public Node(String depart, String dest, Set<Set<String>> total) {
+			this.departure = depart;
+			this.destination = dest;
+			this.totalSet = new LinkedHashSet<>(total);
+		}
+	}
+}
