@@ -50,6 +50,7 @@
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
 * [네트워크](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_28.java)
 * [단어 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_45.java)
+* [여행 경로](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_46.java)
 
 ## 서머/윈터 코딩
 * [[2018 서머/윈터코딩] 스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
