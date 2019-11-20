@@ -1,0 +1,39 @@
+package programmers;
+//저울
+
+import java.util.*;
+
+public class problem_48 {
+	public static void main(String[] args) {
+		int tmp [] = {3,1,6,2,7,30,1};
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] weight) {
+		int answer = 1;
+		Arrays.sort(weight); // 오름차순으로 정렬
+		Set<Integer> set = new LinkedHashSet<>(); // 추로 만들어지는 경우
+		Iterator it = null;
+		int previousMax, nextMax = 0;
+		
+		for (int i = 0; i < weight.length; i++) {
+			int currentWeight = weight[i];
+			if (set.isEmpty()) {
+				set.add(currentWeight);
+				answer = currentWeight; 
+			}
+			else {
+				Set<Integer> tmp = new LinkedHashSet<>(set);
+				it = tmp.iterator();
+				while(it.hasNext()) {
+					set.add(currentWeight + (int)it.next());
+				}
+			}
+			if(set.contains(answer))
+				answer += currentWeight;
+		}
+		
+		return answer;
+	}
+}

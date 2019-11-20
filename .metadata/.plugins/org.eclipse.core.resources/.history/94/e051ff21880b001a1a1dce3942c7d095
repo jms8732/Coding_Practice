@@ -1,0 +1,27 @@
+package programmers;
+//저울 정확성은 다 통과
+
+import java.util.*;
+
+public class problem_48 {
+	public static void main(String[] args) {
+		int tmp [] = {1,5};
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] weight) {
+		Arrays.sort(weight);
+		int bit = 0;
+		for(int i =0 ; i< weight.length ; i++) {
+			bit += weight[i];
+		}
+		int answer= 1;
+		while(true) {
+			if((bit & answer) != answer)
+				break;
+			answer++;
+		}
+		return answer;
+	}
+}
