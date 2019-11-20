@@ -42,6 +42,7 @@
 * [섬 연결하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_31.java)
 * [구명보트](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_32.java)
 * [단속카메라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_47.java)
+* [저울](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_48.java)
 
 ## 동적 계획법(Dynamic Programming)
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
