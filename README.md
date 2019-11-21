@@ -20,9 +20,11 @@
 ## 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
 * [완주하지 못한 마라톤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_16.java)
+* [위장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_49.java)
 
 ## 힙
 * [더 맵게](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_15.java)
+* [라면 공장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_50.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
