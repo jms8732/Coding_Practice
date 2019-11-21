@@ -1,0 +1,64 @@
+package programmers;
+
+//라면 공장
+import java.util.*;;
+
+public class problem_50 {
+	public static void main(String[] args) {
+		int [] tmp = {4,10,15};
+		int [] supp = {20,5,10};
+		
+		int result = solution(4,tmp,supp,30);
+		System.out.println(result);
+	}
+
+	public static int solution(int stock, int[] dates, int[] supplies, int k) {
+		int answer = 0;
+		Queue<Node> dayQueue = new LinkedList<>();
+		for(int i =0 ; i< dates.length ; i++) {
+			dayQueue.add(new Node(dates[i],supplies[i]));
+		}
+		
+		while(!dayQueue.isEmpty()) {
+			List<Node> restList = new LinkedList<>();
+			while(true) {
+				Node tmp = dayQueue.poll();
+				if(tmp.day <= stock)
+					restList.add(tmp);
+				else
+					break;
+			}
+			
+			restList.sort(new Comparator<Node>() {
+
+				@Override
+				public int compare(Node o1, Node o2) {
+					// TODO Auto-generated method stub
+					if(o1.rest < o2.rest) //남은 밀가루 순으로 내림차순
+						return 1;
+					else
+						return -1;
+				}
+				
+			});
+			
+			stock += restList.get(0).rest; //제일 큰 것을 더한다.
+			answer++;
+			restList.clear(); //제거
+			if(stock >= k-1)
+				break;
+		}
+		
+		return answer;
+	}
+	public static class Node{
+		int day,rest;
+		public Node(int d,int r) {
+			this.day =d;
+			this.rest =r;
+		}
+		
+		
+	}
+
+}

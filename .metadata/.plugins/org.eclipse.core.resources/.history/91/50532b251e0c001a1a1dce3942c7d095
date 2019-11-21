@@ -1,0 +1,83 @@
+package programmers;
+
+//라면 공장
+import java.util.*;;
+
+public class problem_50 {
+	public static void main(String[] args) {
+		int[] tmp = { 4, 10, 15 };
+		int[] supp = { 20, 5, 10 };
+
+		int result = solution(4, tmp, supp, 30);
+		System.out.println(result);
+	}
+
+	public static int solution(int stock, int[] dates, int[] supplies, int k) {
+		int answer = 0;
+		List<Node> dayList = new ArrayList<>();
+
+		for (int i = 0; i < dates.length; i++) {
+			dayList.add(new Node(dates[i], supplies[i]));
+		}
+		int idx = 0;
+		List<Node> restList = new ArrayList<>();
+
+		while (!dayList.isEmpty()) {
+			while (true) {
+				if (stock >= dayList.get(idx).day)
+					restList.add(dayList.get(idx));
+				else
+					break;
+				idx++;
+			}
+
+			restList.sort(new Comparator<Node>() {
+
+				@Override
+				public int compare(Node o1, Node o2) {
+					// TODO Auto-generated method stub
+					if (o1.rest < o2.rest)
+						return 1;
+					else if (o1.rest == o2.rest) {
+						if (o1.day < o2.day)
+							return -1;
+						else
+							return 1;
+					} else
+						return -1;
+				}
+
+			});
+
+			stock += restList.get(0).rest;
+			dayList.addAll(restList.subList(idx, restList.size())); // 나머지 부분 넣음
+			dayList.sort(new Comparator<Node>() {
+
+				@Override
+				public int compare(Node o1, Node o2) { //날짜로 정렬
+					// TODO Auto-generated method stub
+					if (o1.day < o2.day)
+						return -1;
+					else
+						return 1;
+				}
+
+			});
+			answer++;
+			if (stock >= k - 1)
+				break;
+		}
+		return answer;
+	}
+
+	public static class Node {
+		int day, rest;
+
+		public Node(int d, int r) {
+			this.day = d;
+			this.rest = r;
+		}
+
+	}
+
+}

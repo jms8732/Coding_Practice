@@ -1,0 +1,75 @@
+package programmers;
+
+//라면 공장
+import java.util.*;;
+
+public class problem_50 {
+	public static void main(String[] args) {
+		int[] tmp = { 3,4, 10, 15 };
+		int[] supp = { 19,20, 5, 10 };
+
+		int result = solution(4, tmp, supp, 30);
+		System.out.println(result);
+	}
+
+	public static int solution(int stock, int[] dates, int[] supplies, int k) {
+		int answer = 0;
+		PriorityQueue<Node> dayList = new PriorityQueue<>();
+
+		for (int i = 0; i < dates.length; i++) {
+			dayList.add(new Node(dates[i], supplies[i]));
+		}
+		List<Node> restList = new ArrayList<>();
+		
+		while(!dayList.isEmpty()) {
+			while(!dayList.isEmpty()) {
+				if(dayList.peek().day <= stock)
+					restList.add(dayList.poll());
+				else
+					break;
+			}
+			
+			restList.sort(new Comparator<Node>() {
+
+				@Override
+				public int compare(Node o1, Node o2) {
+					// TODO Auto-generated method stub
+					if(o1.rest < o2.rest)
+						return 1;
+					else
+						return -1;
+				}
+				
+			});
+			dayList.addAll(restList.subList(1, restList.size()));
+			stock += restList.get(0).rest;
+			answer ++;
+			if(stock >= k-1)
+				break;
+		}
+		
+		return answer;
+		
+	}
+
+	public static class Node implements Comparable<Node>{
+		int day, rest;
+
+		public Node(int d, int r) {
+			this.day = d;
+			this.rest = r;
+		}
+
+		@Override
+		public int compareTo(Node o) {
+			// TODO Auto-generated method stub
+			if(this.day < o.day)
+				return -1;
+			else
+				return 1;
+		}
+		
+		
+	}
+
+}

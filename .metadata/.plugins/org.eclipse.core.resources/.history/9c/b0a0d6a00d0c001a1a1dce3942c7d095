@@ -1,0 +1,60 @@
+package programmers;
+
+//위장
+import java.util.*;
+
+public class problem_49 {
+	static int count = 0;
+
+	public static void main(String[] args0) {
+		String[][] tmp = { { "yellow_hat", "headgear" }  };
+		int result = solution(tmp);
+		System.out.println(result);
+	}
+
+	public static int solution(String[][] clothes) {
+		HashMap<String, Set<String>> map = new HashMap<>();
+
+		for (int i = 0; i < clothes.length; i++) {
+			String kind = clothes[i][1]; // 의상의 종류
+			if (map.get(kind) == null) { // 없을 경우
+				Set<String> tmpSet = new HashSet<>();
+				tmpSet.add(clothes[i][0]);
+				map.put(kind, tmpSet);
+			} else {
+				// 있을 경우
+				Set<String> tmpSet = map.get(kind);
+				tmpSet.add(clothes[i][0]);
+				map.put(kind, tmpSet); // 갱신
+			}
+			//count++;
+		}
+
+		Vector<Set<String>> v = new Vector<>();
+
+		Iterator it = map.keySet().iterator();
+
+		while (it.hasNext()) {
+			String key = (String) it.next();
+			v.add(map.get(key)); // 집합을 넣는다.
+		}
+		for (int i = 0; i < v.size(); i++) {
+			dfs(v, 0, 1, 0, i + 1);
+		}
+
+		return count;
+	}
+
+	public static void dfs(Vector<Set<String>> v, int idx, int current, int currentStep, int step) {
+		if (currentStep == step) {// 현재 단계가 동일 할 경우
+			count += current;
+			return;
+		}
+
+		for (int i = idx; i < v.size(); i++) {
+			Set<String> tmp = v.get(i);
+			dfs(v, i+ 1, current * tmp.size(), currentStep + 1, step);
+		}
+	}
+
+}
