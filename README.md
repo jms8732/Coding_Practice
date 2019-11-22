@@ -80,6 +80,7 @@
 * [2016년](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_22.java)
 * [실패율](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_37.java)
 * [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
+* [가장 먼 노드](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_51.java)
 
 # BackJun
 * [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
