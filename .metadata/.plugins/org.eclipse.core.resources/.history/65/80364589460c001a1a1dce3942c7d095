@@ -1,0 +1,53 @@
+package programmers;
+
+//가장 먼 노드
+import java.util.*;
+
+public class problem_51 {
+	public static void main(String[] args) {
+
+	}
+
+	public static int solution(int n, int[][] edge) {
+		int[][] map  = new int[n][n];
+		
+		//map parsing
+		for(int i= 0 ; i< edge.length ; i++) {
+			int x = edge[i][0] -1;
+			int y = edge[i][1] -1;
+			map[x][y] = 1;
+		}
+		
+		int [] parent = new int[n];
+		for(int i= 0 ; i< parent.length ; i++) {
+			parent[i] = i;
+		}
+		
+		for(int i =0 ; i< map.length ; i++) {
+			for(int j =0 ; j< map[i].length ; j++) {
+				if(map[i][j] != 1)
+				{
+					if()
+				}
+			}
+		}
+	}
+
+	public static int union(int[] parent, int idx) {
+		if (parent[idx] == idx)
+			return idx;
+		else
+			parent[idx] = union(parent, parent[idx]);
+		return -1;
+	}
+
+	public static boolean isCircle(int [] parent,int [] count, int idx1,int idx2) {
+		int parent1 = parent[idx1];
+		int parent2= parent[idx2];
+		
+		if(parent1 < parent2) {
+			parent[parent2] = 
+		}
+		
+	}
+}

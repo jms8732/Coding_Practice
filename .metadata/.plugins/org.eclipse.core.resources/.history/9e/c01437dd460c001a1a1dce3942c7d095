@@ -1,0 +1,64 @@
+package programmers;
+
+//가장 먼 노드
+import java.util.*;
+
+public class problem_51 {
+	static int count = 0;
+	public static void main(String[] args) {
+
+	}
+
+	public static int solution(int n, int[][] edge) {
+		int[][] map  = new int[n][n];
+		
+		//map parsing
+		for(int i= 0 ; i< edge.length ; i++) {
+			int x = edge[i][0] -1;
+			int y = edge[i][1] -1;
+			map[x][y] = 1;
+		}
+		
+		int [] parent = new int[n];
+		int [] count = new int[n];
+		for(int i= 0 ; i< parent.length ; i++) {
+			parent[i] = i;
+		}
+		
+		for(int i =0 ; i< map.length ; i++) {
+			for(int j =0 ; j< map[i].length ; j++) {
+				if(map[i][j] != 1)
+				{
+					if(isCircle(parent,))
+				}
+			}
+		}
+	}
+
+	public static int union(int[] parent, int idx) {
+		if (parent[idx] == idx)
+			return idx;
+		else {
+			count++;
+			parent[idx] = union(parent, parent[idx]);
+		}
+		return -1;
+	}
+
+	public static boolean isCircle(int [] parent,int [] count1, int idx1,int idx2) {
+		int parent1 = parent[idx1];
+		int parent2= parent[idx2];
+		
+		if(parent1 == parent2) //circle이 발생한다.
+			return false;
+		
+		if(parent1 < parent2) {
+			parent[parent2] = union(parent,parent1);
+			count1[parent2] = count;
+		}else {
+			parent[parent1] = union(parent,parent2);
+			count1[parent1] = count;
+		}
+		return true;
+	}
+}

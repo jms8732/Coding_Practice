@@ -1,0 +1,78 @@
+package programmers;
+
+//가장 먼 노드
+import java.util.*;
+
+public class problem_51 {
+	static int count = 0;
+	public static void main(String[] args) {
+		int[][] edge = {{3,6},{4,3},{3,2},{1,3},{1,2},{2,4},{5,2}};
+		int result = solution(6,edge);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[][] edge) {
+		int[][] map  = new int[n][n];
+		int big = 0 ;
+		//map parsing
+		for(int i= 0 ; i< edge.length ; i++) {
+			int x = edge[i][0] -1;
+			int y = edge[i][1] -1;
+			map[x][y] = 1;
+		}
+		
+		int [] parent = new int[n];
+		int [] countTmp = new int[n];
+		for(int i= 0 ; i< parent.length ; i++) {
+			parent[i] = i;
+		}
+		
+		for(int i =0 ; i< map.length ; i++) {
+			for(int j =0 ; j< map[i].length ; j++) {
+				if(map[i][j] != 0)
+				{
+					if(isCircle(parent,i,j)) {
+						int parent1 = parent[i];
+						int parent2= parent[j];
+						if(parent1 < parent2) {
+							parent[parent2] = union(parent,i);
+							countTmp[parent2] = count;
+						}else {
+							parent[parent1] = union(parent,j);
+							countTmp[parent1] = count;
+						}
+						big = Math.max(count, big); //큰 값
+						count =0;
+					}
+				}
+			}
+		}
+		int answer =0 ;
+		for(int i =0 ; i< countTmp.length ; i++)
+			if(big == countTmp[i])
+				answer++;
+		
+		return answer;
+		
+	}
+
+	public static int union(int[] parent, int idx) {
+		count++;
+		if (parent[idx] == idx) 
+			return idx;
+		else {
+			return union(parent, parent[idx]);
+		}
+		return -1;
+	}
+
+	public static boolean isCircle(int [] parent, int idx1,int idx2) {
+		int parent1 = parent[idx1];
+		int parent2= parent[idx2];
+		
+		if(parent1 == parent2) //circle이 발생한다.
+			return false;
+		
+		return true;
+	}
+}
