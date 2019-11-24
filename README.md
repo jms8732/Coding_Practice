@@ -49,6 +49,7 @@
 ## 동적 계획법(Dynamic Programming)
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
 * [타일 장식물](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_30.java)
+* [정수 삼각형](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_52.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
