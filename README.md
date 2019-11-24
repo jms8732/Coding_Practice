@@ -25,7 +25,7 @@
 ## 힙
 * [더 맵게](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_15.java)
 * [라면 공장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_50.java)
-* [디스 컨트롤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_1.java)
+* [디스크 컨트롤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_1.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
