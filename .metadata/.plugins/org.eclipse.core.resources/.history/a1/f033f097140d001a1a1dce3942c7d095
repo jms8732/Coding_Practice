@@ -1,0 +1,32 @@
+package programmers;
+
+//정수삼각형
+import java.util.*;
+
+public class problem_52 {
+	public static void main(String[] args) {
+
+	}
+
+	public static int solution(int[][] triangle) {
+		int answer =0 ;
+		for(int i =0 ; i< triangle.length ; i++) {
+			int nextIdx = i+1;
+			int nextTmp[] = new int[triangle[nextIdx].length]; //임시로 저장할 배열 선언
+			for(int j =0 ; j< triangle[i].length ; j++) {
+				int current = triangle[i][j]; //현재 값
+				for(int k=0 ; k< triangle[nextIdx].length ; k++) {
+					int left = k;
+					int right = k +1;
+					nextTmp[left] = Math.max(nextTmp[left],triangle[nextIdx][left]);
+					answer = Math.max(answer,nextTmp[left]);
+					nextTmp[right] = Math.max(nextTmp[right], triangle[nextIdx][right]);
+					answer = Math.max(answer, nextTmp[right]);
+				}
+				
+			}
+		}
+		
+		return answer;
+	}
+}
