@@ -1,0 +1,61 @@
+package programmers1;
+//예산 65점
+
+import java.util.*;
+
+public class problem_3 {
+	public static void main(String[] args) {
+		int[] tmp = { 120, 110, 130, 140, 150 };
+		int result = solution(tmp, 485);
+		System.out.println(result);
+	}
+
+	public static int solution(int[] budgets, int M) {
+		Arrays.sort(budgets); // 오름차순으로 정렬
+
+		long sum = 0;
+		for (int i = 0; i < budgets.length; i++) {
+			sum += budgets[i];
+		}
+
+		int answer = 0;
+		if (sum <= M) {
+			answer = budgets[budgets.length - 1]; // 가장 최댓값 return
+			return answer;
+		}
+
+		int tmpM = M;
+		sum = 0;
+		int big;
+		int rest = 0;
+		int div = budgets.length;
+		int r = 0;
+		do {
+			tmpM = M;
+			big = 0;
+			sum = 0;
+			r = div % 2;
+			div = div / 2;
+			int restLen = budgets.length - div; // 남은 길이
+			if (r != 0) {
+				// 홀수
+				for(int i =0 ; i<= div ; i++)
+				{
+					sum+= budgets[i];
+					big = Math.max(big, budgets[i]);
+				}
+			} else {
+				//짝수 
+				for (int i = 0; i < div; i++) {
+					sum += budgets[i];
+					big = Math.max(big, budgets[i]);
+				}
+			}
+			tmpM -= sum; // 이분해서 합한 값을 뺀다.
+			rest = tmpM / restLen; // 남은 것 계산
+		} while (big > rest);
+
+		answer = rest;
+		return answer;
+	}
+}
