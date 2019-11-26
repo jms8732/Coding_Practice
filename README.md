@@ -49,6 +49,7 @@
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
+* [입국 심사](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_4.java)
 
 ## 동적 계획법(Dynamic Programming)
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
