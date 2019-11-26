@@ -6,7 +6,7 @@ import java.util.*;
 public class problem_4 {
 	public static void main(String[] args) {
 		int [] tmp = {7,10};
-		long result = solution(1,tmp);
+		long result = solution(6,tmp);
 		System.out.println(result);
 	}
 

@@ -6,16 +6,18 @@ import java.util.*;
 public class problem_4 {
 	public static void main(String[] args) {
 		int [] tmp = {7,10};
-		long result = solution(1,tmp);
+		long result = solution(6,tmp);
 		System.out.println(result);
 	}
 
 	public static long solution(int n, int[] times) {
 		Arrays.sort(times); //시간을 오름차순으로 정렬
-		long low =1 , high= 1000000000000000000L;
-
+		long low =1 , high= times[times.length-1] * n;
 		long result = high;
 		long mid = 0 ; //중간 값
+		
+		if(times.length >= n)
+			return times[times.length-1];
 		
 		while(low <= high) {
 			mid = (low + high)/2;
@@ -25,6 +27,7 @@ public class problem_4 {
 			}
 			else
 				low = mid+1; //개수가 작을 경우에는 중간값을 최소값으로 지정
+			
 		}
 		
 		return result;

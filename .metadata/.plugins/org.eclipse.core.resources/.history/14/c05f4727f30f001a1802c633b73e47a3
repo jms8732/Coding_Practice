@@ -1,0 +1,77 @@
+package samsung;
+//주사위 굴리기
+
+import java.io.*;
+import java.util.*;
+
+public class problem_14499 {
+	static int[][] map;
+	static int[] dice;
+	static int diceX, diceY; // 주사위 좌표
+
+	public static void main(String [] args) {
+		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st= null;
+		dice=  new int[6]; //주사위
+		try {
+			st =new StringTokenizer(br.readLine());
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			map = new int[x][y]; //맵 생성
+			//주사위 좌표 설정
+			diceX = Integer.parseInt(st.nextToken());
+			diceY = Integer.parseInt(st.nextToken());
+			int operation = Integer.parseInt(st.nextToken()); //명령어 수
+			for(int i =0 ;i < x ;i++) {
+				for(int j =0 ; j< y ; j++) {
+					map[i][j] = Integer.parseInt(st.nextToken()); //map에 값 설정
+				}
+			}
+			/*
+			 * dice[0] = 앞, dice[1]= 뒤, dice[2]= 왼, dice[3]=오, dice[4]= 위,dice[5]= 밑
+			 */
+			Vector<Integer> tmpDice = new Vector<>();
+			for(int i =0 ; i< operation ; i++) {
+				//명령
+				int where = Integer.parseInt(st.nextToken()); //방향
+				//방향에 따른 위치 변경
+				int nx,ny =0;
+				switch(where) {
+				case 1:{
+					//동
+					nx = diceX + 1;
+					break;
+				}
+				case 2:{
+					//서
+					nx = diceX - 1;
+					break;
+				}
+				case 3:{
+					//북
+					ny = diceY -1;
+					break;
+				}
+				case 4:{
+					//남
+					ny = diceY +1;
+					break;
+				}
+				
+				if(isPossible(nx,ny)) {
+					
+				}
+			}
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public static boolean isPossible(int x, int y) {
+		if (x >= map.length || y >= map[x].length || x < 0 || y < 0) // 외각일 경우
+			return false;
+		return true;
+	}
+}
