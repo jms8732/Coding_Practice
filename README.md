@@ -97,4 +97,4 @@
 * [3190_뱀](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_3190.java)
 * [14499 주사위 굴리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14499.java)
 * [14503 로봇청소기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14503.java)
-
+* [14889 스타트와링크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14889.java)
