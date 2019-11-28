@@ -1,6 +1,6 @@
 package samsung;
 
-//스타트와 링크, 조합탐색
+//스타트와 링크
 import java.util.*;
 import java.io.*;
 
