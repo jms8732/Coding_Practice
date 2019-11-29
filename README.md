@@ -21,6 +21,7 @@
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
 * [완주하지 못한 마라톤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_16.java)
 * [위장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_49.java)
+* [베스트앨범](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_6.java)
 
 ## 힙
 * [더 맵게](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_15.java)
@@ -55,6 +56,7 @@
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
 * [타일 장식물](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_30.java)
 * [정수 삼각형](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_52.java)
+* [등굣길](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_7.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
@@ -78,6 +80,7 @@
 * [[2019 KAKAO BLIND] 길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
 * [[2020 KAKAO BLIND] 문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
 * [[2020 KAKAO BLIND] 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
+
 ## 그 외
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
