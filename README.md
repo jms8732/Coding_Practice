@@ -80,8 +80,7 @@
 * [[2019 KAKAO BLIND] 길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
 * [[2020 KAKAO BLIND] 문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
 * [[2020 KAKAO BLIND] 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
-* [[2020 KAKAO BLIND] 자물쇠와 열쇠]
-(https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
+* [[2020 KAKAO BLIND] 자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
 
 ## 그 외
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
