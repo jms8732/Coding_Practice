@@ -1,0 +1,21 @@
+package programmers1;
+
+//같은 숫자는 싫어
+
+import java.util.*;
+public class problem_9 {
+	public static void main(String[] args) {
+		
+	}
+	public static int[] solution(int []arr) {
+		Set<Integer> set = new LinkedHashSet<>(); //순서를 유지하기 위해서
+		
+		for(int i =0 ; i < arr.length ; i++) {
+			set.add(arr[i]);
+		}
+		int [] t = new int[set.size()];
+		
+		System.arraycopy(set.toArray(), 0, t, 0, set.size());
+		return t;
+	}
+}
