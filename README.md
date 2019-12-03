@@ -92,6 +92,8 @@
 * [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
 * [가장 먼 노드](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_51.java)
 * [같은 숫자는 싫어](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_9.java)
+* [보행자 천국](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_11.java)
+* [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
 
 # BackJun
 * [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
