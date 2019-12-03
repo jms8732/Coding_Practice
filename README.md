@@ -96,6 +96,7 @@
 * [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
 
 # BackJun
+## Samsung
 * [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
 * [13460_구슬탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13460.java)
 * [14500_테트로미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14500.java)
@@ -105,3 +106,6 @@
 * [14499 주사위 굴리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14499.java)
 * [14503 로봇청소기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14503.java)
 * [14889 스타트와링크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14889.java)
+
+## 다익스트라
+* [1753 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
