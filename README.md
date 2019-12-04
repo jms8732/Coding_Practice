@@ -109,3 +109,4 @@
 
 ## 다익스트라
 * [1753 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
+* [1916 최소비용구하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1916.java)
