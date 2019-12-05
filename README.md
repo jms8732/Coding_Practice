@@ -97,16 +97,18 @@
 
 # BackJun
 ## Samsung
-* [13458_시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
-* [13460_구슬탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13460.java)
-* [14500_테트로미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14500.java)
-* [14501_퇴사](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14501.java)
-* [14502_연구소](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14502.java)
-* [3190_뱀](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_3190.java)
-* [14499 주사위 굴리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14499.java)
-* [14503 로봇청소기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14503.java)
-* [14889 스타트와링크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14889.java)
+* [13458. 시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
+* [13460. 구슬탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13460.java)
+* [14500. 테트로미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14500.java)
+* [14501. 퇴사](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14501.java)
+* [14502. 연구소](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14502.java)
+* [3190. 뱀](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_3190.java)
+* [14499. 주사위 굴리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14499.java)
+* [14503. 로봇청소기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14503.java)
+* [14889. 스타트와링크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14889.java)
 
 ## 다익스트라
-* [1753 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
-* [1916 최소비용구하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1916.java)
+* [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
+* [1916. 최소비용구하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1916.java)
+* [1238. 파티](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1238.java)
+* [1261. 알고스팟](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1261.java)
