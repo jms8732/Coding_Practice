@@ -1,0 +1,28 @@
+package programmers1;
+//가장 긴 팰린드롬 25점
+
+import java.util.*;
+
+public class problem_12 {
+	public static void main(String[] args) {
+		int result = solution("abacdaba");
+		System.out.println(result);
+	}
+
+	public static int solution(String s) {
+		StringBuffer reverse = new StringBuffer(s);
+		reverse = reverse.reverse(); // 뒤집음
+		
+		int answer = 0;
+		for (int j = 3; j < reverse.length() /2; j++) {
+			for (int i = 0; i < reverse.length()-1 - j; i++) {
+				StringBuilder sb = new StringBuilder(reverse.substring(i, j));
+				if(reverse.toString().contains(sb.toString())) {
+					answer = Math.max(answer, j); //길이 저장
+				}
+			}
+		}
+		
+		return answer;
+	}
+}

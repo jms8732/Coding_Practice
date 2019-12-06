@@ -1,0 +1,25 @@
+package programmers1;
+//가장 긴 팰린드롬 25점
+
+public class problem_12 {
+	public static void main(String[] args) {
+		int result = solution("abcdeba");
+		System.out.println(result);
+	}
+
+	public static int solution(String s) {
+		int answer = 0;
+		int frontIdx =0 ;
+		int lastIdx = s.length()-1;
+		
+		while(frontIdx < lastIdx) {
+			if(s.charAt(frontIdx) == s.charAt(lastIdx)) { //팰린드롬인지 확인
+				answer++;
+				frontIdx++;
+			}
+			lastIdx--;
+		}
+
+		return (answer*2) +1;
+	}
+}
