@@ -15,7 +15,7 @@ public class problem_12 {
 		int p[] = new int[updateString.length()];
 		int c=0,r=0; //center, rightBounday
 		
-		for(int i = 1; i< updateString.length() ; i++) {
+		for(int i =1 ; i< updateString.length() ; i++) {
 			//String ¼øÈ¸
 			int mirror = 2*c - i;
 			
@@ -25,9 +25,9 @@ public class problem_12 {
 			
 			int left = i-(1+p[i]);
 			int right = i+(1+p[i]);
-			while(right < updateString.length() && left >= 0 && updateString.charAt(left) == updateString.charAt(right) ) {
+			while(updateString.charAt(left) == updateString.charAt(right) && right < updateString.length() && left >=0) {
 				left--;
-				right++;
+				right--;
 				p[i]++; 
 			}
 			

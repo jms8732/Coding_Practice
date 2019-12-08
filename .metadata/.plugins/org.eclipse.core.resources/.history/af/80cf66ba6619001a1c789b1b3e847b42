@@ -27,7 +27,7 @@ public class problem_12 {
 			int right = i+(1+p[i]);
 			while(right < updateString.length() && left >= 0 && updateString.charAt(left) == updateString.charAt(right) ) {
 				left--;
-				right++;
+				right--;
 				p[i]++; 
 			}
 			
