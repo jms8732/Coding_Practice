@@ -1,6 +1,6 @@
 package programmers1;
-//가장 긴 팰린드롬 
-//manacher 알고리즘
+//가장 긴 팰린드롬 25점
+
 import java.util.*;
 
 public class problem_12 {
@@ -26,7 +26,6 @@ public class problem_12 {
 			int left = i-(1+p[i]);
 			int right = i+(1+p[i]);
 			while(right < updateString.length() && left >= 0 && updateString.charAt(left) == updateString.charAt(right) ) {
-				//확장
 				left--;
 				right++;
 				p[i]++; 
@@ -37,7 +36,7 @@ public class problem_12 {
 				c = i; //center 갱신
 				r = i + p[i]; //right boundary 갱신
 				
-				answer = Math.max(p[i],answer); //가장 큰 값을 구하기 위한 
+				answer = Math.max(p[i],answer);
 			}
 		}
 		
