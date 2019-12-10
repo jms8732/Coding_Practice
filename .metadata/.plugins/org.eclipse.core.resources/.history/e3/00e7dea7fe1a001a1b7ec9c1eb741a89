@@ -1,21 +1,6 @@
 package palindrome;
 
 //가장 긴 증가하는 팰린드롬 부분 수열
-/*
- * 예시
- * 6
- * 32 59 75 75 59 32 result: 6
- * 
- * 5
- * 3 2 1 2 3 result: 1
- * 
- * 7
- * 32 57 57 80 57 57 32 result: 3
- * 
- * 5
- * 8 7 9 7 8 result:3 
- * 
- */
 import java.io.*;
 import java.util.*;
 
@@ -65,6 +50,8 @@ public class problem_16161 {
 				}
 
 			}
+			if (big == 1)
+				big = 0;
 			System.out.println(big);
 		} catch (IOException e) {
 			e.printStackTrace();

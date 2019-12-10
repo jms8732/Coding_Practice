@@ -10,10 +10,10 @@ package palindrome;
  * 3 2 1 2 3 result: 1
  * 
  * 7
- * 32 57 57 80 57 57 32 result: 3
+ * 32 57 57 80 57 57 32
  * 
  * 5
- * 8 7 9 7 8 result:3 
+ * 8 7 9 7 8
  * 
  */
 import java.io.*;

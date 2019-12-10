@@ -13,7 +13,7 @@ package palindrome;
  * 32 57 57 80 57 57 32 result: 3
  * 
  * 5
- * 8 7 9 7 8 result:3 
+ * 8 7 9 7 8
  * 
  */
 import java.io.*;
