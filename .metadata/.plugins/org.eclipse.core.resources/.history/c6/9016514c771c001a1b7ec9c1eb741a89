@@ -1,0 +1,57 @@
+package combination;
+
+//1로 만들기
+import java.util.*;
+
+public class problem_1463 {
+	static int small;
+	static int [] array;
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int N = scanner.nextInt();
+		array = new int[3];
+		array[0] =3;
+		array[1] =2;
+		array[2] =1;
+		
+		small = Integer.MAX_VALUE;
+		int tmp = N;
+		if(N % 2 == 0)
+		{
+			//2로 나누어 지면
+			dfs(tmp /2,1);
+		}
+		if(N % 3 == 0)
+		{
+			//3으로 나눠지면
+			dfs(tmp /3,N+1);
+		}
+		
+		dfs(tmp-1,N+1);
+
+		System.out.println(small);
+		
+	}
+
+	private static void dfs(int target, int count) {
+		if(target == 1) {
+			//값이 1이 되면 비교
+			small = Math.min(small, count);
+			return;
+		}
+			
+		if(target % 2 == 0)
+		{
+			//2로 나누어 지면
+			dfs(target /2,count+1);
+		}
+		if(target % 3 == 0)
+		{
+			//3으로 나눠지면
+			dfs(target/3,count+1);
+		}
+		
+		dfs(target-1,count+1);
+		
+	}
+}

@@ -1,0 +1,57 @@
+package combination;
+
+//1로 만들기
+import java.util.*;
+
+public class problem_1463 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Queue<Node> queue = new LinkedList<>();
+
+		int N = scanner.nextInt();
+
+		int tmp = N;
+		if (tmp % 2 == 0) {
+			// 2로 나눠 떨어지는 경우
+			tmp /= 2;
+		} else if (tmp % 3 == 0) {
+			// 3으로 나눠 떨어지는 경우
+			tmp /= 3;
+		} else
+			tmp -= 1;// 1로 뺀다.
+		
+		queue.add(new Node(1,tmp));
+		
+		int small = Integer.MAX_VALUE;
+		while(!queue.isEmpty()) {
+			Node nTmp = queue.poll();
+			if(nTmp.value == 1) {
+				small = nTmp.count;
+				break;
+			}
+			int t = nTmp.value;
+			if (t % 2 == 0) {
+				// 2로 나눠 떨어지는 경우
+				t /= 2;
+			} else if (t % 3 == 0) {
+				// 3으로 나눠 떨어지는 경우
+				t /= 3;
+			} else
+				t -= 1;// 1로 뺀다.
+			
+			queue.add(new Node(nTmp.count+1,t));
+		}
+		
+		System.out.println(small);
+	}
+
+	private static class Node {
+		int count, value;
+
+		public Node(int c, int v) {
+			this.count = c;
+			this.value = v;
+
+		}
+	}
+}

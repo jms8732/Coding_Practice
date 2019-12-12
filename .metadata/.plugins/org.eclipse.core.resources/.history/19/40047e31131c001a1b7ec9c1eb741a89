@@ -1,0 +1,45 @@
+package combination;
+
+
+//1, 2, 3 더하기
+import java.io.*;
+import java.util.*;
+public class problem_9095 {
+	static int [] array;
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try {
+		int N = Integer.parseInt(br.readLine());
+		array = new int[3];
+		//1,2,3을 저장하는 배열
+		array[0] = 1;
+		array[1] = 2;
+		array[2] = 3;
+		
+		for(int i =0 ; i< N; i++) {
+			int target = Integer.parseInt(br.readLine());
+			int count = dfs(target,array[i]);
+			System.out.println(count);
+		}
+		}catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	private static int dfs(int target ,int current) {
+		int count = 0; //개수 저장
+		
+		if(current >= target) {
+			if(current== target)
+				return 1;
+			return 0;
+		}
+		
+		for(int i =0 ; i< array.length ; i++) {
+			count += dfs(target,current+array[i]);
+			
+		}
+		
+		return count;
+	}
+}
