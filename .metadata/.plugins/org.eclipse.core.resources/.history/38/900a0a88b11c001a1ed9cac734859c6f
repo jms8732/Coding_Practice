@@ -9,10 +9,7 @@ public class problem_1463 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		N = scanner.nextInt();
-		/*
-		 * 런타임 에러가 발생하는 것을 방지하기 위해 배열의 크기를 문제에서 주어진 최댓값 10^6으로 설정한다.
-		 */
-		dp = new int[1000001]; 
+		dp = new int[N +1];
 		dp[2]= 1;
 		dp[3] =1;
 		int result = 0;
@@ -40,8 +37,8 @@ public class problem_1463 {
 		if(target % 3 == 0) result = Math.min(result, dfs(target/3)+1); //3으로 나눠지는 경우
 		
 		result = Math.min(result, dfs(target-1)+1); //1로 뺏을 경우
-		dp[target] = result; //해당 인덱스의 최소로 만들 수 있는 개수를 배열에 저장한다.
-		result = dfs(target+1); //다음 인덱스로 넘어간다.
+		dp[target] = result;
+		result = dfs(target+1);
 		
 		return result;
 	}
