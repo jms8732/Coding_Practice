@@ -121,9 +121,10 @@
 * [11404. 플로이드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_11404.java)
 
 ## 팰린드롬
-* [13285 가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_13275.java)
-* [16161 가장 긴 증가하는 팰린드롬 부분 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_16161.java)
+* [13285. 가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_13275.java)
+* [16161. 가장 긴 증가하는 팰린드롬 부분 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_16161.java)
 
 ## 조합
-* [10974 모든순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10974.java)
-* [9095 1,2,3 더하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_9095.java)
+* [10974. 모든순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10974.java)
+* [9095. 1,2,3 더하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_9095.java)
+* [1463 1로 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1463.java)
