@@ -1,0 +1,12 @@
+package combination;
+
+public class test {
+	public static void main(String[] args) {
+
+		for (int i = 0; i < 4; i++) {
+			String n = Integer.toBinaryString(1 << 3);
+
+			System.out.println(n);
+		}
+	}
+}

@@ -1,0 +1,80 @@
+package combination;
+//단어 수학
+
+import java.util.*;
+import java.io.*;
+
+public class problem_1339 {
+	static String[] s;
+	static Map<Character, Integer> map; // 글자 숫자 중복 방지
+	static List<Character> list;
+	static int N;
+	static int big;
+	
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Set<Character> set = new HashSet<>();
+		try {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			N = Integer.parseInt(st.nextToken());
+			s = new String[N];
+			map = new HashMap<>();
+
+			for (int i = 0; i < N; i++) {
+				String tmp = br.readLine();
+				s[i] = tmp;
+				for (int j = 0; j < tmp.length(); j++) {
+					set.add(tmp.charAt(j)); // 문자들 집합에 저장
+				}
+			}
+			list = new ArrayList<>(set);
+			int [] number = new int[set.size()]; // 숫자 저장
+			
+			
+			for (int i = 0; i < number.length; i++)
+				number[i] = 9 - i;
+
+			int depth = 0;
+			dfs(number ,depth);
+			
+			System.out.println(big);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	private static void dfs(int [] array, int depth) {
+		if(depth == array.length) {
+			for(int i =0 ; i < list.size() ; i++) {
+				char c = list.get(i);
+				int num = array[i];
+				map.replace(c, num);
+			}
+			
+			int result =0 ;
+			for(int i =0 ; i< s.length ; i++) {
+				String tmp = s[i];
+				StringBuilder sb = new StringBuilder();
+				for(int j =0 ; j< tmp.length() ; j++) {
+					sb.append(map.get(tmp.charAt(i)));
+				}
+				result += Integer.parseInt(sb.toString());
+			}
+			
+			big = Math.max(big, result);
+			return;
+		}
+		
+		for(int i = depth ; i < array.length ; i++) {
+			swap(array,depth,i);
+			dfs(array,depth+1);
+			swap(array,depth,i);
+		}
+	}
+	
+	private static void swap(int [] array, int depth,int i) {
+		int tmp =  array[depth];
+		array[depth] = array[i];
+		array[i] = tmp;
+	}
+	
+}

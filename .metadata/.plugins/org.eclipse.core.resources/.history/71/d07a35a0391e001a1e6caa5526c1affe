@@ -1,0 +1,84 @@
+package combination;
+//단어 수학
+
+import java.util.*;
+import java.io.*;
+
+public class problem_1339 {
+	static boolean[] visited; // 숫자 선택 중복 방지
+	static String[] s;
+	static Map<Character, Integer> map; // 글자 숫자 중복 방지
+	static List<Character> list;
+	static int N;
+	static int min;
+
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Set<Character> set = new HashSet<>();
+		try {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			N = Integer.parseInt(st.nextToken());
+			s = new String[N];
+			map = new HashMap<>();
+
+			for (int i = 0; i < N; i++) {
+				String tmp = br.readLine();
+				s[i] = tmp;
+				for (int j = 0; j < tmp.length(); j++) {
+					set.add(tmp.charAt(j)); // 문자들 집합에 저장
+				}
+			}
+			visited = new boolean[10];
+			list = new ArrayList<>(set);
+			min = 10 - set.size(); // 최솟값 정함
+			int idx = 0;
+
+			int result = 0;
+			for (int i = 9; i >= min; i--) {
+				visited[i] = true;
+				map.put(list.get(idx), i);
+				result = Math.max(result, dfs(idx+1));
+				visited[i] = false;
+				map.remove(list.get(idx));
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static int dfs(int depth) {
+		if (list.size() == depth) {
+			int result = 0;
+			for (int i = 0; i < N; i++) {
+				StringBuilder sb = new StringBuilder();
+				String tmp = s[i];
+				for (int j = 0; j < tmp.length(); j++) {
+					char c = tmp.charAt(j);
+					String t = Integer.toString(map.get(c));
+					sb.append(t);
+				}
+				result += Integer.parseInt(sb.toString());
+			}
+
+			return result;
+		}
+		int result = 0;
+		
+		for (int i = 9; i >= min; i--) {
+			if(map.containsKey(list.get(depth)))
+				result = dfs(depth+1);
+			else {
+				if(!visited[i]) {
+					visited[i] = true;
+					map.put(list.get(depth), i);
+					result = dfs(depth+1);
+					visited[i] = false;
+					map.remove(list.get(depth));
+				}
+			}
+		}
+		
+		return result;
+	}
+}
