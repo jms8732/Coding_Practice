@@ -130,3 +130,4 @@
 * [1463 1로 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1463.java)
 * [1182. 부분수열의 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1182.java)
 * [1339. 단어 수학](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1339.java)
+* [2309. 일곱난쟁이](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_2309.java)
