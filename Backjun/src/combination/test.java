@@ -28,17 +28,17 @@ public class test {
 			}
 		}
 		long end = System.currentTimeMillis();
-		System.out.println("visited time : " + (end-start)/100000.0);
+		System.out.println("visited time : " + (end-start)/1000.0);
 		
 		depth = 0 ;
+		
 		start = System.currentTimeMillis();
-	
 		swapDfs(array,0,array.length,array.length);
 		end = System.currentTimeMillis();
-		System.out.println("swap time : " + (end-start)/100000.0);
+		System.out.println("swap time : " + (end-start)/1000.0);
 	}
 	private static void swapDfs(int array[], int depth,int n ,int r) {
-		if(array.length == r) {
+		if(depth == r) {
 			//print(array);
 			return; 
 		}
