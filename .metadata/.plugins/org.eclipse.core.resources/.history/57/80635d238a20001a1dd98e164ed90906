@@ -10,8 +10,8 @@ public class problem_1941 {
 	static int[] rl = { 0, 1, 0, -1 }; // 양옆
 	static int count; // 개수를 저장하는 변수
 	static char[] map;
-	static boolean[] mapVisited; //조합을 하기 위한 변수
-	static int cnt; //DFS의 개수를 카운트하기 위한 변수
+	static boolean[] mapVisited;
+	static int cnt;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
