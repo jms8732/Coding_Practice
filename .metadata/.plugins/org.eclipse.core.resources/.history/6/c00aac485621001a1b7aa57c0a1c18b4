@@ -1,0 +1,76 @@
+package samsung;
+
+//경사로
+
+import java.util.*;
+import java.io.*;
+
+public class problem_14890 {
+	static int N, L ;
+	static int count;
+	public static void main(String[] args)throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		N = Integer.parseInt(st.nextToken());
+		L = Integer.parseInt(st.nextToken());
+		int [][] map = new int[N][N];
+		
+		for(int i =0 ; i < N ; i++) {
+			st = new StringTokenizer(br.readLine());
+			for(int j =0 ; j< N ; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+		
+		List<List<Integer>> list=  new ArrayList<>();
+		
+		for(int [] tmp : map) { //가로의 경로
+			List<Integer> tmpList = new ArrayList<>();
+			for(int i : tmp) {
+				tmpList.add(i);
+			}
+			list.add(tmpList);
+		}
+		
+		for(int i =0 ; i< N ; i++) { //세로의 경로
+			List<Integer> tmpList = new ArrayList<>();
+			for(int j =0 ; j < N; j++) {
+				tmpList.add(map[j][i]);
+			}
+			list.add(tmpList);
+		}
+		
+		checkRoad(list);
+	}
+	
+	private static void checkRoad(List<List<Integer>> list) {
+		for(int i =0 ; i< list.size(); i++) {
+			List<Integer> tmp = list.get(i);
+			boolean[] visited = new boolean[tmp.size()];
+			
+			if(isFlat(tmp)) { //경로가 평평할 경우
+				count++;
+				continue;
+			}
+			
+			int idx = 0;
+			while(idx < tmp.size()) {
+				List<Integer> subList = tmp.subList(idx, idx+L); //L크기만큼 가져온다
+				if(isFlat(subList)) {
+					idx++; //가져온 부분이 평평하면 다음 인덱스로 넘어간다
+				}else {
+					setRunway(subList,tmp,visited);
+				}
+			}
+			
+		}
+	}
+	private static void setRunway(List<Integer> subList, List<Integer> tmp, boolean[] visited) {
+		for(int i =0 ; i< subList.size()) {
+			
+		}
+	}
+
+}
