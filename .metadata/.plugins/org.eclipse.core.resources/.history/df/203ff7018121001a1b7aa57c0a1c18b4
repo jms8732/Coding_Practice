@@ -70,7 +70,7 @@ public class test {
 			map[x][py] = map[x][y];
 		}
 		
-		map[2][0] =0; 
+		map[0][0] =0; 
 	}
 
 	private static void circleRotation(int x, int y, int[][] map) {
