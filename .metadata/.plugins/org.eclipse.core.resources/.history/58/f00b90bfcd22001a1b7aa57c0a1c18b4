@@ -1,0 +1,56 @@
+package programmers1;
+//가장 큰 정사각형 찾기
+
+import java.util.*;
+
+public class problem_13 {
+	public static void main(String[] args) {
+		int[][] board = {{0,1,1,1},{1,1,1,1},{1,1,1,1},{0,0,1,0}};
+		int result = solution(board);
+		System.out.println(result);
+	}
+
+	public static int solution(int[][] board) {
+		int[][] window = null;
+		int len = board.length * board[0].length; // 정사각형 이므로
+
+		int size = board.length > board[0].length ? board[0].length : board.length; //작은 값 반환
+			
+		int windowSize = size +1;
+		boolean check = false;
+		while (!check) {
+			windowSize-=1;
+			if(windowSize <= 0)
+				break;
+			for (int i = 0; i < len; i++) {
+				int x = i / len;
+				int y = i % len;
+				
+				if(x + windowSize <0 || x+ windowSize > size || y+ windowSize < 0 || y + windowSize > size)
+					break;
+
+				if(board[x][y] == 0)
+					continue;
+				
+				if (checkSquare(x, y, windowSize, board)) {
+					check = true;
+					break;
+				}
+			}
+		}
+		
+		return (windowSize)*(windowSize);
+		
+	}
+
+	private static boolean checkSquare(int x, int y, int windowSize, int[][] board) {
+		for (int i = x; i < x + windowSize; i++) {
+			for (int j = y; j < y + windowSize; j++) {
+				if (board[i][j] == 0) //정사각형을 구성하는 값 중 한개라도 0이 존재할 경우
+					return false;
+			}
+		}
+
+		return true;
+	}
+}
