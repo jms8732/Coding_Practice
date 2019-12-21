@@ -138,3 +138,6 @@
 
 ## 문자열
 * [1786 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kmp/problem_1786.java)
+
+## 크루즈칼
+* [1922. 네트워크 연결](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kruskal/problem_1922.java)
