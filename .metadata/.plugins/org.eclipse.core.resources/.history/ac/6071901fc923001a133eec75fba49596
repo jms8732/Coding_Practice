@@ -30,7 +30,7 @@ public class test {
 	}
 	private static void print(int [] sp) {
 		for(int i =0 ; i< sp.length ; i++) {
-			System.out.print(sp[i] + " ");
+			System.out.print(i + " ");
 		}
 		System.out.println();
 	}
