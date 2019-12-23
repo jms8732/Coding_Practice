@@ -1,0 +1,69 @@
+package programmers1;
+
+public class test {
+	String[] data2 = null;
+	int N = 0;
+	int answer = 0;
+
+	public int solution(int n, String[] data) {
+		N = n;
+		data2 = new String[n];
+		data2 = data;
+		char T = '4';
+		System.out.println(T - 48);
+		char[] arr1 = { 'A', 'C', 'F', 'J', 'M', 'N', 'R', 'T' };
+		permutation(arr1, 0, 8);
+		return answer;
+	}
+
+	public void permutation(char[] arr, int curNum, int destNum) {
+		if (curNum == destNum) {
+
+			for (int i = 0; i < N; i++) {
+				char start = data2[i].charAt(0);
+				char end = data2[i].charAt(2);
+				int startIndex = 0;
+				int endIndex = 0;
+				char distance = data2[i].charAt(4);
+				char compareOp = data2[i].charAt(3);
+				for (int j = 0; j < arr.length; j++) {
+					if (start == arr[j]) {
+						startIndex = j;
+					} else if (end == arr[j]) {
+						endIndex = j;
+					}
+				}
+
+				if (compareOp == '=' && Math.abs(startIndex - endIndex) - 1 == distance - 48) {
+					continue;
+				} else if (compareOp == '>' && Math.abs(startIndex - endIndex) - 1 > distance - 48) {
+					continue;
+				} else if (compareOp == '<' && Math.abs(startIndex - endIndex) - 1 < distance - 48) {
+					continue;
+				} else {
+					return;
+				}
+			}
+			answer++;
+			return;
+		}
+
+		for (int i = 0; i + curNum < arr.length; i++) {
+
+			swap(arr, curNum, curNum + i);
+
+			permutation(arr, curNum + 1, destNum);
+
+			swap(arr, curNum, curNum + i);
+
+		}
+		return;
+
+	}
+
+	public void swap(char[] arr, int origin, int changer) {
+		char temp = arr[origin];
+		arr[origin] = arr[changer];
+		arr[changer] = temp;
+	}
+}

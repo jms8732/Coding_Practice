@@ -11,8 +11,9 @@ import java.util.*;
 
 public class test {
 	static boolean[] visited;
+	static int count;
 	public static void main(String[] args) {
-		int array[] = {1,2,3,4,5,6,7,8,9,10};
+		int array[] = {1,2,3,4,5,6,7,8};
 		visited = new boolean[array.length];
 		int value[] = new int[array.length];
 		int depth = 0;
@@ -29,17 +30,18 @@ public class test {
 		}
 		long end = System.currentTimeMillis();
 		System.out.println("visited time : " + (end-start)/1000.0);
-		
+		System.out.println("count : " + count);
 		depth = 0 ;
-		
+		count = 0;
 		start = System.currentTimeMillis();
 		swapDfs(array,0,array.length,array.length);
 		end = System.currentTimeMillis();
 		System.out.println("swap time : " + (end-start)/1000.0);
+		System.out.println("count : " + count);
 	}
 	private static void swapDfs(int array[], int depth,int n ,int r) {
 		if(depth == r) {
-			//print(array);
+			count++;
 			return; 
 		}
 		
@@ -59,7 +61,7 @@ public class test {
 	
 	private static void visitedDfs(int [] array,int [] value, int depth) {
 		if(array.length == depth) {
-			//print(value);
+			count++;
 			return;
 		}
 		for(int i =0 ; i< array.length ; i++) {
