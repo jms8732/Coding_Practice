@@ -1,0 +1,40 @@
+package programmers1;
+
+//°Å½º¸§µ·
+import java.util.*;
+
+public class problem_15 {
+	static int count = 0;
+	static Set<ArrayList<Integer>> set;
+	public static void main(String[] args) {
+		int[] money = { 1, 2, 5 };
+		int result = solution(5, money);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[] money) {
+		set = new HashSet<>();
+		for(int i =0 ; i< money.length ; i++) {
+			ArrayList<Integer> list = new ArrayList<>();
+			list.add(money[i]);
+			dfs(n, money[i], money,list);
+		}
+		return count;
+	}
+
+	public static void dfs(int target, int value, int[] money,ArrayList<Integer> list) {
+		if (target <= value) {
+			if (target == value && !set.contains(list)) {
+				set.add(list);
+				count++;
+			}
+			return;
+		}
+
+		for (int i = 0; i < money.length; i++) {
+			list.add(money[i]);
+			dfs(target, value + money[i], money,list);
+			list.remove(list.size()-1);
+		}
+	}
+}
