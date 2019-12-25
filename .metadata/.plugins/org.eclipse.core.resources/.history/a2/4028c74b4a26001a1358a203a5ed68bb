@@ -9,7 +9,6 @@ public class test2 {
 		System.out.println("중복 없는 조합 : " );
 		combination(0,value,array,0);
 		
-		value = new int[2];
 		System.out.println("중복 있는 조합 : " );
 		reCombination(0,value,array,0);
 	}
@@ -21,8 +20,8 @@ public class test2 {
 		if(idx == array.length) return;
 		
 		value[depth] = array[idx];
-		reCombination(depth+1,value,array,idx);
 		reCombination(depth,value,array,idx+1);
+		reCombination(depth+1,value,array,idx);
 	}
 	
 	

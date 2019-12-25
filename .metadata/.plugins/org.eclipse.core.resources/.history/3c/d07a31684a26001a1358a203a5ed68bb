@@ -22,7 +22,7 @@ public class test2 {
 		
 		value[depth] = array[idx];
 		reCombination(depth+1,value,array,idx);
-		reCombination(depth,value,array,idx+1);
+		reCombination(depth,value,array,idx);
 	}
 	
 	

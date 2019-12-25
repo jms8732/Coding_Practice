@@ -1,0 +1,12 @@
+package programmers1;
+
+//°Å½º¸§ µ·
+public class problem_16 {
+	public static int solution(int n, int[] money) {
+		int [] dp = new int[n];
+		
+		
+		
+		
+	}
+}
