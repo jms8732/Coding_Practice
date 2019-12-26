@@ -7,9 +7,7 @@
 
 클릭하시면 해당 소스 코드로 넘어갑니다.
 
-# Programmers
-
-## 스택 / 큐
+# 스택 / 큐
 * [프린터](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_3.java)
 * [기능 개발](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_7.java)
 * [탑](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_2.java)
@@ -17,29 +15,30 @@
 * [쇠 막대기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_5.java)
 * [주식 가격](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_8.java)
 
-## 해시
+# 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
 * [완주하지 못한 마라톤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_16.java)
 * [위장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_49.java)
 * [베스트앨범](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_6.java)
 
-## 힙
+# 힙
 * [더 맵게](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_15.java)
 * [라면 공장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_50.java)
 * [디스크 컨트롤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_1.java)
 * [이중우선순위큐](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_5.java)
-## 정렬
+
+# 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
 * [가장 큰 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_25.java)
 * [H-Index](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_27.java)
 
-## 완전 탐색
+# 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
 * [모의고사](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_18.java)
 * [카펫](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_33.java)
 * [숫자 야구](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_34.java)
 
-## 탐욕법(Greedy)
+# 탐욕법(Greedy)
 * [큰 수 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_13.java)
 * [체육복](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_19.java)
 * [조이스틱](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_23.java)
@@ -48,30 +47,30 @@
 * [단속카메라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_47.java)
 * [저울](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_48.java)
 
-## 이분법(Binary Search)
+# 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
 * [입국 심사](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_4.java)
 
-## 동적 계획법(Dynamic Programming)
+# 동적 계획법(Dynamic Programming)
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
 * [타일 장식물](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_30.java)
 * [정수 삼각형](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_52.java)
 * [등굣길](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_7.java)
 * [가장 큰 정사각형 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_13.java)
 * [멀리 뛰기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_15.java)
+* [거스름돈](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_16.java)
+* [2xn 타일링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_12.java)
 
-## 깊이/넓이 우선 탐색(DFS/BFS)
+# 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
 * [네트워크](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_28.java)
 * [단어 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_45.java)
 * [여행 경로](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_46.java)
-
-## 서머/윈터 코딩
-* [[2018 서머/윈터코딩] 스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
 * [[2019 서머/윈터코딩] 종이접기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_41.java
 )
+* [카카오 프렌즈 컬러링 북](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_20.java)
 
-## Kakao
+# Kakao
 * [[2017 카카오코드 페스티벌 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
 * [[2018 KAKAO BLIND] [1차] 뉴스 클러스터링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java) 
 * [[2018 KAKAO BLIND] [1차] 캐시](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_42.java)
@@ -85,23 +84,17 @@
 * [[2020 KAKAO BLIND] 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 * [[2020 KAKAO BLIND] 자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
 
-
-## 그 외
+# 그 외
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
-* [2xn 타일링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_12.java)
-* [카카오 프렌즈 컬러링 북](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_20.java)
 * [2016년](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_22.java)
 * [실패율](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_37.java)
 * [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
-* [가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_12.java)
-* [가장 먼 노드](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_51.java)
 * [같은 숫자는 싫어](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_9.java)
 * [보행자 천국](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_11.java)
-* [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
+* [[2018 서머/윈터코딩] 스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
 
-# BackJun
-## Samsung
+# Samsung
 * [13458. 시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
 * [13460. 구슬탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13460.java)
 * [14500. 테트로미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14500.java)
@@ -114,21 +107,25 @@
 * [14888 연산자 끼워넣기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14888.java)
 * [15683. 감시](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_15683.java)
 * [17144. 미세먼지 안녕!](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17144.java)
-## 다익스트라
+
+# 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
 * [1916. 최소비용구하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1916.java)
 * [1238. 파티](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1238.java)
 * [1261. 알고스팟](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1261.java)
+* [가장 먼 노드](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_51.java)
 
-## 플로이드와샬
+# 플로이드와샬
 * [2458. 키순서](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_2458.java)
 * [11404. 플로이드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_11404.java)
+* [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
 
-## 팰린드롬
+# 팰린드롬
 * [13285. 가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_13275.java)
+* [가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_12.java)
 * [16161. 가장 긴 증가하는 팰린드롬 부분 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_16161.java)
 
-## 조합
+# 조합
 * [10974. 모든순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10974.java)
 * [9095. 1,2,3 더하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_9095.java)
 * [1463 1로 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1463.java)
@@ -140,8 +137,9 @@
 * [2003. 수들의 합2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_2003.java)
 * [1941. RGB 거리](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1941.java)
 
-## 문자열
+# 문자열
 * [1786. 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kmp/problem_1786.java)
 * [1305. 광고](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kmp/problem_1305.java)
-## 크루즈칼
+
+# 크루즈칼
 * [1922. 네트워크 연결](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kruskal/problem_1922.java)
