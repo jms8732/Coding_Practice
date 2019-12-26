@@ -1,0 +1,107 @@
+package programmers1;
+
+//리틀 프랜즈
+
+import java.util.*;
+
+public class problem_17 {
+	static int ud[] = { -1, 0, 1, 0 };
+	static int rl[] = { 0, 1, 0, -1 };
+
+	public static void main(String[] args) {
+		String[] s = { "AB", "BA" };
+		String result = solution(2, 4, s);
+		System.out.println(result);
+	}
+
+	public static String solution(int m, int n, String[] board) {
+		char[][] map = new char[m][n];
+		Queue<Character> queue = null;
+		Set<Character> set = new TreeSet<>(); // 문자를 오름차순으로 정렬
+		// map 초기화
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				map[i][j] = board[i].charAt(j);
+				if (map[i][j] >= 'A' && map[i][j] <= 'Z')
+					set.add(map[i][j]);
+			}
+		}
+
+		queue = new LinkedList<>(set); // 문자열 순환
+		
+		Queue<Character> queue1 = new LinkedList<>(queue);
+		boolean [] dVisited = new boolean[4];
+		boolean check;
+		StringBuilder sb = new StringBuilder();
+		while(!queue.isEmpty()) {
+			check = false;
+			char target = queue.poll();
+			
+			for(int i =0 ; i < m ; i++) {
+				for(int j =0 ; j < n ;  j++) {
+					if(map[i][j] == target) {
+						dfs(0,dVisited,i,j,i,j,map);
+						if(map[i][j] == '.') { //없어진 경우
+							check= true;
+							break;
+						}
+					}
+				}
+				if(check)
+					break;
+			}
+			if(!check) {
+				queue.add(target);
+			}else
+				sb.append(target);
+			if(queue.equals(queue1))
+				return "IMPOSSIBLE";
+		}
+		
+		return sb.toString();
+
+	}
+
+	private static void dfs(int depth, boolean[] dVisited, int px,int py,int x, int y, char[][] map) {
+		if (depth == 2)
+			return;
+
+		int tmpX = x;
+		int tmpY = y;
+		
+		for (int i = 0; i < 4; i++) {
+			x = tmpX;
+			y = tmpY;
+			if (!dVisited[i]) {
+				// 되돌아 가는 것을 방지
+				while (true) {
+					int nx = x + ud[i];
+					int ny = y + rl[i];
+
+					if (nx < 0 || nx >= map.length || ny < 0 || ny >= map[nx].length) {
+						// 벗어나는 경우
+						if (nx != x && ny != y) {
+							// 다음 좌표가 현재 좌표가 아닌 경우
+							dVisited[i] = true;
+							dfs(depth + 1, dVisited,px,py, nx, ny, map);
+							dVisited[i] = false;
+						}
+						break;
+					}
+					
+					if(map[nx][ny] != '.') {
+						//타일이 있거나 벽이 존재하는 경우
+						if(map[px][py] == map[x][y]) {
+							map[px][py] = '.';
+							map[x][y] = '.';
+							return;
+						}
+					}
+					
+					x = nx;
+					y=  ny;
+				}
+			}
+		}
+	}
+}

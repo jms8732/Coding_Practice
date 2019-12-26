@@ -1,0 +1,134 @@
+package programmers1;
+
+//리틀 프랜즈
+
+import java.util.*;
+
+public class problem_17 {
+	static boolean[][] visited;
+	static int x1, y1, x2, y2;
+
+	public static void main(String[] args) {
+		String[] s = { "NRYN", "ARYA" };
+		String result = solution(2, 4, s);
+		System.out.println(result);
+	}
+
+	public static String solution(int m, int n, String[] board) {
+		char[][] map = new char[m][n];
+		Stack<Node> stack = new Stack<>(); // 제거될 좌표들이 저장돼 있는 stack
+		visited = new boolean[m][n]; // 해당 좌표의 값이 방문했는지 판단하기 위한 값
+		// map 초기화
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				map[i][j] = board[i].charAt(j);
+			}
+		}
+
+		StringBuilder sb = new StringBuilder();
+		List<String> list = new ArrayList<>();
+		boolean [] dVisited =  new boolean[4];
+		boolean check = false;
+		while (!check) {
+			check = true;
+			for (int i = 0; i < m; i++) {
+				for (int j = 0; j < n; j++) {
+					if (map[i][j] >= 'A' && map[i][j] <= 'Z' && !visited[i][j]) {
+						// 해당 좌표에 문자가 존재할 경우
+						x1 = i;
+						y1 = j;
+						dfs(0,dVisited, i, j, map, stack);
+					}
+				}
+			}
+			if (!stack.isEmpty()) {
+				removeChar(stack, map, sb); // stack에 존재하는 값 제거
+				check = false;
+
+			}
+		}
+
+		if (sb.toString() == null)
+			return "IMPOSSIBLE";
+
+		return sb.toString();
+
+	}
+
+	private static void removeChar(Stack<Node> stack, char[][] map, StringBuilder sb) {
+		while (!stack.isEmpty()) {
+			Node tmp = stack.pop();
+			int x = tmp.x;
+			int y = tmp.y;
+			map[x][y] = '.'; // 해당 위치를 점으로 바꿈
+			visited[x][y] = false; // 해당 위치 초기화
+			if (sb.toString().indexOf(tmp.value) < 0) // 해당 값이 없을 경우 붙인다. 중복을 피하기 위해
+				sb.append(tmp.value);
+		}
+	}
+
+	private static void dfs(int depth, boolean[] dVisited, int x, int y, char[][] map, Stack<Node> stack) {
+		if (depth == 2)
+			return;
+
+		int px = x, py = y;
+		int ud[] = { -1, 0, 1, 0 };
+		int rl[] = { 0, 1, 0, -1 };
+		boolean check = false;
+		for (int i = 0; i < 4; i++) {
+			// 4방향으로 직진
+			if (!dVisited[i]) {
+				x = px;
+				y = py;
+				while (true) {
+					int nx = x + ud[i]; // 다음 좌표 값
+					int ny = y + rl[i];
+
+					if (nx < 0 || nx >= map.length || ny < 0 || ny >= map[nx].length) {
+						// 범위를 벗어나는 경우
+						check = true;
+						break;
+					}
+
+					if (map[nx][ny] != '.') {
+						// 문자나 벽이 존재할 경우
+						break;
+					}
+
+					x = nx;
+					y = ny;
+				}
+
+				if (check) {
+					// 범위를 벗어나게 되는 경우
+					dVisited[i] = true;
+					dfs(depth + 1,dVisited, x, y, map, stack);
+					dVisited[i] = false;
+				} else {
+					// 문자나 벽이 존재할 경우
+					if (map[px][py] == map[x][y]) {
+						// 문자가 같은 경우
+						stack.add(new Node(px, py, map[x1][y1]));
+						stack.add(new Node(x, y, map[x2][y2]));
+						visited[x1][y1] = true;
+						visited[x2][y2] = true;
+						break;
+					}
+				}
+			}
+		}
+
+		return;
+	}
+
+	private static class Node {
+		int x, y;
+		char value;
+
+		public Node(int x, int y, char v) {
+			this.x = x;
+			this.y = y;
+			this.value = v;
+		}
+	}
+}
