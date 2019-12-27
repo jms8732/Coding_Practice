@@ -60,6 +60,7 @@
 * [멀리 뛰기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_15.java)
 * [거스름돈](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_16.java)
 * [2xn 타일링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_12.java)
+* [땅따먹기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problm_19.java)
 
 # 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
