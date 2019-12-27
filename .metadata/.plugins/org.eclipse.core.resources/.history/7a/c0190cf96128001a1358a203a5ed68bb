@@ -1,0 +1,40 @@
+package programmers1;
+
+//¶¥µû¸Ô±â
+public class problm_19 {
+	public static void main(String[] args) {
+		int [][] land = {{1,2,3,5},{5,6,7,8},{4,3,2,1}};
+		int result = solution(land);
+		System.out.println(result);
+	}
+
+	public static int solution(int[][] land) {
+		int [][] dp = new int[land.length][4];
+		int depth = 0;
+		for(int i = 0;  i< 4 ; i++) {
+			int value =  land[depth][i];
+			dp[depth][i] = Math.max(dp[depth][i], value);
+			dfs(depth+1,value,i,dp,land);
+		}
+		int answer =0 ;
+		for(int i =0 ; i< 4;  i++) {
+			answer = Math.max(answer, dp[dp.length-1][i]);
+		}
+		
+		return answer;
+	}
+	
+	private static void dfs(int depth,int value,int preIdx,int [][] dp, int [][] land) {
+		if(depth == land.length) {
+			return; 
+		}
+		
+		for(int i =0 ; i < 4; i++) {
+			if(preIdx != i) {
+				//ÀÌÀü ÀÎµ¦½º¿Í °°ÀÌ ¾ÊÀ¸¸é
+				dp[depth][i] = Math.max(dp[depth][i], land[depth][i]+value);
+				dfs(depth+1,land[depth][i],i,dp,land);
+			}
+		}
+	}
+}
