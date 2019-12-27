@@ -1,0 +1,28 @@
+package programmers1;
+
+//¿Ã¹Ù¸¥ °ýÈ£
+public class problem_18 {
+	public static void main(String[] args) {
+		boolean result = solution(")()(");
+		System.out.println(result);
+	}
+	
+	private static boolean solution(String s) {
+		boolean answer = false;
+		int count = 0;
+		
+		for(int i =0 ; i< s.length() ; i++) {
+			if(s.charAt(i) == ')' && i==0)
+				return false;
+			if(s.charAt(i) == '(')
+				count++;
+			else
+				count--;
+		}
+		
+		
+		if(count == 0)
+			return !answer;
+		return answer;
+	}
+}
