@@ -1,0 +1,30 @@
+package programmers1;
+//기지국 설치
+
+public class problem_22 {
+	public static void main(String[] args) {
+		int N = 11;
+		int [] stations = {4,11};
+		int W = 1;
+		int result = solution(N,stations,W);
+		System.out.println(result);
+	}
+	public static int solution(int n, int[] stations, int w) {
+		int remain = n;
+		
+		for(int i = 0 ; i< stations.length ; i++) {
+			if(stations[i] == 0 || stations[i] == n)
+				remain -= 1*w+1;
+			else
+				remain -= 2*w+1;
+		}
+		int answer = remain / (2*w+1);
+		
+		if(remain % (2*w+1) != 0) {
+			answer += 1;
+		}
+		
+		return answer;
+		
+	}
+}

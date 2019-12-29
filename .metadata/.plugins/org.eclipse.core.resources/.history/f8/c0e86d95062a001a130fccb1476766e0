@@ -1,0 +1,16 @@
+package programmers1;
+//기지국 설치
+
+public class problem_22 {
+	public int solution(int n, int[] stations, int w) {
+		int remain = n - (2*w+1)*stations.length;
+		int answer = remain / (2*w+1);
+		
+		if(remain % (2*w+1) != 0) {
+			answer += 1;
+		}
+		
+		return answer;
+		
+	}
+}

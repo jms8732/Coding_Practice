@@ -38,7 +38,6 @@ public class problem_21 {
         	int f= road[i][1]-1;
         	int w = road[i][2];
         
-        	//양방향이기 때문에 양쪽에다 넣는다.
         	list[f].add(new Node(s,w));
         	list[s].add(new Node(f,w));
         }
