@@ -42,7 +42,6 @@
 * [큰 수 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_13.java)
 * [체육복](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_19.java)
 * [조이스틱](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_23.java)
-* [섬 연결하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_31.java)
 * [구명보트](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_32.java)
 * [단속카메라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_47.java)
 * [저울](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_48.java)
@@ -96,6 +95,7 @@
 * [같은 숫자는 싫어](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_9.java)
 * [보행자 천국](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_11.java)
 * [[2018 서머/윈터코딩] 스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
+* [[2018 서머/윈터코딩] 방문길이](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_20.java)
 * [올바른 괄호](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_18.java)
 
 # Samsung
@@ -147,3 +147,4 @@
 
 # 크루즈칼
 * [1922. 네트워크 연결](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kruskal/problem_1922.java)
+* [섬 연결하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_31.java)
