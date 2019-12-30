@@ -1,0 +1,50 @@
+package programmers1;
+
+//줄서는 법
+
+import java.util.*;
+
+public class problem_23 {
+	public static void main(String[] args) {
+		int[] result = solution(3,5);
+	}
+
+	public static int[] solution(int n, long k) {
+		int[] answer = {};
+		boolean[] visited = new boolean[n];
+		int [] original = new int[n];
+		
+		for(int i = 0 ;i < n ; i++) original[i] = i+1;
+		List<int[]> list = new ArrayList<>();
+		int [] value = new int[n];
+		dfs(0,n,original, value, list,visited);
+		print(list);
+		return answer;
+	}
+	
+	private static void print(List<int[] > list) {
+		for(int [] tmp : list) {
+			for(int i=0 ; i < tmp.length ; i++) {
+				System.out.print(tmp[i] + " " );
+			}
+			System.out.println();
+		}
+	}
+	
+	private static void dfs(int depth,int n,int [] original, int [] value, List<int[]> list, boolean [] visited) {
+		if(depth == value.length)
+		{
+			list.add(value);
+			return;
+		}
+		
+		for(int i =0 ; i< n; i++) {
+			if(!visited[i]) {
+				visited[i]= true;
+				value[depth] = original[i];
+				dfs(depth+1,n,original,value,list,visited);
+				visited[i] = false;
+			}
+		}
+	}
+}
