@@ -1,0 +1,55 @@
+package programmers1;
+//소수 만들기
+
+import java.util.*;
+
+public class problem_25 {
+	static int count =0;
+	public static void main(String[] args) {
+		int [] nums = {1,2,3,4};
+		int result = solution(nums);
+		System.out.println(result);
+	}
+	public static int solution(int[] nums) {
+		int depth = 0;
+		int n = 3;
+		int [] value = new int[3];
+		permutation(depth,value,nums);
+		
+		return count;
+	}
+	
+	public static void permutation(int depth, int [] value, int [] nums) {
+		if(depth == value.length) {
+			if(isPrime(value)) count++;
+			return;
+		}
+		
+		for(int i = depth ; i < nums.length;  i++) {
+			swap(depth,i,nums);
+			value[depth] = nums[i];
+			permutation(depth+1,value,nums);
+			swap(i,depth,nums);
+		}
+	}
+	
+	private static boolean isPrime(int[] value) {
+		int sum =0;
+		for(int i =0 ; i< value.length ; i++) {
+			sum += value[i];
+		}
+		
+		//소수 판단
+		for(int i = sum-1; i >=2 ; i--) {
+			if(sum % i == 0)
+				return false;
+		}
+		return true;
+	}
+	
+	public static void swap(int depth, int i, int[] nums) {
+		int tmp = nums[depth];
+		nums[depth] = nums[i];
+		nums[i] = tmp;
+	}
+}
