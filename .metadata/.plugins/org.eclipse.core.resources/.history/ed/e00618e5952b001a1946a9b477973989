@@ -1,0 +1,46 @@
+package programmers1;
+
+//기지국 설치
+import java.util.*;
+
+public class problem_24 {
+	public static void main(String[] args) {
+		int n = 11;
+		int[] stations = { 4,11};
+		int w = 1;
+		int result = solution(n, stations, w);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[] stations, int w) {
+		int answer = 0;
+		Deque<Integer> dq = new LinkedList<>();
+		dq.add(1); //시작 지점
+		for(int i =0 ; i < stations.length ; i++) {
+			int start = dq.pollLast();
+			int left = stations[i] - w-1;
+			int right = stations[i] + w+ 1;
+			
+			if(left > start) {
+				dq.add(start);
+				dq.add(left);
+			}
+			if(right > n)
+				right = n;
+			dq.add(right);
+		}
+		
+		while(!dq.isEmpty()) {
+			int left = dq.poll();
+			int right = dq.poll();
+			
+			int blockCount = right- left + 1;
+			int tmp = blockCount / (2*w+1);
+			if(blockCount % (2*w+1) != 0) {
+				answer++;
+			}
+			answer += tmp;
+		}
+		return answer;
+	}
+}

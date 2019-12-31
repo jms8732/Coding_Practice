@@ -6,7 +6,8 @@ import java.util.*;
 
 public class problem_23 {
 	public static void main(String[] args) {
-		int[] result = solution(4,14);
+		long n = 2432902008176640000L;
+		int[] result = solution(20,n);
 		for(int i : result) {
 			System.out.print(i+ " ");
 		}

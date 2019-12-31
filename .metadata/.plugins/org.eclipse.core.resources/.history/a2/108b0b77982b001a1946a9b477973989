@@ -1,0 +1,55 @@
+package programmers1;
+
+//기지국 설치
+import java.util.*;
+
+public class problem_24 {
+	public static void main(String[] args) {
+		int n = 200000000;
+		int[] stations = new int[10000];
+		for(int i =0; i < 10000 ; i++) {
+			stations[i] = i+1;
+		}
+		int w=1 ;
+		long start = System.currentTimeMillis();
+		int result = solution(n, stations, w);
+		long end = System.currentTimeMillis();
+		System.out.println("time : " + (end-start)/1000.0);
+		System.out.println(result);
+	}
+
+	   public static int solution(int n ,int [] stations, int w) {
+			int answer =0 ;
+			Queue<Integer> queue =new LinkedList<>();
+			
+			//큐에 값 할당
+			for(int i = 0 ; i < stations.length ; i++) queue.add(stations[i]);
+			
+			int start = 1;
+			while(!queue.isEmpty()) {
+				int point = queue.poll();
+				int left = point-w-1; //현재 포인트의 전파 밖위치
+				int right = point+ w+1; 
+				
+				if(left > start) {
+					int blockCount = left - start +1; //전파가 닿지 않는 블록의 수
+					int tmp = blockCount / (2*w+1);
+					if(blockCount % (2*w+1) != 0)
+						answer++;
+					answer += tmp; //개수 더하기
+				}
+				if(right > n)
+					right = n+1;
+				start = right; //다음 시작 위치
+			}
+			
+				if (start <= n) {
+				int last = n - start + 1;
+				int tmp = last / (2 * w + 1);
+				if (last % (2 * w + 1) != 0)
+					answer++;
+				answer += tmp;
+			}
+			return answer;
+		}
+}
