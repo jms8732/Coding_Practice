@@ -47,6 +47,7 @@
 * [저울](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_48.java)
 * [[2018 서머/윈터코딩]숫자 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_22.java)
 * [줄 서는법](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_23.java)
+* [[2018 서머/윈터코딩]기지국 설치](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_24.java)
 
 # 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
