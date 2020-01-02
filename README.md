@@ -103,6 +103,7 @@
 * [2003. 수들의 합2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_2003.java)
 * [1941. RGB 거리](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1941.java)
 * [[2018 서머/윈터코딩] 소수만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_25.java)
+* [N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_28.java)
 
 ## KMP
 * [1786. 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kmp/problem_1786.java)
