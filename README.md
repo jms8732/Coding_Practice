@@ -122,8 +122,9 @@
 * [보행자 천국](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_11.java)
 * [[2018 서머/윈터코딩] 스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
 * [[2018 서머/윈터코딩] 방문길이](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_20.java)
+* [[2018 서머/윈터코딩] 점프와 순간이동](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_27.java)
+* [[2018 서머/윈터코딩] 영어 끝말 잇기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_26.java)
 * [올바른 괄호](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_18.java)
-
 
 ## Kakao
 * [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
