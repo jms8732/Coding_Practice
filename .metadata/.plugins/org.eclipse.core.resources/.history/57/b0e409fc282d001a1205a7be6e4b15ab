@@ -1,0 +1,59 @@
+package programmers1;
+
+//N-Queen
+
+
+public class problem_28 {
+	static int count =0;
+	public static void main(String[] args) {
+		
+	}
+    public static int solution(int n) {
+        int answer = 0;
+        boolean [][] map = new boolean[n][n];
+        int depth =0 ;
+        dfs(depth,0,n,map);
+        return answer;
+    }
+    
+    private static void dfs(int depth,int next,int n, boolean[][] map) {
+    	if(depth == n) {
+    		//퀸의 개수가 n개가 된 경우, 경우의 수를 증가시킨다.
+    		count++;
+    		return;
+    	}
+    	
+    	for(int i =next ; i < n*n ; i++) {
+    		int x = i / n*n;
+    		int y = i % n*n;
+    		
+    		if(!map[x][y]) {
+    			//방문하지 않았다면 퀸이 도달할 수 없는 지역으로 판단
+    			fill(x,y,map); //퀸의 이동방향으로 채운다.
+    			dfs(depth+1, i,n,map);
+    		}
+    	}
+    }
+    
+    private static void fill(int x,int y, boolean [][] map) {
+    	//퀸은 8방향으로 이동할 수 있다. 북,북동,동,동남,남,남서,서,북서
+    	int ud[] = {-1,-1,0,1,1,1,0,-1};
+    	int rl[] = {0,1,1,1,0,-1,-1,-1};
+    	
+    	for(int i =0 ; i< ud.length ; i++) {
+    		while(true) {
+    			int nx = x + ud[i];
+        		int ny = y + rl[i];
+        		
+        		if(nx < 0 || nx >= map.length || ny < 0 || ny >= map.length)
+        			break;
+        		
+        		map[nx][ny] = true; //퀸이 이동 할 수 있는 좌표 
+        		
+        		//다음 좌표로 이동
+        		x = nx;
+        		y = ny;
+    		}
+    	}
+    }
+}
