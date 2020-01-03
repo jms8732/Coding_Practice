@@ -6,7 +6,7 @@ public class problem_28 {
 	static int count = 0;
 
 	public static void main(String[] args) {
-		int result = solution(5);
+		int result = solution(8);
 		System.out.println(result);
 	}
 
@@ -36,6 +36,13 @@ public class problem_28 {
 				copyMap(tmpMap, map);
 			}
 		}
+
+		/*
+		 * for(int i =next ; i < n*n ; i++) { int x = i / n; int y = i % n;
+		 * 
+		 * if(!map[x][y]) { //방문하지 않았다면 퀸이 도달할 수 없는 지역으로 판단 fill(x,y,map); //퀸의 이동방향으로
+		 * 채운다. map[x][y] = true; dfs(depth+1,i+4,n,map); copyMap(tmpMap,map); } }
+		 */
 	}
 
 	private static void copyMap(boolean[][] src, boolean[][] target) {

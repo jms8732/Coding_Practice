@@ -1,12 +1,18 @@
-package programmers1;
+package combination;
 
 //N-Queen
+import java.io.*;
 
-public class problem_28 {
+public class problem_9663 {
 	static int count = 0;
 
-	public static void main(String[] args) {
-		int result = solution(5);
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		long start = System.currentTimeMillis();
+		int result = solution(Integer.parseInt(br.readLine()));
+		long end = System.currentTimeMillis();
+		System.out.println("time : " + (end - start) / 1000.0);
 		System.out.println(result);
 	}
 
@@ -28,7 +34,7 @@ public class problem_28 {
 		copyMap(map, tmpMap); // 채우기 이전의 모습
 
 		for (int j = 0; j < n; j++) {
-			if (!map[next][j]) {
+			if (!map[next][j]) { // 퀸은 좌우로 이동이 가능하므로 행에 맞게 행동한다.
 				fill(next, j, map);
 				map[next][j] = true;
 				dfs(depth + 1, next + 1, n, map);
@@ -46,26 +52,19 @@ public class problem_28 {
 	}
 
 	private static void fill(int x, int y, boolean[][] map) {
-		// 퀸은 8방향으로 이동할 수 있다. 북,북동,동,동남,남,남서,서,북서
-		int ud[] = { -1, -1, 0, 1, 1, 1, 0, -1 };
-		int rl[] = { 0, 1, 1, 1, 0, -1, -1, -1 };
-		int tmpX = x, tmpY = y;
-		for (int i = 0; i < ud.length; i++) {
-			x = tmpX;
-			y = tmpY;
-			while (true) {
-				int nx = x + ud[i];
-				int ny = y + rl[i];
+		int gap = 1;
+		while (x < map.length) {
+			// x가 map의 범위를 벗어나기 전 까지 반복
+			int nx = x + 1; // 다음 x좌표
+			map[nx][y] = true;
+			int leftY = y - gap;
+			int rightY = y + gap;
+			if (leftY > 0)
+				map[x][leftY] = true;
+			if (rightY > map.length)
+				map[x][rightY] = true;
 
-				if (nx < 0 || nx >= map.length || ny < 0 || ny >= map.length)
-					break;
-
-				map[nx][ny] = true; // 퀸이 이동 할 수 있는 좌표
-
-				// 다음 좌표로 이동
-				x = nx;
-				y = ny;
-			}
+			x = nx;
 		}
 	}
 }

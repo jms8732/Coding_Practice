@@ -1,15 +1,16 @@
-package programmers1;
+package combination;
 
 //N-Queen
+import java.io.*;
 
-public class problem_28 {
-	static int count = 0;
-
-	public static void main(String[] args) {
-		int result = solution(5);
+public class problem_9663 {
+	static int count=0;
+	public static void main(String[] args) throws IOException{
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		
+		int result = solution(Integer.parseInt(br.readLine()));
 		System.out.println(result);
 	}
-
 	public static int solution(int n) {
 		boolean[][] map = new boolean[n][n];
 		int depth = 0;

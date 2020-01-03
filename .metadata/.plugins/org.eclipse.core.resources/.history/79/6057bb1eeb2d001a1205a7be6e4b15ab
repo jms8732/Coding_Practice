@@ -1,0 +1,65 @@
+package combination;
+
+//N-Queen
+import java.io.*;
+
+public class problem_9663 {
+	static int count = 0;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		long start = System.currentTimeMillis();
+		int result = solution(Integer.parseInt(br.readLine()));
+		long end = System.currentTimeMillis();
+		System.out.println("time : " + (end - start) / 1000.0);
+		System.out.println(result);
+	}
+
+	public static int solution(int n) {
+		boolean[] original = new boolean[n];
+		boolean[] idx = new boolean[n];
+		int depth = 0;
+		dfs(depth, n, original, idx);
+		return count;
+	}
+
+	private static void dfs(int depth, int n, boolean[] original, boolean[] idx) {
+		if (depth == n) {
+			// 퀸의 개수가 n개가 된 경우, 경우의 수를 증가시킨다.
+			count++;
+			return;
+		}
+		
+		boolean [] tmpOriginal = new boolean[n];
+		
+		copyMap(original,tmpOriginal);
+
+		for (int i = 0; i < n; i++) {
+			if (!tmpOriginal[i]) {
+				idx[i] = true;
+				original[i] = true;
+
+				copyMap(idx, original);
+
+				int left = i - 1;
+				int right = i + 1;
+
+				if (left >= 0)
+					original[left] = true;
+
+				if (right < n)
+					original[right] = true;
+
+				dfs(depth + 1, n, original, idx);
+				idx[i] = false;
+			}
+		}
+
+	}
+
+	private static void copyMap(boolean[] src, boolean[] target) {
+		System.arraycopy(src, 0, target, 0, src.length);
+	}
+
+}
