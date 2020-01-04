@@ -72,6 +72,8 @@
 * [[2019 서머/윈터코딩] 종이접기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_41.java
 )
 * [카카오 프렌즈 컬러링 북](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_20.java)
+* [9963. N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_9663.java)
+* [N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_28.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
@@ -103,7 +105,6 @@
 * [2003. 수들의 합2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_2003.java)
 * [1941. RGB 거리](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_1941.java)
 * [[2018 서머/윈터코딩] 소수만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_25.java)
-* [N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_28.java)
 
 ## KMP
 * [1786. 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kmp/problem_1786.java)
