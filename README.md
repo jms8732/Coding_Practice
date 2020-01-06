@@ -31,7 +31,6 @@
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
 * [가장 큰 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_25.java)
 * [H-Index](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_27.java)
-* [[2018 서머/윈터코딩] 예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_29.java)
 
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
@@ -49,6 +48,7 @@
 * [[2018 서머/윈터코딩]숫자 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_22.java)
 * [줄 서는법](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_23.java)
 * [[2018 서머/윈터코딩]기지국 설치](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_24.java)
+* [[2018 서머/윈터코딩] 예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_29.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
@@ -128,6 +128,8 @@
 * [[2018 서머/윈터코딩] 점프와 순간이동](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_27.java)
 * [[2018 서머/윈터코딩] 영어 끝말 잇기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_26.java)
 * [올바른 괄호](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_18.java)
+* [최고의 집합](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_31.java)
+* [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_30.java)
 
 ## Kakao
 * [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
