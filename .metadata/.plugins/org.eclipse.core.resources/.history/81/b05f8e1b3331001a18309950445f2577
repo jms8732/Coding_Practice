@@ -1,0 +1,36 @@
+package dp;
+
+//Á¦°ö¼öÀÇ ÇÕ
+
+import java.util.*;
+
+public class problem_1699 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int N = scanner.nextInt();
+		
+		int [] dp = new int[100001];
+		dp[1] = 1;
+		dp[2] = 2;
+		
+		for(int i = 3 ; i <= N ; i++) {
+			dp[i] = min(dp,i-1);
+		}
+		
+		System.out.println(dp[N]);
+	}
+	
+	private static int min(int [] dp, int N) {
+		int left = 1 , right = N;
+		int min = Integer.MAX_VALUE;
+		while(left <= right) {
+			min = Math.min(min, dp[left]+dp[right]);
+			left++;
+			right--;
+		}
+		
+		
+		return min;
+	}
+}

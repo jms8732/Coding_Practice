@@ -1,0 +1,40 @@
+package dp;
+
+//Á¦°ö¼öÀÇ ÇÕ
+
+import java.util.*;
+
+public class problem_1699 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		int N = scanner.nextInt();
+		
+		int [] dp = new int[100001];
+		dp[1] = 1;
+		long start = System.currentTimeMillis();
+		for(int i = 2 ; i <= N ; i++) {
+			int pow = (int)Math.pow(i,2);
+			dp[pow] = 1;
+			
+			if(dp[i] == 0)
+				dp[i] = min(dp,i-1);
+		}
+		long end = System.currentTimeMillis();
+		System.out.println("time : " + (end-start)/1000.0);
+		System.out.println(dp[N]);
+	}
+	
+	private static int min(int [] dp, int N) {
+		int left = 1 , right = N;
+		int min = Integer.MAX_VALUE;
+		while(left <= right) {
+			min = Math.min(min, dp[left]+dp[right]);
+			left++;
+			right--;
+		}
+		
+		
+		return min;
+	}
+}

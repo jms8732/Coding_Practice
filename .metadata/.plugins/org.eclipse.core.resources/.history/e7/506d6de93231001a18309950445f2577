@@ -9,7 +9,7 @@ public class problem_2193 {
 		Scanner scanner = new Scanner(System.in);
 		int N = scanner.nextInt();
 		
-		long [] dp = new long[90]; //int형으로 하게 되면 overflow가 발생한다.
+		long [] dp = new long[90];
 		
 		dp[0] = 1;
 		dp[1] = 1;
