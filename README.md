@@ -65,6 +65,7 @@
 * [2xn 타일링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_12.java)
 * [땅따먹기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problm_19.java)
 * [9465. 스티커](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_9465.java)
+* [2193. 이친수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2193.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
