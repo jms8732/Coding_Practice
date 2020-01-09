@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;dp.problem_2294&apos; to &apos;problem_10844&apos;&#x0D;&#x0A;- Original project: &apos;Backjun&apos;&#x0D;&#x0A;- Original element: &apos;dp.problem_2294&apos;&#x0D;&#x0A;- Renamed element: &apos;dp.problem_10844&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;problem_2294&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;dp{problem_2294.java[problem_2294" matchStrategy="1" name="problem_10844" qualified="false" references="true" similarDeclarations="false" stamp="1578537111904" textual="false" version="1.0"/>
+</session>

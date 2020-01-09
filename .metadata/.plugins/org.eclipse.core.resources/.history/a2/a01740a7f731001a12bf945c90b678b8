@@ -18,8 +18,8 @@ public class problem_11052 {
 			array[i] = Integer.parseInt(st.nextToken());
 		}
 
-		int[][] dp = new int[N + 1][N + 1];/*
-		long start = System.currentTimeMillis();*/
+		int[][] dp = new int[N + 1][N + 1];
+		long start = System.currentTimeMillis();
 		for (int i = 1; i <= N; i++) {
 			dp[1][i] = Math.max(array[i],array[1] * i);
 		}
@@ -29,9 +29,9 @@ public class problem_11052 {
 			for(int j= i+1 ; j <=N; j++) {
 				dp[i][j] = Math.max(dp[i-1][j],dp[i][i]+dp[i][j-i]);
 			}
-		}/*
+		}
 		long end = System.currentTimeMillis();
-		System.out.println("time : " + (end-start)/1000.0);*/
+		System.out.println("time : " + (end-start)/1000.0);
 		System.out.println(dp[N][N]);
 	}
 }
