@@ -69,6 +69,7 @@
 * [1699. 제곱수의 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_1699.java)
 * [10844. 쉬운 계단 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_10844.java)
 * [11052. 카드 구매하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11052.java)
+* [2294. 동전2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2294.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
