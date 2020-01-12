@@ -31,7 +31,7 @@
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
 * [가장 큰 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_25.java)
 * [H-Index](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_27.java)
-* [나누어 떨어지는 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_33.java)
+* [나누어 떨어지는 ](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_33.java)
 
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
