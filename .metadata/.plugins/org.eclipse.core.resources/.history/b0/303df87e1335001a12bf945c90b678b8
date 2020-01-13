@@ -164,7 +164,7 @@ public class problem_32 {
 		int count = cc;
 		// 북쪽
 		int nx = baseX + ud[0];
-		if (nx >= 0) // 범위 내에 존재할 경우
+		if (nx >= 1) // 범위 내에 존재할 경우
 		{
 			if (map[lx - 1][ly] == 0 && map[rx - 1][ry] == 0) { // 둘다 벽이 없을 경우
 				if (!visited[lx - 1][ly][rx - 1][ry]) {
@@ -198,7 +198,7 @@ public class problem_32 {
 
 		// 동쪽
 		ny = baseY + rl[3];
-		if (ny >= 0) {
+		if (ny >= 1) {
 			if (map[lx][ly - 1] == 0 && map[rx][ry - 1] == 0) {
 				if (!visited[lx][ly - 1][rx][ry - 1]) {
 					visited[lx][ly - 1][rx][ry - 1] = true;

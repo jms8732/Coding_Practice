@@ -1,0 +1,53 @@
+package programmers1;
+
+//야근 지수
+
+import java.util.*;
+public class problem_34 {
+	public static void main(String[] args) {
+		int [] works = {2,1,2};
+		long result = solution(1,works);
+		System.out.println(result);
+	}
+	public static long solution(int n , int [] works) {
+		long answer =0 ;
+		List<Integer> list = new ArrayList<>();
+		
+		for(int i =0 ; i < works.length ; i++) {
+			list.add(works[i]);
+		}
+		
+		//내림차순으로 정렬
+		list.sort(new Comparator<Integer>() {
+
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				// TODO Auto-generated method stub
+				if(o1 < o2)
+					return 1;
+				else
+					return -1;
+			}
+			
+		});
+		
+		
+		int div = n / list.size();
+		int reminder = n % list.size();
+		
+		//남은 부분
+		for(int i =0 ; i < reminder ; i++) {
+			long tmp = list.get(i) - (div+1);
+			if(tmp > 0)
+				answer += (int)Math.pow(tmp, 2);
+		}
+		
+		for(int i = reminder; i < list.size() ; i++) {
+			long tmp = list.get(i) - div;
+			if(tmp > 0)
+				answer += (int)Math.pow(tmp,2);
+		}
+		
+		return answer;
+	}
+}
