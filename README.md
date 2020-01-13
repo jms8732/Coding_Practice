@@ -31,6 +31,7 @@
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
 * [가장 큰 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_25.java)
 * [H-Index](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_27.java)
+* [나누어 떨어지는 숫자 배열](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_33.java)
 
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
@@ -73,6 +74,7 @@
 * [11057. 오르막 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11057.java)
 * [11051. 이항 계수2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11051.java)
 * [12865. 평범한 배낭](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_12865.java)
+
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
 * [네트워크](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_28.java)
@@ -154,6 +156,7 @@
 * [[2020 KAKAO BLIND] 문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
 * [[2020 KAKAO BLIND] 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 * [[2020 KAKAO BLIND] 자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
+* [[2020 KAKAO BLIND] 블록 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_32.java)
 
 ## Samsung
 * [13458. 시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
