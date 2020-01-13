@@ -1,0 +1,49 @@
+package programmers1;
+
+//야근 지수
+import java.util.*;
+
+public class problem_35 {
+	public static void main(String[] args0) {
+		int[] works = {5,4,3,2,1};
+		long result = solution(11,works);
+		System.out.println(result);
+	}
+
+	public static long solution(int n, int[] works) {
+		long answer = 0;
+		Queue<Integer> queue = new LinkedList<>();
+		Arrays.sort(works); //오름차순 정렬
+		for(int i =0 ; i< works.length ; i++) queue.add(works[i]);
+		
+		int step = 0;
+		while(!queue.isEmpty()) {
+			int div = n / queue.size();
+			int first = queue.peek();
+			if(div >= first) {
+				//회전 수가 맨 앞에 있는 수보다 클 경우
+				int idx = queue.poll();
+				//다른 값이 나올때 까지 큐에서 뺀다.
+				while(idx == queue.peek())
+					queue.poll();
+			}
+			else
+			{
+				List<Integer> list = new ArrayList<>(queue);
+				//내림 차순을 정렬
+				list.sort(Collections.reverseOrder());
+				div = n / list.size();
+				int reminder = n % list.size();
+				for(int i =0 ; i< reminder ; i++) {
+					answer += Math.pow(list.get(i)-(div+1), 2);
+				}
+				
+				for(int i = reminder ; i < list.size() ; i++)
+					answer += Math.pow(list.get(i)-div,2);
+				break;
+			}
+		}
+	
+		return answer;
+	}
+}
