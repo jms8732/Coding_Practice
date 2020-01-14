@@ -145,6 +145,7 @@
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_30.java)
 * [[찾아라 프로그래밍 마에스터]폰켓몬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_34.java)
 * [숫자의 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_36.java)
+* [다음 큰 숫자](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_39.java)
 
 ## Kakao
 * [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
