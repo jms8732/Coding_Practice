@@ -12,7 +12,7 @@ public class problem_43 {
 			if(s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')
 				return false;
 		}
-		//문자열 s의 길이가 4 혹은 6
+		
 		if(s.length() == 4 || s.length() == 6)
 			return true;
 		
