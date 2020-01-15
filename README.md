@@ -122,6 +122,7 @@
 
 ## 백트래킹
 * [2580. 스도쿠](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2580.java)
+* [1987. 알파벳](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_1987.java)
 
 ## 문자열
 * [1786. 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kmp/problem_1786.java)
