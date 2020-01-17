@@ -1,0 +1,44 @@
+package programmers1;
+
+import java.util.*;
+
+//¿ÃªÛ«— πÆ¿⁄ ∏∏µÈ±‚
+
+public class problem_48 {
+	public static void main(String[] args) {
+		String s = "try hello world";
+		System.out.println(solution(s));
+	}
+
+	public static String solution(String s) {
+		StringBuilder sb = new StringBuilder();
+		Queue<Integer> queue = new LinkedList<>();
+		for(int i =0 ; i< s.length() ; i++) 
+			if(s.charAt(i) == ' ')
+				queue.add(i); //∫Ûƒ≠ ¡¬«• 
+		
+		String[] tmp = s.split(" "); //∫Ûƒ≠¿∏∑Œ ≥™¥©±‚
+		
+		for(int i =0 ; i< tmp.length ; i++){
+			String tmpp = tmp[i];
+			for (int i = 0; i < tmpp.length(); i++) {
+				if (i % 2 == 0)// ¬¶ºˆ¿Œ ∞ÊøÏ
+					sb.append(Character.toUpperCase(tmpp.charAt(i)));
+				else // »¶ºˆ ¿Œ ∞ÊøÏ
+					sb.append(Character.toLowerCase(tmpp.charAt(i)));
+			}
+		}
+		
+		StringBuilder answer = new StringBuilder();
+		int idx =0 ;
+		for(int i =0 ; i< s.length() ; i++) {
+			int eidx = queue.poll();
+			if(i != eidx)
+				answer.append(sb.append(idx++));
+			else if(i == eidx)
+				answer.append(' ');
+		}
+		
+		return answer.toString();
+	}
+}
