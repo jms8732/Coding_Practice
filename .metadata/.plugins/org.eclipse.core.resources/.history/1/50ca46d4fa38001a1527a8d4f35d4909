@@ -1,0 +1,20 @@
+package programmers1;
+
+//시저 암호
+public class problem_46 {
+	public String solution(String s ,int n) {
+		StringBuilder sb =new StringBuilder();
+		for(int i =0 ; i< s.length() ; i++) {
+			int c = 0;
+			if(s.charAt(i) != ' ')
+				c = (s.charAt(i) + n);
+			else if(s.charAt(i) >= 'a' && s.charAt(i)<= 'z') //소문자 일 경우
+				c = s.charAt(i) % 'a';
+			else if(s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') //대문자 일 경우
+				c = s.charAt(i) % 'A';
+			sb.append((char)c); //형변환
+		}
+		
+		return sb.toString();
+	}
+}
