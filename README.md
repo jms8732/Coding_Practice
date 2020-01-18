@@ -163,6 +163,8 @@
 * [자릿수 더하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_49.java)
 * [자연수 뒤집어 배열로 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_50.java)
 * [제일 작은 수 제거하기](https://github.com/jms8732/Coding_Practice/tree/master/programmers/src/programmers2/problem_1.java)
+* [정수 제곱근 판별](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_3.java)
+
 ## Kakao
 * [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
 * [[2017 카카오코드 본선]리틀 프랜즈 사천성](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_17.java)
