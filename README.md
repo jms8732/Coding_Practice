@@ -35,6 +35,7 @@
 * [나누어 떨어지는 숫자 배열](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_33.java)
 * [문자열 내 마음대로 정렬하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_37.java)
 * [문자열 내림차순으로 배치하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_42.java)
+* [정수 내림차순으로 배치하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_2.java)
 
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
