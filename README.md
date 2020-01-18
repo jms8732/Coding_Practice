@@ -27,6 +27,7 @@
 * [디스크 컨트롤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_1.java)
 * [이중우선순위큐](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_5.java)
 * [야근 지수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_35.java)
+* [최솟값 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_7.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
