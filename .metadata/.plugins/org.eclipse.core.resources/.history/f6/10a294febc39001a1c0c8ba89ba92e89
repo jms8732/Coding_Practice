@@ -1,0 +1,32 @@
+package programmers2;
+
+//최대공약수와 최소공배수
+public class problem_6 {
+	public static void main(String[] args) {
+		for(int i : solution(12,24))
+		{
+			System.out.print(i + " " );
+		}
+	}
+	
+	public static int [] solution(int n ,int m) {
+		int small =1; 
+		int big = Math.max(m, n);
+		for(int i = 2; i <= big; i++) {
+			if(n % i == 0 && m % i ==0) {
+				n /= i;
+				m /= i;
+				small *= i;
+			}
+		}
+		
+		int value1 = n / small;
+		int value2 = m / small;
+		
+		int[] answer = new int[2];
+		answer[0] = small;
+		answer[1] = value1 * value2*  small;
+		
+		return answer;
+	}
+}
