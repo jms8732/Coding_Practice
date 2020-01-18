@@ -1,0 +1,31 @@
+package programmers2;
+
+import java.util.Arrays;
+
+//제일 작은 수 제거하기
+public class problem_1 {
+	public static void main(String[] args) {
+		int[] arr = {4,3,2,1};
+		for(int i : solution(arr)) {
+			System.out.print(i + " ");
+		}
+	}
+	
+	public static int[] solution(int [] arr) {
+		Arrays.sort(arr);
+		int [] answer = new int[arr.length-1];
+		
+		if(answer.length == 1)
+		{
+			//빈 배열일 경우
+			answer[0] = -1;
+			return answer;
+		}
+		
+		for(int i =0 ; i < answer.length ; i++) {
+			answer[i] = arr[arr.length-i];
+		}
+		
+		return answer;
+	}
+}

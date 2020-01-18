@@ -1,0 +1,49 @@
+package backTracking;
+
+//순열장난
+import java.util.*;
+import java.io.*;
+
+public class problem_10597 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int[] array = new int[50];
+		boolean[] visited = new boolean[50]; // 중복 방지
+		int depth = 0, next = 0;
+		dfs(depth, next, br.readLine(), array, visited);
+		br.close();
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] != 0)
+				System.out.print(array[i] + " ");
+		}
+	}
+
+	private static boolean dfs(int depth, int next, String s, int[] array, boolean[] visited) {
+		if (next >= s.length()) {
+			return true;
+		}
+		boolean check = false;
+		for (int i = 1; i <= 2; i++) {
+			if (next + i <= s.length()) {
+				String tmp = s.substring(next, next + i);// 현재 숫자
+				int value = Integer.parseInt(tmp);
+				if(value == 0)
+					break;
+				if (value >=1 && value <= 50 && !visited[value - 1]) {
+					// 최소 1부터 50까지의 순열이므로 50이 최대 숫자이다
+					visited[value - 1] = true;
+					array[depth] = value;
+					check = dfs(depth + 1, next + i, s, array, visited);
+					if (check)
+						return true;
+					array[depth] = 0;
+					visited[value - 1] = false;
+				}
+			}
+		}
+		return check;
+	}
+
+}
