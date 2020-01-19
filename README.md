@@ -126,7 +126,7 @@
 * [15651. N과 M(3)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15651.java)
 * [15652. N과 M(4)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15652.java)
 * [15653. N과 M(5)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15653.java)
-* [15654. N과 M(6)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15654.java)
+* [15654. N과 M(6)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15655.java)
 
 ## 백트래킹
 * [2580. 스도쿠](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2580.java)
