@@ -1,0 +1,44 @@
+package combination;
+
+//N°ú M (3)
+import java.io.*;
+import java.util.*;
+
+public class problem_15651 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+
+		int[] array = new int[M];
+		int[] value = new int[N];
+		for(int i =0 ; i< value.length ; i++) value[i] = i+1;
+		
+		int depth = 0, idx = 0;
+		dfs(depth,idx N, value, array);
+	}
+
+	private static void dfs(int depth, int idx, int N, int[] value, int[] array) {
+		if (depth == array.length) {
+			print(array);
+			return;
+		}
+
+		if(idx == value.length) {
+			return;
+		}
+		
+		array[depth] = value[idx];
+		dfs(depth+1,idx,N,value,array);
+		dfs(depth,idx+1,N,value,array);
+	}
+
+	private static void print(int[] array) {
+		for (int i : array) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+	}
+}
