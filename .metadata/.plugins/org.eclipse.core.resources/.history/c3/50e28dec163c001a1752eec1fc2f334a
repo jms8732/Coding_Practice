@@ -1,0 +1,75 @@
+package samsung_Atype;
+
+//파이프 옮기기 1
+import java.util.*;
+import java.io.*;
+
+public class problem_17070 {
+	static int count = 0;
+
+	public static void main(String[] args0) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+
+		int[][] map = new int[N][N];
+		StringTokenizer st = null;
+
+		// 초기화 과정
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
+			for (int j = 0; j < N; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+
+		dfs(0, 0, 0, 1, map, 0);
+	}
+
+	private static void dfs(int lx, int ly, int rx, int ry, int[][] map, int direction) {
+		if (isReach(lx, ly, rx, ry, map.length)) {
+			count++;
+			return;
+		}
+		int rl[] = { 1, 0, 1 };
+		int ud[] = { 0, 1, 1 };
+		for (int i = 0; i < 3; i++) {
+			/*
+			 * 3가지 방향 (가로, 세로, 대각선) 0: 가로, 1: 세로, 2: 대각선 이전에 어떤것을 선택했느냐에 따라 달라진다.
+			 */
+
+			// 다음 파이프의 좌표
+			int nlx = lx + ud[i], nly = ly + rl[i];
+			int nrx = rx + ud[i], nry = ry + rl[i];
+
+			// 배열의 범위 밖인 경우
+			if (nlx < 0 || nlx >= map.length || nly < 0 || nly >= map.length)
+				continue;
+			if (nrx < 0 || nrx >= map.length || nry < 0 || nry >= map.length)
+				continue;
+
+			// 다음 좌표에 벽이 존재하는 경우
+			if (map[nlx][nly] == 1 || map[nrx][nry] == 1)
+				continue;
+
+			if (i == 2) {
+				// 대각선인 경우
+				if (map[nrx][nry - 1] == 1 && map[nrx - 1][nry] == 1)
+					continue;
+			}
+			if (i == 0 && (direction == 0 || direction == 2))
+				dfs(nlx, nly, nrx, nry, map, direction);
+			else if (i == 1 && (direction == 1 || direction == 2))
+				dfs(nlx, nly, nrx, nry, map, direction);
+			else {
+				dfs(nlx,nly,nrx,nry,map,direction);
+			}
+		}
+	}
+
+	private static boolean isReach(int lx, int ly, int rx, int ry, int N) {
+		if ((lx == N && ly == N) || (rx == N && ry == N))
+			return true;
+		return false;
+	}
+}

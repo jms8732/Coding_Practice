@@ -1,0 +1,37 @@
+package samsung_Atype;
+
+//파이프 옮기기 1
+import java.util.*;
+import java.io.*;
+
+public class problem_17070 {
+	static int count =0;
+	public static void main(String [] args0) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int N = Integer.parseInt(br.readLine());
+		
+		int [][] map = new int[N][N];
+		StringTokenizer st = null;
+		
+		//초기화 과정
+		for(int i =0 ; i< N ; i++) {
+			st = new StringTokenizer(br.readLine());
+			for(int j = 0; j < N ; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+		
+		dfs(0,0, int [][] map);
+	}
+	
+	private static void dfs(int x,int y, int[][] map) {
+		
+	}
+	
+	private static boolean isReach(int lx,int ly, int rx, int ry, int N) {
+		if((lx == N && ly == N) || (rx == N && ry == N))
+			return true;
+		return false;
+	}
+}
