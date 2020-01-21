@@ -129,7 +129,7 @@
 * [15655. N과 M(6)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15655.java)
 * [15656. N과 M(7)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15656.java)
 * [15657. N과 M(8)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15657.java)
-
+* [15663. N과 M(9)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15663.java)
 
 ## 백트래킹
 * [2580. 스도쿠](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2580.java)
@@ -210,3 +210,6 @@
 * [15683. 감시](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_15683.java)
 * [17144. 미세먼지 안녕!](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17144.java)
 
+## Samsung 코딩 대비 기출문제
+* [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
+* [16637. 괄호 추가하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_16637.java)
