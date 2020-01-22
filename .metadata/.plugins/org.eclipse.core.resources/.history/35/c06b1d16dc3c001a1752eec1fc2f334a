@@ -1,0 +1,119 @@
+package samsung_Atype;
+
+//캐슬 디펜스
+import java.util.*;
+import java.io.*;
+
+public class problem_17135 {
+	static int big = 0;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		int D = Integer.parseInt(st.nextToken());
+
+		int[][] map = new int[N + 1][M];
+		
+		// 초기화
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
+			for (int j = 0; j < M; j++) {
+				map[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+		int count = 0 , next = 0;
+		dfs(N,M,D,next,count,map);
+		System.out.println(big);
+	}
+	private static void copyMap(int[][] src, int[][]dest) {
+		int idx =0 ;
+		for(int [] tmp : src) {
+			System.arraycopy(tmp, 0, dest[idx++], 0, tmp.length);
+		}
+	}
+	
+	private static void dfs(int N, int M, int D, int next, int count, int[][] map) {
+		int ec = 0;
+		if (count == 3) {
+			int [][] tmpMap = new int[N+1][M];
+			boolean [] visited = new boolean[M];
+			copyMap(map,tmpMap);
+			// 3개의 아처가 자리 잡은 경우
+			while (true) {
+				if (isEnd(N, map)) {
+					// 게임이 끝났는지의 여부 판단.
+					break;
+				}
+				for (int i = N-1; i >= 0; i--) {
+					for (int j = 0; j < map[N].length; j++) {
+						if (map[i][j] == 1) {
+							ec += attackEnemy(i, j, N, M, D, map,visited);
+						}
+					}
+				}
+				downEnemy(N, map);
+			}
+			
+			big = Math.max(big, ec);
+			copyMap(tmpMap,map); //맵을 원상 복귀 시킨다.
+			return;
+		}
+
+		// 아처의 위치
+		for (int i = next; i < M; i++) {
+			if (map[N][i] == 0) {
+				map[N][i] = 2;
+				dfs(N, M, D, i + 1, count + 1, map);
+				map[N][i] = 0;
+			}
+		}
+
+	}
+
+	private static boolean isEnd(int N, int[][] map) {
+		for (int i = N-1; i >= 0; i--) {
+			for (int j = 0; j < map[i].length; j++) {
+				if (map[i][j] == 1)
+					return false;
+			}
+		}
+
+		return true;
+	}
+
+	private static int attackEnemy(int ex, int ey, int N, int M, int D, int[][] map,boolean [] visited) {
+		int count =0 ;
+		for (int i = 0; i < map[N].length; i++) {
+			if (map[N][i] == 2 && map[ex][ey] == 1 && !visited[i]) {
+				// 현재 궁수의 위치
+				int dtc = Math.abs(ex - N) + Math.abs(i - ey);
+				if (dtc <= D) {
+					// 거리가 D 이하일 경우
+					map[ex][ey] = 0; // 적을 죽임
+					count++;
+					break;
+				}
+			}
+		}
+		
+		return count;
+	}
+
+	private static void downEnemy(int N, int[][] map) {
+		for (int i = N-1; i >= 0; i--) {
+			for (int j = 0; j < map[i].length; j++) {
+				if (map[i][j] == 1) {
+					if (i + 1 <= N && map[i + 1][j] == 0) {
+						if (i + 1 != N) {
+							// 적이 내려옴
+							map[i + 1][j] = map[i][j];
+						}
+						map[i][j] = 0;
+					}
+				}
+			}
+		}
+	}
+}
