@@ -14,7 +14,7 @@ public class problem_17135 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		int D = Integer.parseInt(st.nextToken());
- 
+
 		int[][] map = new int[N + 1][M];
 
 		// √ ±‚»≠
