@@ -183,7 +183,7 @@
 * [최대공약수와 최소공배수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_6.java)
 * [평균 구하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_9.java)
 * [콜라츠 추측](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_8.java)
-* [피보나치 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_10java)
+* [피보나치 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_10.java)
 ## Kakao
 * [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
 * [[2017 카카오코드 본선]리틀 프랜즈 사천성](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_17.java)
