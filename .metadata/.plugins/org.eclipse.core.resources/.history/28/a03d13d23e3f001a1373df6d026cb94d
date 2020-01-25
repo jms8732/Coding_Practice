@@ -1,6 +1,6 @@
 package programmers2;
 
-//Æò±Õ ±¸ÇÏ±â
+//Æò±Õ ±ÔÇÏ±â
 public class problem_9 {
 	public double solution(int[] arr) {
 		double answer=0;
