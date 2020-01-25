@@ -181,7 +181,9 @@
 * [짝수와 홀수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_4.java)
 * [최댓값과 최솟값](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_5.java)
 * [최대공약수와 최소공배수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_6.java)
-
+* [평균 구하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_9.java)
+* [콜라츠 추측](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_8.java)
+* [피보나치 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_10java)
 ## Kakao
 * [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
 * [[2017 카카오코드 본선]리틀 프랜즈 사천성](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_17.java)
