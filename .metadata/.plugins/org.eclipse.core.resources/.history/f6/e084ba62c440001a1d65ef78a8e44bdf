@@ -78,7 +78,6 @@ public class problem_17471 {
 			if(!component[iidx] && visited[iidx] == part) {
 				component[iidx] = true;
 				set.add(iidx);
-				makeSet(iidx,visited[iidx],set,component,visited);
 			}
 			
 		}
