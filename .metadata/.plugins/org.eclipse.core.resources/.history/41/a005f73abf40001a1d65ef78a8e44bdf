@@ -72,44 +72,71 @@ public class problem_17471 {
 	}
 
 	
-	private static void makeSet(int idx,boolean part, Set<Integer> set , boolean[] component, boolean[]visited) {
-		for(int i =0 ; i< list[idx].size() ; i++) {
+	private static void connect(int idx,boolean part, boolean [] connectP, boolean[] visited) {
+		
+		connectP[idx] = true;
+		for(int i = 0; i < list[idx].size() ; i++) {
 			int iidx = list[idx].get(i);
-			if(!component[iidx] && visited[iidx] == part) {
-				component[iidx] = true;
-				set.add(iidx);
-				makeSet(iidx,visited[iidx],set,component,visited);
+			if(!connectP[iidx] && part == visited[iidx]) {
+				connect(iidx,part,connectP,visited);
 			}
-			
 		}
 	}
-	
+	private static boolean isConnected(boolean [] connect, List<Integer> A, List<Integer> B) {
+		Set<Integer> Aset = new TreeSet<>();
+		Set<Integer> Bset = new TreeSet<>();
+		
+		for(int i =0 ; i< connect.length ; i++) {
+			boolean cp = connect[i];
+			if(cp == true)
+				Aset.add(i);
+			else
+				Bset.add(i);
+			
+			for(int j =0 ; j < list[i].size() ; j++) {
+				int idx = list[i].get(j);
+				if(cp == connect[idx]) {
+					if(cp == true)
+						Aset.add(idx);
+					else
+						Bset.add(idx);
+				}
+			}
+		}
+		
+		if(Aset.size() == A.size() && Bset.size() == B.size())
+			return true;
+		return false;
+		
+	}
 	
 	private static void dfs(int depth, int next, boolean[] visited) {
 		if (depth == visited.length) {
-			Set<Set<Integer>> totalSet = new HashSet<>(); 
+			List<Integer> A = new ArrayList<>();
+			boolean [] connectA = new boolean[visited.length];
+			List<Integer> B = new ArrayList<>();
+			boolean[] connectB = new boolean[visited.length];
 			
-			boolean [] component = new boolean[visited.length];
+			for(int i =0 ; i< visited.length ; i++) {
+				if(visited[i])
+					A.add(i);
+				else
+					B.add(i);
+			}
 			
-			for(int i =0 ; i< component.length ; i++) {
-				if(!component[i]) {
-					component[i] = true;
-					Set<Integer> set = new TreeSet<>();
-					set.add(i);
-					makeSet(i,visited[i],set,component,visited);
-					totalSet.add(set);
+			boolean [] connect = new boolean[visited.length];
+			
+			//현재 당파에 맞게 연결돼 있는 것을 찾는다.
+			for(int i =0  ; i< visited.length ; i++) {
+				if(!connect[i]) {
+					connect(i,true,connect,visited);
 				}
 			}
 			
-			
-			if(totalSet.size() == 2) {
-				//연결과 당의 나눔이 제대로 됨
-				if(answer == -1)
-					answer = calculate(visited);
-				else
-					answer = Math.min(answer, calculate(visited));
+			if(isConnected(connect,A,B)) {
+				
 			}
-			return;
+			
 		}
 
 		for (int i = next; i < visited.length; i++) {

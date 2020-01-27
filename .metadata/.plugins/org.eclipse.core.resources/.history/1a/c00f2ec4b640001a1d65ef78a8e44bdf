@@ -35,28 +35,25 @@ public class problem_17471 {
 			}
 		}
 
-		boolean[] count = new boolean[N];
-		int c =0 ;
-		for(int i =0 ; i< list.length ; i++) {
-			if(!count[i]) {
-				c++;
-				connectCount(i,count);
-			}
-		}
-		
-		if(c <= 2) //연결된 요소가 2개 이하일 경우만 수행
-			dfs(0, 0, visited);
+		dfs(0, 0, visited);
 		System.out.println(answer);
 	}
 
-	private static void connectCount(int idx, boolean[] visited) {
-		visited[idx] = true;
-		for(int i =0 ; i < list[idx].size() ; i++) {
-			int iidx = list[idx].get(i);
-			if(!visited[iidx]) {
-				connectCount(iidx,visited);
+	private static boolean isConnected(boolean part, boolean[] visited, int n,List<Integer> llist) {
+		Set<Integer> set = new TreeSet<>();
+
+		for (int i = 0; i < llist.size(); i++) {
+			int idx = llist.get(i);
+			for (int j = 0; j < list[idx].size(); j++) {
+				if (!set.contains(list[idx].get(j)) && part == visited[list[idx].get(j)])
+					set.add(list[idx].get(j));
 			}
 		}
+
+		// 크기가 맞다면
+		if (set.size() == n)
+			return true;
+		return false;
 	}
 
 	private static int calculate(boolean[] visited) {
@@ -71,44 +68,30 @@ public class problem_17471 {
 		return result;
 	}
 
-	
-	private static void makeSet(int idx,boolean part, Set<Integer> set , boolean[] component, boolean[]visited) {
-		for(int i =0 ; i< list[idx].size() ; i++) {
-			int iidx = list[idx].get(i);
-			if(!component[iidx] && visited[iidx] == part) {
-				component[iidx] = true;
-				set.add(iidx);
-				makeSet(iidx,visited[iidx],set,component,visited);
-			}
-			
-		}
-	}
-	
-	
 	private static void dfs(int depth, int next, boolean[] visited) {
 		if (depth == visited.length) {
-			Set<Set<Integer>> totalSet = new HashSet<>(); 
-			
-			boolean [] component = new boolean[visited.length];
-			
-			for(int i =0 ; i< component.length ; i++) {
-				if(!component[i]) {
-					component[i] = true;
-					Set<Integer> set = new TreeSet<>();
-					set.add(i);
-					makeSet(i,visited[i],set,component,visited);
-					totalSet.add(set);
+			// 서로 나눠서 골라진 경우
+			List<Integer> A = new LinkedList<>();
+			List<Integer> B = new LinkedList<>();
+
+			// 현재 당 나누기
+			for (int i = 0; i < visited.length; i++) {
+				if (visited[i]) {
+					A.add(i);
+				} else
+					B.add(i);
+			}
+
+			if (!A.isEmpty() && !B.isEmpty()) {
+				if (isConnected(true, visited, A.size(),A) && isConnected(false, visited, B.size(),B)) {
+					// 연결된 것을 확인 했다면
+					if (answer == -1)
+						answer = calculate(visited);
+					else
+						answer = Math.min(answer, calculate(visited));
 				}
 			}
-			
-			
-			if(totalSet.size() == 2) {
-				//연결과 당의 나눔이 제대로 됨
-				if(answer == -1)
-					answer = calculate(visited);
-				else
-					answer = Math.min(answer, calculate(visited));
-			}
+
 			return;
 		}
 

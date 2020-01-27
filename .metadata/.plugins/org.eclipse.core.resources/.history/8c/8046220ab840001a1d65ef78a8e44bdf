@@ -38,7 +38,8 @@ public class problem_17471 {
 		boolean[] count = new boolean[N];
 		int c =0 ;
 		for(int i =0 ; i< list.length ; i++) {
-			if(!count[i]) {
+			if(!visited[i]) {
+				visited[i] = true;
 				c++;
 				connectCount(i,count);
 			}
@@ -72,44 +73,9 @@ public class problem_17471 {
 	}
 
 	
-	private static void makeSet(int idx,boolean part, Set<Integer> set , boolean[] component, boolean[]visited) {
-		for(int i =0 ; i< list[idx].size() ; i++) {
-			int iidx = list[idx].get(i);
-			if(!component[iidx] && visited[iidx] == part) {
-				component[iidx] = true;
-				set.add(iidx);
-				makeSet(iidx,visited[iidx],set,component,visited);
-			}
-			
-		}
-	}
-	
-	
 	private static void dfs(int depth, int next, boolean[] visited) {
 		if (depth == visited.length) {
-			Set<Set<Integer>> totalSet = new HashSet<>(); 
 			
-			boolean [] component = new boolean[visited.length];
-			
-			for(int i =0 ; i< component.length ; i++) {
-				if(!component[i]) {
-					component[i] = true;
-					Set<Integer> set = new TreeSet<>();
-					set.add(i);
-					makeSet(i,visited[i],set,component,visited);
-					totalSet.add(set);
-				}
-			}
-			
-			
-			if(totalSet.size() == 2) {
-				//연결과 당의 나눔이 제대로 됨
-				if(answer == -1)
-					answer = calculate(visited);
-				else
-					answer = Math.min(answer, calculate(visited));
-			}
-			return;
 		}
 
 		for (int i = next; i < visited.length; i++) {
