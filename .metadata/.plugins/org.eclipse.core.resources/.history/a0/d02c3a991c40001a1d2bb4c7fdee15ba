@@ -1,0 +1,96 @@
+package samsung_Atype;
+
+//게리 맨더링
+import java.util.*;
+import java.io.*;
+
+public class problem_17471 {
+	static int value[]; // 값
+	static List<Integer>[] list; // 연결된 요소
+	static int answer = Integer.MAX_VALUE;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		boolean[] visited = new boolean[N];
+		value = new int[N];
+
+		st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < N; i++) {
+			value[i] = Integer.parseInt(st.nextToken());
+		}
+
+		list = new ArrayList[N];
+
+		// 연결된 요소 넣기
+		for (int i = 0; i < list.length; i++)
+			list[i] = new ArrayList<>();
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
+			int m = Integer.parseInt(st.nextToken());
+			for (int l = 0; l < m; l++) {
+				list[i].add(Integer.parseInt(st.nextToken()));
+			}
+		}
+
+	}
+
+	private static boolean isConnected(int depth, int n, int idx, boolean part, boolean[] visited,
+			List<Integer> llist) {
+		if (depth == n) {
+			// 연결이 된 경우
+			return true;
+		}
+		boolean check = false;
+
+		for (int i = 0; i < list[idx].size(); i++) {
+			if (visited[list[idx].get(i)] == part) {
+				check = isConnected(depth + 1, n, i, part, visited, llist);
+			}
+		}
+		return check;
+	}
+
+	private static int calculate(boolean[] visited) {
+		int A = 0, B = 0;
+		for (int i = 0; i < visited.length; i++)
+			if (visited[i])
+				A += value[i];
+			else
+				B += value[i];
+
+		int result = Math.abs(A - B);
+		return result;
+	}
+
+	private static void dfs(int depth, int next, boolean[] visited) {
+		if (depth == visited.length) {
+			// 서로 나눠서 골라진 경우
+			List<Integer> A = new LinkedList<>();
+			List<Integer> B = new LinkedList<>();
+
+			// 현재 당 나누기
+			for (int i = 0; i < visited.length; i++) {
+				if (visited[i]) {
+					A.add(i);
+				} else
+					B.add(i);
+			}
+			int depth1 = 0;
+			if (isConnected(depth1, A.size(), A.get(0), true, visited, A)
+					&& isConnected(depth1, B.size(), B.get(0), false, visited, B)) {
+				// 연결이 된 경우
+				answer = Math.min(answer, calculate(visited));
+
+			}
+		}
+
+		for (int i = next; i < visited.length; i++) {
+			visited[i] = true;
+			dfs(depth + 1, i + 1, visited);
+			visited[i] = false;
+		}
+	}
+}
