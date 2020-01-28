@@ -1,0 +1,67 @@
+package samsung_Atype;
+
+//야구공
+import java.util.*;
+import java.io.*;
+
+public class problem_17281 {
+	static int inning;
+	static int answer;
+
+	public static void main(String[] args) throws IOException{
+		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+		
+		inning = Integer.parseInt(br.readLine());
+		Node [] players = new Node[9];
+		List[] tmpList =new ArrayList[9];
+		
+		for(int i =0 ;i < tmpList.length ; i++) tmpList[i] =new ArrayList<>();
+		
+		for(int i =0 ;i <players.length; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			for(int j =0 ; j< tmpList.length ; j++) {
+				tmpList[i].add(Integer.parseInt(st.nextToken()));
+			}
+		}
+		
+		//선수들에 관한 정보 저장
+		for(int i =0 ; i< players.length ; i++) {
+			players[i] = new Node(tmpList[i],i);
+		}
+		int depth =0 ;
+		dfs(depth,players);
+		
+		System.out.println(answer);
+	}
+
+	private static void dfs(int depth, Node[] players) {
+		if (depth == players.length) {
+
+			return;
+		}
+
+		for (int i = depth; i < players.length; i++) {
+			swap(depth, i, players);
+			dfs(depth + 1, players);
+			swap(i, depth, players);
+		}
+	}
+
+	private static void swap(int depth, int i, Node[] players) {
+		Node tmp = players[depth];
+		players[depth] = players[i];
+		players[i] = tmp;
+
+	}
+
+	private static class Node {
+		List<Integer> innings;
+		int number;
+
+		public Node(List<Integer> in, int n) {
+			this.innings = new ArrayList<>(in);
+			this.number = n;
+		}
+	}
+
+}
