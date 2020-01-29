@@ -25,38 +25,39 @@ public class problem_17281 {
 			}
 		}
 
-		// 1번째 선수는 4번 타자이므로
-		players[3] = new Node(tmpList[0], 0);
-		int idx = 1;
 		// 선수들에 관한 정보 저장
 		for (int i = 0; i < players.length; i++) {
-			if (i != 3)
-				players[i] = new Node(tmpList[idx], idx++);
+			players[i] = new Node(tmpList[i], i);
 		}
-		int depth = 0;
+
+		int depth = 1;
 		long start = System.currentTimeMillis();
 		dfs(depth, players);
 		long end = System.currentTimeMillis();
-		
+		System.out.println("total time : " + (end - start) / 1000.0);
 		System.out.println(answer);
-		System.out.println("time : " + (end-start)/1000.0);
 	}
 
 	private static void dfs(int depth, Node[] players) {
 		if (depth == players.length) {
 
 			int value = 0;
-			Queue<Node> player = new LinkedList<>();
+			Queue<Node> player = null;
+			List<Node> tmp = new ArrayList<>();
 
-			for (int i = 0; i < players.length; i++)
-				player.add(players[i]);
+			for (int i = 1; i < players.length; i++) {
+				if (i == 4)
+					tmp.add(players[0]);
+				tmp.add(players[i]);
+			}
 
+			player = new LinkedList<>(tmp);
+		
 			for (int i = 0; i < inning; i++) {
 				value += startGame(player, i);
 			}
 			answer = Math.max(value, answer);
 
-			//print(players);
 			return;
 		}
 
@@ -67,45 +68,47 @@ public class problem_17281 {
 		}
 	}
 
-	private static void print(Node[] players) {
-		for (int i = 0; i < players.length; i++) {
-			System.out.print(players[i].number + " ");
-		}
-		System.out.println();
-	}
 
 	private static int startGame(Queue<Node> player, int inning) {
 		int point = 0;
 		int outCount = 0;
-		Queue<Integer> ground = new LinkedList<>(); // 야구 그라운드를 뜻한다.
-
+		int basePlayer = 0;
+		int base[] = new int[3];
+		
 		// 아웃 카운트가 3이 되면 다음 이닝으로 넘어간다.
 		while (outCount != 3) {
 			Node currentPlayer = player.poll();
 			int action = currentPlayer.innings.get(inning);
 
-			if (action == 0) {
+			if (action == 0) { //아웃 당했을 경우
 				outCount += 1;
-			} else if (action == 4) {
-				if (!ground.isEmpty()) {
-					point += ground.size();
-					ground.clear();
+			} else if (action == 4) { //홈런을 쳤을 경우
+				if(basePlayer != 0) {
+					point += basePlayer;
+					basePlayer = 0;
+					Arrays.fill(base, 0);
 				}
 				point++;
 			} else {
-				if (!ground.isEmpty()) {
-					int n = ground.size();
-					for (int i = 0; i < n; i++) {
-						int a = ground.poll();
-						a += action;
-						if (a >= 4)
+				for(int i = 2 ; i >= 0 ; i --) {
+					if(base[i] != 0)
+					{
+						base[i] += action;
+						if(base[i] >= 4) {
 							point++;
-						else
-							ground.add(a);
+							base[i] = 0;
+							basePlayer--;
+						}
+						else {
+							base[base[i]-1] = base[i];
+							base[i] = 0;
+						}
 					}
 				}
-				ground.add(action);
+				base[action-1] = action;
+				basePlayer++;
 			}
+			//순환 구조를 가지기 위해서 현재 계산한 결과를 넣는다.
 			player.add(currentPlayer);
 		}
 
@@ -114,12 +117,10 @@ public class problem_17281 {
 	}
 
 	private static void swap(int depth, int i, Node[] players) {
-		if (depth != 3 && i != 3) {
-			Node tmp = players[depth];
-			players[depth] = players[i];
-			players[i] = tmp;
-		}
-
+		// 4번 타자는 고정돼 있다.
+		Node tmp = players[depth];
+		players[depth] = players[i];
+		players[i] = tmp;
 	}
 
 	private static class Node {
