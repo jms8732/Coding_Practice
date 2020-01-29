@@ -226,3 +226,4 @@
 * [17136. 색종이 붙이기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17136.java)
 * [17471. 게리 맨더링](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17471.java)
 * [17406. 배열 돌리기4](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17406.java)
+* [17281. 야구공](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17281.java)
