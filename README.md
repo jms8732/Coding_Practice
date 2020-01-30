@@ -133,6 +133,7 @@
 * [15664. N과 M(10)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15664.java)
 * [15665. N과 M(11)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15665.java)
 * [15666. N과 M(12)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_15666.java)
+* [3040. 백설 공주와 일곱 난쟁이](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_3040.java)
 
 ## 백트래킹
 * [2580. 스도쿠](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2580.java)
