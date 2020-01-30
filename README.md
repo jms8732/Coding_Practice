@@ -186,6 +186,9 @@
 * [콜라츠 추측](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_8.java)
 * [피보나치 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_10.java)
 * [9506. 약수들의 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9506.java)
+* [1837. 암호제작](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1837.java)
+
+
 ## 그래프
 * [11724. ](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
 
