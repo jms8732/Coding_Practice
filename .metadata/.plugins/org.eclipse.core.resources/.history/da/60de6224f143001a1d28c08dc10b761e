@@ -1,0 +1,40 @@
+package topological_sort;
+
+import java.util.*;
+
+public class test1 {
+	static List<Integer> list[];
+	public static void main(String[] args) {
+		list = new ArrayList[7];
+		Stack<Integer> sort = new Stack<>();
+		
+		for(int i =0 ; i< list.length ; i++) list[i] = new ArrayList<>();
+		
+		list[0].add(1);
+		list[0].add(2);
+		list[0].add(3);
+		
+		list[1].add(4);
+		list[2].add(4);
+		list[2].add(5);
+		
+		list[4].add(6);
+		int depth =0 , next =0 ;
+		sort.add(next);
+		dfs(depth,next,sort);
+		
+		
+	}
+	
+	private static void dfs(int depth, int next,Stack<Integer> stack) {
+		
+		
+		for(int i =0 ; i< list.length ; i++) {
+			for(int j =0 ; j< list[i].size() ; j++) {
+				next = list[i].get(j);
+				stack.add(next);
+				dfs(depth+1,next,stack);
+			}
+		}
+	}
+}
