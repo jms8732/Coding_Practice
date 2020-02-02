@@ -1,0 +1,85 @@
+package search_algorithm;
+
+//DFS와 BFS
+import java.util.*;
+import java.io.*;
+
+public class problem_1260 {
+	static List<Integer> list[];
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		int start = Integer.parseInt(st.nextToken());
+
+		list = new ArrayList[N];
+		for (int i = 0; i < N; i++)
+			list[i] = new ArrayList<>();
+
+		for (int i = 0; i < M; i++) {
+			st = new StringTokenizer(br.readLine());
+			int v1 = Integer.parseInt(st.nextToken()) - 1;
+			int v2 = Integer.parseInt(st.nextToken()) - 1;
+
+			list[v1].add(v2);
+		}
+
+		boolean[] visited = new boolean[N];
+		int [] answer = new int[N];
+		
+		dfs(start,0,answer,visited);
+		bfs(start,visited,answer);
+		
+	}
+	private static void bfs(int start, boolean[] visited, int[] answer) {
+		Queue<Integer> queue = new LinkedList<>();
+		for(int i =0 ; i < list[start].size() ; i++) queue.add(list[start].get(i));
+		
+		visited[start] = true;
+		int idx = 0;
+		answer[idx++]= start;
+		
+		while(!queue.isEmpty()) {
+			int current = queue.poll();
+			
+			if(!visited[current]) {
+				//현재 노드가 방문하지 않았다면
+				visited[current] = true;
+				answer[idx++] = current;
+				for(int i =0 ; i < list[current].size() ; i++) {
+					queue.add(list[current].get(i));
+				}
+			}
+		}
+		
+		print(answer);
+	}
+	
+	private static void dfs(int current, int depth ,int[] answer, boolean[] visited) {
+		if(depth == answer.length)
+		{
+			print(answer);
+			System.exit(0);
+		}
+		visited[current] = true;
+
+		for (int i = 0; i < list[current].size(); i++) {
+			int next = list[current].get(i);
+			if (!visited[next]) {
+				answer[depth] = next;
+				dfs(next,depth+1,answer,visited);
+			}
+		}
+	}
+	
+	private static void print(int[] array) {
+		for(int i =0 ; i < array.length ; i++) {
+			System.out.print(array[i] + " " );
+		}
+		System.out.println();
+	}
+}
