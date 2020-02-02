@@ -90,6 +90,8 @@
 * [카카오 프렌즈 컬러링 북](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_20.java)
 * [9963. N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_9663.java)
 * [N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_28.java)
+* [1260. DFS와 BFS](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1260.java)
+* [9466. 텀 프로젝트](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9466.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
