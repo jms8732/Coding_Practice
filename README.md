@@ -92,6 +92,8 @@
 * [N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_28.java)
 * [1260. DFS와 BFS](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1260.java)
 * [9466. 텀 프로젝트](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9466.java)
+* [2644. 촌수 계산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2644.java)
+* [1012. 유기농 배추](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1012.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
