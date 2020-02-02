@@ -35,7 +35,6 @@ public class problem_2644 {
 		bfs(start, end,N);
 	}
 
-	//시작 지점에서 구하는 촌수는 같다.
 	private static void bfs(int start, int end, int N) {
 		int answer = -1;
 		Queue<Integer> queue = new LinkedList<>();
