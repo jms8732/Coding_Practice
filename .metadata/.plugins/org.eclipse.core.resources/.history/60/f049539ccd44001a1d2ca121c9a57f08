@@ -1,0 +1,58 @@
+package search_algorithm;
+
+//MT
+import java.util.*;
+import java.io.*;
+
+public class problem_10265 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int K = Integer.parseInt(st.nextToken());
+
+		st = new StringTokenizer(br.readLine());
+		int[] array = new int[N];
+		boolean[] visited = new boolean[N];
+		for (int i = 0; i < N; i++) {
+			int tmp = Integer.parseInt(st.nextToken()) - 1;
+			if (tmp == i)
+				array[i] = -1;
+			else
+				array[i] = tmp;
+		}
+
+		int answer = 0;
+		int depth = 1;
+		for (int i = 0; i < array.length; i++) {
+			int tmp =0;
+			visited[i] = true;
+			tmp = dfs(depth,K,i,array,visited);
+			visited[i] = false;
+			if(tmp < K )
+				answer = Math.max(answer, tmp);
+				
+		}
+
+		System.out.println(answer);
+	}
+
+	private static int dfs(int depth, int limit,int current, int[]array, boolean [] visited) {
+		if(depth > limit)
+			return depth;
+		
+		int next = array[current];
+		if(next == -1)
+			return depth;
+		int count =0;
+		
+		if(!visited[next]) {
+			visited[next] = true;
+			count = dfs(depth+1,limit,next,array,visited);
+			visited[next] = false;
+		}
+		
+		return count;
+	}
+}

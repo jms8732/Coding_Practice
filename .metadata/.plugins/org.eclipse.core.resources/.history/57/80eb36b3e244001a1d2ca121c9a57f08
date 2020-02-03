@@ -1,0 +1,77 @@
+package search_algorithm;
+
+//MT
+import java.util.*;
+import java.io.*;
+
+public class problem_10265 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int K = Integer.parseInt(st.nextToken());
+
+		st = new StringTokenizer(br.readLine());
+		int[] array = new int[N];
+		boolean[] visited = new boolean[N];
+		for (int i = 0; i < N; i++) {
+			int tmp = Integer.parseInt(st.nextToken()) - 1;
+			array[i] = tmp;
+		}
+
+		int answer = 0;
+		int depth = 1;
+
+		Set<Set<Integer>> totalSet = new HashSet<>();
+
+		for (int i = 0; i < array.length; i++) {
+			Set<Integer> tmp = new HashSet<>();
+			tmp.add(i);
+			visited[i] = true;
+			dfs(depth, i, tmp, array, visited);
+			visited[i] = false;
+			totalSet.add(tmp);
+		}
+		
+		Iterator<Set<Integer>> it = totalSet.iterator();
+		List<Set<Integer>> list = new ArrayList<>();
+		
+		while (it.hasNext()) {
+			Set<Integer> tmp = it.next();
+			if (tmp.size() <= K) {
+				list.add(tmp);
+			}
+		}
+		
+		for(int i =0 ; i< list.size() ; i++) {
+			answer = Math.max(answer,combination(i,list.get(i).size(),K,list));
+		}
+		System.out.println(answer);
+
+	}
+	
+	private static int combination(int depth, int count, int limit, List<Set<Integer>> list) {
+		if(count > limit)
+			return 0;
+		
+		int tmpCount = count;
+		
+		for(int i = depth ;i  < list.size() ; i++) {
+			tmpCount = Math.max(count, combination(depth+1,list.get(i).size(),limit,list));
+		}
+		
+		return tmpCount;
+	}
+
+	private static void dfs(int depth, int current, Set<Integer> set, int[] array, boolean[] visited) {
+		int next = array[current];
+		if (!visited[next]) {
+			set.add(next);
+			visited[next] = true;
+			dfs(depth + 1, next, set, array, visited);
+			visited[next] = false;
+		}
+
+	}
+}
