@@ -24,6 +24,7 @@
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
+		<item key="EmptyDefaultAssistCategory" value="false"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.typehierarchy.QuickHierarchy">
 		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
