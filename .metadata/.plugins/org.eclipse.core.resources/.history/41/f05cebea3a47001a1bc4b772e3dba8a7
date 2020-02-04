@@ -1,0 +1,18 @@
+package samsung;
+
+import java.util.*;
+
+
+public class test2 {
+	public static void main(String[] args) {
+		Queue<Integer> queue = new LinkedList<>();
+		queue.add(3);
+		queue.add(2);
+		
+		PriorityQueue<Integer> pq = new PriorityQueue<Integer>(queue);
+		
+		while(!pq.isEmpty()) {
+			System.out.print(pq.poll() + " ");
+		}
+	}
+}
