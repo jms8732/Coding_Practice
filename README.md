@@ -87,6 +87,7 @@
 * [여행 경로](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_46.java)
 * [[2019 서머/윈터코딩] 종이접기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_41.java
 )
+* [6593. 상범 빌딩](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_6593.java)
 * [카카오 프렌즈 컬러링 북](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_20.java)
 * [9963. N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_9663.java)
 * [N-Queen](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_28.java)
