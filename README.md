@@ -181,7 +181,7 @@
 * [문자열 다루기 기본](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_43.java)
 * [수박수박수박수박수박수?](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_44.java)
 * [시저 암호](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_46.java)
-* [약의 합](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_47.java)
+* [약수의 합](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_47.java)
 * [이상한 문자 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_48.java)
 * [자릿수 더하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_49.java)
 * [자연수 뒤집어 배열로 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_50.java)
