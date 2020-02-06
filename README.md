@@ -17,7 +17,7 @@
 
 ## 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
-* [완주하지 못한 마라톤](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_16.java)
+* [완주하지 못한 ](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_16.java)
 * [위장](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_49.java)
 * [베스트앨범](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_6.java)
 
