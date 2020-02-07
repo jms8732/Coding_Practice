@@ -118,7 +118,7 @@
 
 ## 위상정렬
 * [2623. 음악프로그램](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2623.java)
-* [2252. ](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2252.java)
+* [2252. 줄 세우기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2252.java)
 
 ## 조합
 * [10974. 모든순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10974.java)
