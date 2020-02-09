@@ -1,0 +1,9 @@
+package programmers2;
+
+import java.util.*;
+public class problem_13 {
+	public static void main(String[] args) {
+		int result = (int)Math.floorMod(1, 12);
+		System.out.println(result);
+	}
+}
