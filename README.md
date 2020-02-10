@@ -31,6 +31,7 @@
 
 ## 비트마스크
 * [11723. 집합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_11723.java)
+* [2098. 외판원 순회](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_2098.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
