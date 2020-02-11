@@ -1,0 +1,67 @@
+package bitmask;
+
+//발전소
+import java.util.*;
+import java.io.*;
+
+public class problem_1102 {
+	static int N,P;
+	static int [][] dp;
+	static int [][] cost;
+	public static void main(String[] args) throws IOException{
+		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+		
+		N = Integer.parseInt(br.readLine());
+		cost = new int[N][N];
+		dp = new int[N][1<<N];
+		
+		StringTokenizer st = null;
+		
+		for(int i =0 ; i< N ; i++) {
+			st = new StringTokenizer(br.readLine());
+			for(int j =0 ; j< N ; j++) {
+				cost[i][j] = Integer.parseInt(st.nextToken());
+			}
+		}
+		
+		String tmp = br.readLine();
+		int light = 0 ;
+		
+		//발전소에 불이 들어온 것을 비트로 표현
+		for(int i =0 ; i< tmp.length() ; i++) {
+			if(tmp.charAt(i) == 'Y') {
+				light |= 1<<i;
+			}
+		}
+		
+		P = Integer.parseInt(br.readLine());
+		for(int i [] : dp)
+			Arrays.fill(i, Integer.MAX_VALUE);
+		
+		int current =0 ;
+		int result = dfs(current,light);
+		System.out.println(result);
+	}
+	
+	private static int dfs(int current,int light) {
+		if(Integer.bitCount(light) == P) {
+			return 0;
+		}
+		
+		if(dp[current][light] != Integer.MAX_VALUE)
+			return dp[current][light];
+		
+		for(int i = 0 ; i < N ; i++) {
+			if((light & 1<<i) == 1) {
+				for(int j = 0 ; j< N ; j++) {
+					if((light & 1<<j) == 0){
+						dp[current][light] = Math.min(dp[current][light],cost[i][j] + dfs(i,light | 1<<i));
+					}
+				}
+			}
+		}
+		
+		return dp[current][light];
+	}
+
+}
