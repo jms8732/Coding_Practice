@@ -1,0 +1,76 @@
+package topology_sort;
+
+//게임 개발
+import java.util.*;
+import java.io.*;
+
+public class problem_1516 {
+	static int N;
+	static List<Integer> list[];
+	static int [] indegree;
+	static int [] time;
+	public static void main(String[] args) throws IOException{
+		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+		
+		N = Integer.parseInt(br.readLine());
+		list =new ArrayList[N];
+		indegree = new int[N];
+		time = new int[N];
+		
+		for(int i =0 ; i < N ; i++) list[i] = new ArrayList<>();
+		
+		StringTokenizer st =null;
+		
+		for(int i =0 ; i < N ; i++) {
+			st = new StringTokenizer(br.readLine());
+			int timer = Integer.parseInt(st.nextToken());
+			time[i] = timer;
+			
+			int next = Integer.parseInt(st.nextToken());
+			
+			if(next != -1) {
+				list[next-1].add(i);
+				st.nextToken();
+			}
+		}
+		
+		topology_sort();
+	}
+	
+	private static void topology_sort() {
+		Queue<Integer> queue =new LinkedList<>();
+		
+		for(int i =0 ; i< N ; i++) {
+			for(int j = 0 ; j< list[i].size() ; j++) {
+				indegree[list[i].get(j)] += 1;
+			}
+		}
+		
+		for(int i =0 ; i< N ; i++) {
+			if(indegree[i] == 0)
+				queue.add(i);
+		}
+		
+		int answer [] = new int[N];
+		for(int i =0 ; i< N  ;i++) {
+			if(queue.isEmpty())
+				break;
+			int current = queue.poll();
+			answer[i] = time[current];
+			
+			for(int j = 0; j< list[current].size() ; j++) {
+				indegree[list[current].get(j)] -=1;
+				
+				if(indegree[list[current].get(j)] == 0) {
+					queue.add(list[current].get(j));
+					time[list[current].get(j)] += time[current];
+				}
+			}
+			
+		}
+		
+		for(int i= 0; i < N ; i++) {
+			System.out.println(answer[i]);
+		}
+	}
+}
