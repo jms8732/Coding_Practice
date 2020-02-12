@@ -84,6 +84,7 @@
 * [11057. 오르막 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11057.java)
 * [11051. 이항 계수2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11051.java)
 * [12865. 평범한 배낭](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_12865.java)
+* [11055. 가장 큰 증가 부분 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11055.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
