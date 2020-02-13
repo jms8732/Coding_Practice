@@ -39,6 +39,13 @@ public class problem_18429 {
 		return true;
 	}
 
+	private static void print(int[] answer) {
+		for (int i = 0; i < answer.length; i++) {
+			System.out.print(answer[i] + " ");
+		}
+		System.out.println();
+	}
+
 	private static void permutation(int depth, int[] array, int[] answer) {
 		if (N == depth) {
 			if (exercise(answer)) {
