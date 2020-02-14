@@ -1,0 +1,65 @@
+package dp;
+
+//LCS 2
+import java.io.*;
+import java.util.*;
+
+public class problem_9252 {
+	static String a, b;
+	static StringBuilder sb;
+	//static int[][] dp;
+	static int IMPOSSIBLE = -1000000;
+	static String[][] dp;
+	
+	public static void main(String[] args)throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		a =br.readLine();
+		b = br.readLine();
+		sb = new StringBuilder();
+		
+		dp = new String[a.length()][b.length()];
+		
+		for(String i [] : dp)
+			Arrays.fill(i, null);
+		
+		int aPos =0 ;
+		int bPos =0;
+		String result = dfs(aPos,bPos);
+		System.out.println(result);
+	}
+	
+	private static String dfs(int aPos,int bPos) {
+		if(aPos >= a.length() || bPos >= b.length())
+			return null;
+		
+		if(dp[aPos][bPos] != null)
+			return dp[aPos][bPos];
+		
+		if(a.charAt(aPos) == b.charAt(bPos)) {
+			dp[aPos][bPos] += dfs(aPos+1,bPos+1);
+		}
+		
+		dp[aPos][bPos] = Math.max(dp[aPos][bPos].length(), Math.max(dfs(aPos+1,bPos), dfs(aPos,bPos+1));
+		
+		return dp[aPos][bPos];
+	}
+	/*
+	 * private static int dfs(int aPos,int bPos) { if(aPos >= a.length() || bPos >=
+	 * b.length()) { return 0; }
+	 * 
+	 * if(dp[aPos][bPos] != IMPOSSIBLE) return dp[aPos][bPos];
+	 * 
+	 * if(a.charAt(aPos) == b.charAt(bPos)) { dp[aPos][bPos] =1; dp[aPos][bPos] +=
+	 * dfs(aPos+1,bPos+1); }
+	 * 
+	 * dp[aPos][bPos] = Math.max(dp[aPos][bPos],Math.max(dfs(aPos+1,bPos),
+	 * dfs(aPos,bPos+1)));
+	 * 
+	 * 
+	 * return dp[aPos][bPos];
+	 * 
+	 * 
+	 * }
+	 */
+}
