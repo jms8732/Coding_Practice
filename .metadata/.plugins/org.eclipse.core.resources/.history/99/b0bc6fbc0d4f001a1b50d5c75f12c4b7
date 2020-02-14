@@ -1,0 +1,66 @@
+package dp;
+
+//사회망 서비스(SNS)
+import java.util.*;
+import java.io.*;
+
+public class problem_2533 {
+	static int N;
+	static List<Integer> list[];
+	static int IMPOSSIBLE = 10000000;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		N = Integer.parseInt(br.readLine());
+
+		list = new ArrayList[N];
+		StringTokenizer st = null;
+		
+		for(int i =0 ; i< N ; i++) list[i] =new ArrayList<>();
+		
+		for (int i = 0; i < N; i++) {
+			st = new StringTokenizer(br.readLine());
+			int s = Integer.parseInt(st.nextToken()) - 1;
+			int e = Integer.parseInt(st.nextToken()) - 1;
+
+			list[s].add(e);
+		}
+
+		int start = 0;
+		for (int i = 0; i < N; i++) {
+			if (list[i].isEmpty()) {
+				start = i;
+				break;
+			}
+		}
+
+		boolean status = false;
+		int result = dfs(start, status);
+		System.out.println(result);
+	}
+
+	private static int dfs(int start, boolean prevStatus) {
+		if (list[start].isEmpty()) {
+			if (prevStatus == false)
+				return 1;
+			else
+				return 0;
+		}
+		int tmp = IMPOSSIBLE;
+		for (int i = 0; i < list[start].size(); i++) {
+			// 현재 사람과 연결된 사람을 찾는다.
+			int next = list[start].get(i);
+			if (prevStatus == false) {
+				// 이전 사람의 상태가 얼리 아답터가 아닌 경우, 현재 사람을 얼리 어답터로 한다.
+				tmp = Math.min(tmp, 1 + dfs(next, true));
+			} else {
+				//현재 사람이 얼리 어뎁터 인 경우, 현재 사람이 얼리 어뎁터일 수도, 아닐 수도 있다.
+				tmp = Math.min(tmp, dfs(next,false));
+				tmp = Math.min(tmp, 1+dfs(next,true));
+			}
+		}
+
+		return tmp;
+	}
+}

@@ -1,0 +1,39 @@
+package dp;
+
+//LCS 2
+import java.io.*;
+import java.util.*;
+
+public class problem_9252 {
+	static String a, b;
+	static StringBuilder sb;
+	static int count =0;
+	public static void main(String[] args)throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		a =br.readLine();
+		b = br.readLine();
+		sb = new StringBuilder();
+		int aPos =0 ;
+		int bPos =0;
+		dfs(aPos,bPos);
+		
+	}
+	
+	private static void dfs(int aPos,int bPos) {
+		if(aPos >= a.length() || bPos >= b.length()) {
+			return;
+		}
+		
+		if(a.charAt(aPos) == b.charAt(bPos)) {
+			count++;
+			sb.append(a.charAt(aPos));
+			dfs(aPos+1,bPos+1);
+		}
+		
+		dfs(aPos+1,bPos);
+		dfs(aPos,bPos+1);
+		
+		
+	}
+}
