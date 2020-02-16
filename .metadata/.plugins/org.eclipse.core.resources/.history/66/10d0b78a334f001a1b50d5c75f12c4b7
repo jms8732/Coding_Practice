@@ -34,7 +34,7 @@ public class problem_9252 {
 		StringBuilder sb = new StringBuilder(answer);
 		sb = sb.reverse();
 		answer = sb.toString();
-		System.out.println(answer.trim());
+		System.out.println(answer);
 	}
 	
 	private static void reconstruction(int aPos, int bPos) {
