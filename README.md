@@ -33,6 +33,7 @@
 * [11723. 집합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_11723.java)
 * [2098. 외판원 순회](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_2098.java)
 * [1102. 발전소](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_1102.java)
+* [1562. 계단 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_1562.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
