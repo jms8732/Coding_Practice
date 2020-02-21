@@ -1,0 +1,101 @@
+package samsung;
+//드래곤 커브
+
+import java.util.*;
+import java.io.*;
+
+public class problem_15685 {
+	static Set<List<Integer>> set;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		for (int i = 0; i < N; i++) {
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			int d = Integer.parseInt(st.nextToken());
+			int g = Integer.parseInt(st.nextToken());
+
+			List<Integer> tmp = new ArrayList<>();
+			tmp.add(x);
+			tmp.add(y);
+
+			set.add(tmp);
+
+			int nx = 0, ny = 0;
+			// 세대만큼 반복문을 진행한다
+			for (int j = 0; j <= g; j++) {
+				int size = set.size();
+				for (int k = 0; k < size; k++) {
+					switch (d) {
+					case 0:
+						nx = x + 1;
+						d = 1;
+						break;
+					case 1:
+						ny = y - 1;
+						d = 0;
+						break;
+					case 2:
+						nx = x - 1;
+						d = 1;
+						break;
+					case 3:
+						ny = y + 1;
+						d = 2;
+						break;
+					}
+
+					tmp = new ArrayList<>();
+					tmp.add(nx);
+					tmp.add(ny);
+
+					// 전체에 값 넣기
+					set.add(tmp);
+
+					x = nx;
+					y = ny;
+
+				}
+
+			}
+		}
+
+		checkCount();
+	}
+
+	private static void checkCount() {
+		int count =0;
+		for (int i = 0; i <= 100; i++) {
+			for (int j = 0; j <= 100; j++) {
+
+				List<Integer> f = new ArrayList<>();
+				f.add(i);
+				f.add(j);
+				
+				List<Integer> s = new ArrayList<>();
+				s.add(i);
+				s.add(j+1);
+				
+				List<Integer> t = new ArrayList<>();
+				t.add(i+1);
+				t.add(j);
+				
+				List<Integer> ft = new ArrayList<>();
+				ft.add(i+1);
+				ft.add(j+1);
+				
+				//네 점이 다 있는 정사각형을 찾았을 경우,
+				if(set.contains(f) && set.contains(s) && set.contains(t) && set.contains(ft))
+					count++;
+			}
+		}
+		
+		
+		System.out.println(count);
+	}
+}

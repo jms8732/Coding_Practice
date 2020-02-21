@@ -26,4 +26,5 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="bitmask.problem_1194.Node"/>
 </qualifiedTypeNameHistroy>
