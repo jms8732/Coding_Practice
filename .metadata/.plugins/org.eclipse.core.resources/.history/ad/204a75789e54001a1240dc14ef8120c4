@@ -1,0 +1,55 @@
+package samsung;
+//드래곤 커브
+
+import java.util.*;
+import java.io.*;
+
+public class problem_15685 {
+	static List<List<Integer>> list;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		for (int i = 0; i < N; i++) {
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			int d = Integer.parseInt(st.nextToken());
+			int g = Integer.parseInt(st.nextToken());
+
+			// 세대만큼 반복문을 진행한다
+			for (int j = 0; j <= g; j++) {
+				List<List<Integer>> tmp = new ArrayList<>(list);
+				for (int k = 0; k < tmp.size(); k++) {
+
+				}
+			}
+		}
+	}
+
+	private static void makeDirection(int cx, int cy, int d) {
+		int nx = 0, ny = 0;
+		switch (d) {
+		case 0:
+			nx = cx + 1;
+			break;
+		case 1:
+			ny = cy - 1;
+			break;
+		case 2:
+			nx = cx - 1;
+			break;
+		case 3:
+			ny = cy + 1;
+			break;
+		}
+
+		List<Integer> tmp = new ArrayList<>();
+		tmp.add(nx);
+		tmp.add(ny);
+	}
+
+}
