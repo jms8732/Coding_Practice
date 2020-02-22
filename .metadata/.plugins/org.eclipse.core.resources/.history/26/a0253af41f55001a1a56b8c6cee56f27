@@ -53,41 +53,12 @@ public class problem_15685 {
 
 			start(g, totalList);
 		}
-		checkSquare();
-	}
-	private static void checkSquare() {
-		int count =0;
-		for(int i =0 ; i<= 100 ; i++) {
-			for(int j =0 ; j<= 100 ; j++) {
-				List<Integer> first = new ArrayList<>();
-				first.add(i);
-				first.add(j);
-				
-				List<Integer> second = new ArrayList<>();
-				second.add(i+1);
-				second.add(j);
-				
-				List<Integer> third = new ArrayList<>();
-				third.add(i);
-				third.add(j+1);
-				
-				List<Integer> fourth = new ArrayList<>();
-				fourth.add(i+1);
-				fourth.add(j+1);
-				
-				if(set.contains(first) && set.contains(second)
-						&& set.contains(third) && set.contains(fourth))
-					count++;
-			}
-		}
-		
-		System.out.println(count);
 	}
 
 	private static void start(int g, List<List<Integer>> list) {
+		int idx = list.size() - 1;
 
 		for (int i = 0; i < g; i++) {
-			int idx = list.size() - 1;
 			List<Integer> top = list.get(idx);
 			int pivotX = top.get(0);
 			int pivotY = top.get(1);
@@ -102,8 +73,8 @@ public class problem_15685 {
 				x -= pivotX;
 				y -= pivotY;
 
-				int rotateX = y * -1;
-				int rotateY = x;
+				int rotateX = y;
+				int rotateY = x * -1;
 
 				List<Integer> tmpList = new ArrayList<>();
 				tmpList.add(pivotX + rotateX);
