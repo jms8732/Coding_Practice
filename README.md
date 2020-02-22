@@ -253,6 +253,7 @@
 * [16235. 나무 재태크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_16235.java)
 * [15684. 사다리 조작](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_15684.java)
 * [14891. 톱니 바퀴](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14891.java)
+* [15685. 드래곤 커브](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_15685.java)
 
 ## Samsung 코딩 대비 기출문제
 * [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
