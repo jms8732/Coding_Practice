@@ -1,0 +1,65 @@
+package samsung;
+
+//치킨 배달
+import java.util.*;
+import java.io.*;
+public class problem_15686 {
+	static Queue<List<Integer>> house;
+	static List<List<Integer>> chicken;
+	public static void main(String[] args) throws IOException{
+		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		house = new LinkedList<>();
+		chicken= new ArrayList<>();
+		
+		for(int i =0 ; i< N ; i++) {
+			st = new StringTokenizer(br.readLine());
+			
+			for(int j =0 ; j < N ;j ++) {
+				int tmp = Integer.parseInt(st.nextToken());
+				List<Integer> list = new ArrayList<>();
+				
+				if(tmp == 1) {
+					//집의 좌표
+					list.add(i);
+					list.add(j);
+					house.add(list);
+				}else if(tmp == 2) {
+					//치킨 집의 좌표
+					list.add(i);
+					list.add(j);
+					chicken.add(list);
+				}
+			}
+		}
+		
+		distance();
+	}
+	private static void distance() {
+		int totalDis = 0;
+		while(!house.isEmpty()) {
+			List<Integer> cur = house.poll();
+			int cx = cur.get(0);
+			int cy = cur.get(1);
+			
+			int tmpDist = Integer.MAX_VALUE;
+			for(int i =0 ; i < chicken.size() ; i++) {
+				List<Integer> ccur= chicken.get(i);
+				int ccx = ccur.get(0);
+				int ccy = ccur.get(1);
+				
+				int calDis = Math.abs(cx-ccx) + Math.abs(cy-ccy);
+				tmpDist = Math.min(calDis, tmpDist);
+				
+			}
+			
+			totalDis += tmpDist;
+		}
+		
+		System.out.println(totalDis);
+	}
+}
