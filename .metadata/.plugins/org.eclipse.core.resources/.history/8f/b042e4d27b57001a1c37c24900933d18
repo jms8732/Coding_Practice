@@ -12,7 +12,7 @@ public class problem_5373 {
 		StringTokenizer st = null;
 
 		for (int i = 0; i < testCase; i++) {
-			char[][] U = { { 'w', 'w', 'w' }, { 'w', 'w', 'w' }, { 'w', 'w', 'w' } };
+			char[][] U = { { 'a', 'b', 'c' }, { 'd', 'e', 'f' }, { 'g', 'h', 'i' } };
 			char[][] D = { { 'y', 'y', 'y' }, { 'y', 'y', 'y' }, { 'y', 'y', 'y' } };
 			char[][] B = { { 'o', 'o', 'o' }, { 'o', 'o', 'o' }, { 'o', 'o', 'o' } };
 			char[][] L = { { 'g', 'g', 'g' }, { 'g', 'g', 'g' }, { 'g', 'g', 'g' } };
@@ -98,7 +98,7 @@ public class problem_5373 {
 		case 'L':
 			char[] lu = { U[0][0], U[1][0], U[2][0] };
 			char[] lf = { F[0][0], F[1][0], F[2][0] };
-			char[] ld = { D[0][0], D[1][0], D[2][0] };
+			char[] ld = { D[0][0], D[0][1], D[0][2] };
 			char[] lb = { B[2][2], B[1][2], B[0][2] };
 
 			rotation_Dim(U, D, B, L, R, F, lu, lf, ld, lb, d, direction);
@@ -209,8 +209,8 @@ public class problem_5373 {
 			F[2][0] = array[1][2];
 
 			D[0][0] = array[2][0];
-			D[1][0] = array[2][1];
-			D[2][0] = array[2][2];
+			D[0][1] = array[2][1];
+			D[0][2] = array[2][2];
 
 			B[2][2] = array[3][0];
 			B[1][2] = array[3][1];
