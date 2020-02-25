@@ -200,7 +200,6 @@ public class problem_5373 {
 			L[2][2] = array[3][2];
 			break;
 		case 'L':
-			U[0][0] = array[0][0];
 			U[1][0] = array[0][1];
 			U[2][0] = array[0][2];
 
