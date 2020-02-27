@@ -107,6 +107,10 @@
 * [2178. 미로 탐색](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2178.java)
 * [5014. 스타트링크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_5014.java)
 
+## 브루트포스
+* [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
+* [1476. 날짜 계산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1476.java)
+
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
 * [1916. 최소비용구하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1916.java)
