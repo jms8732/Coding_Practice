@@ -1,0 +1,17 @@
+package bruteForce;
+
+import java.util.*;
+import java.io.*;
+
+public class test {
+	public static void main(String[] args)throws IOException {
+		File f = new File("c:\\Users\\jms87\\desktop\\test.txt");
+		
+		FileWriter fw = new FileWriter(f);
+		
+		for(int i = 1; i <= 10000 ; i++) {
+			fw.write(i + " ");
+		}
+		fw.close();
+	}
+}
