@@ -1,0 +1,77 @@
+package combination;
+
+//다음 순열
+import java.util.*;
+import java.io.*;
+
+public class problem_10972 {
+	static boolean np = false;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int[] array = new int[N];
+
+		for (int i = 0; i < N; i++) {
+			array[i] = Integer.parseInt(st.nextToken());
+		}
+
+		int value = array[0];
+		boolean check = false;
+		for (int i = 1; i < N; i++) {
+			if (value > array[i]) {
+				value = array[i];
+			} else {
+				check = true;
+				break;
+			}
+		}
+
+		// 마지막 순열이 아닌 경우
+		if (check) {
+			permutation(array);
+		}else
+			System.out.println(-1);
+
+	}
+
+	private static void permutation(int[] array) {
+		boolean visited[] = new boolean[array.length];
+		Arrays.fill(visited, true);
+		int idx = array.length-1;
+		List<Integer> list = new ArrayList<>();
+		boolean check = false;
+		while(true) {
+			list.add(array[idx]);
+			visited[array[idx]-1] = false;
+			
+			for(int i = array[idx]+1 ; i < array.length ; i++) {
+				if(!visited[i]) {
+					//list.add(i);
+					check = true;
+					break;
+				}
+			}
+			
+			if(check) {
+				array[idx] = list.get(0);
+				list = list.subList(1, list.size());
+				
+				//오름차순 정렬
+				Collections.sort(list);
+				for(int i = 0; i < list.size(); i++) {
+					array[idx+1+i] = list.get(i);
+				}
+				break;
+			}
+			idx--;
+		}
+		
+		for(int i =0 ; i < array.length ; i++) {
+			System.out.print(array[i] + " ");
+		}
+		
+	}
+
+}

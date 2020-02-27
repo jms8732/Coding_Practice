@@ -1,0 +1,59 @@
+package combination;
+
+//다음 순열
+import java.util.*;
+import java.io.*;
+
+public class problem_10972 {
+	static boolean np = false;
+	public static void main(String[] args) throws IOException {
+		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		//int N = Integer.parseInt(br.readLine());
+		//StringTokenizer st = new StringTokenizer(br.readLine());
+		int[] array = new int[10000];
+		
+		FileReader fr = new FileReader("c:\\Users\\jms87\\desktop\\test.txt");
+		int cur = 0;
+		while((cur=fr.read()) != -1) {
+			System.out.print((int)cur);
+		}
+		
+		
+		/*
+		 * for (int i = 0; i < 10000; i++) { array[i] =
+		 * Integer.parseInt(st.nextToken()); }
+		 */
+		/*
+		 * int value = array[0]; boolean[] visited = new boolean[N];
+		 * 
+		 * boolean check = false; for (int i = 1; i < N; i++) { if (value > array[i]) {
+		 * value = array[i]; } else { check = true; break; } }
+		 * 
+		 * // 마지막 순열이 아닌 경우 if (check) { int[] next = new int[N]; permutation(0, array,
+		 * visited, next); }else System.out.println(-1);
+		 */
+	}
+
+	private static void permutation(int depth, int[] array, boolean[] visited, int[] next) {
+		if (depth == array.length) {
+			if(np) {
+				for(int i =0 ; i< next.length ; i++) {
+					System.out.print(next[i] + " ");
+				}
+				System.exit(0);
+			}
+			np = true;
+			return; 
+		}
+
+		for (int i = 0; i < array.length; i++) {
+			if (!visited[i]) {
+				visited[i] = true;
+				next[depth] = array[i];
+				permutation(depth+1,array,visited,next);
+				visited[i] = false;
+			}
+		}
+	}
+}
