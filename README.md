@@ -110,6 +110,7 @@
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
 * [1476. 날짜 계산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1476.java)
+* [10973. 이전 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_10973.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
