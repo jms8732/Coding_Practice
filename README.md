@@ -223,6 +223,7 @@
 * [10430. 나머지](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10430.java)
 * [2609. 최대공약수와 최소공배수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2609.java)
 * [1934. 최소공배수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1934.java)
+* [9613. GCD 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9613.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
