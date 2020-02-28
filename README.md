@@ -220,6 +220,7 @@
 * [9506. 약수들의 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9506.java)
 * [1837. 암호제작](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1837.java)
 * [하노이의 탑](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_12.java)
+* [10430. 나머지](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10430.java)
 
 
 ## 그래프
