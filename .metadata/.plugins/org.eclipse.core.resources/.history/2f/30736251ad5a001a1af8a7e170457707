@@ -1,0 +1,16 @@
+package graph;
+//ABCDE
+import java.util.*;
+import java.io.*;
+
+public class problem_13023 {
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(Systme.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		
+		
+	}
+}
