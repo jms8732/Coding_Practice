@@ -108,6 +108,7 @@
 * [2178. 미로 탐색](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2178.java)
 * [5014. 스타트링크](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_5014.java)
 * [15658. 연산자 끼워넣기(2)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_15658.java)
+* [7562. 나이트의 이동](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_7562.java)
 
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
