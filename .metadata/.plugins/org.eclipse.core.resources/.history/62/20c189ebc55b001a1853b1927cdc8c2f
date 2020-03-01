@@ -1,0 +1,25 @@
+package greedy;
+
+//회의실 배정
+import java.util.*;
+import java.io.*;
+
+public class problem_1931 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N  = Integer.parseInt(br.readLine());
+	}
+
+	private static class Node implements Comparable<Node>{
+		int start,end, diff;
+
+		public Node(int s, int e, int d) {
+			this.start = s;
+			this.end = e;
+			this.diff = d;
+		}
+		
+		
+	}
+}
