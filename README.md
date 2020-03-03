@@ -66,6 +66,7 @@
 * [11047. 동전0](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_11047.java)
 * [1931. 회의실 배정](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1931.java)
 * [11399. ATM](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_11399.java)
+* [1080. 행렬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1080.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
