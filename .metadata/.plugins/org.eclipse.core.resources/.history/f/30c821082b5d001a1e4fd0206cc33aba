@@ -1,0 +1,73 @@
+package greedy;
+
+//전구와 스위치
+import java.util.*;
+import java.io.*;
+
+public class problem_2138 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+
+		boolean[] A = new boolean[N];
+		boolean[] B = new boolean[N];
+
+		String tmp = br.readLine();
+		for (int i = 0; i < N; i++) {
+			if (tmp.charAt(i) == '0')
+				A[i] = false;
+			else
+				A[i] = true;
+		}
+		tmp = br.readLine();
+		for (int i = 0; i < N; i++) {
+			if (tmp.charAt(i) == '0')
+				A[i] = false;
+			else
+				A[i] = true;
+		}
+
+		compare(A, B);
+	}
+
+	private static void compare(boolean[] A, boolean[] B) {
+		int left = 0, right = 0;
+		int count = 0;
+		for (int i = 0; i < A.length; i++) {
+			left = i - 1;
+			right = i;
+
+			count++;
+			if (left < 0) {
+				A[i]= !A[i];
+				A[right] = !A[right];
+				continue;
+			}
+
+			if (right >= A.length) {
+				A[left] = !A[left];
+				A[i] = !A[i];
+				continue;
+			}
+
+			if (A[left] != B[left] || A[i] != B[i] || A[right] != B[right]) {
+				A[left] = !A[left];
+				A[i] = !A[i];
+				A[right] = !A[right];
+			}
+		}
+		
+		if(isSame(A,B)) {
+			System.out.println(count);
+		}else
+			System.out.println(-1);
+	}
+	private static boolean isSame(boolean [] A ,boolean []B) {
+		for(int i =0 ; i < A.length ; i++) {
+			if(A[i] != B[i])
+				return false;
+		}
+		return true;
+	}
+}

@@ -1,0 +1,65 @@
+package greedy;
+
+//전구와 스위치
+import java.util.*;
+import java.io.*;
+
+public class problem_2138 {
+	static String A,B;
+	static StringBuilder sb;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+
+		A = br.readLine();
+		B = br.readLine();
+		sb = new StringBuilder(A);
+		int idx =0 , count = 0;
+		//첫번째 스위치를 안 누른 경우
+
+		simulation(idx+1,count);
+		
+		//누른 경우
+		make(sb,idx);
+		simulation(idx+1,count+1);
+		
+		System.out.println(-1);
+	}
+
+	private static void simulation(int idx, int count) {
+		
+		//마지막 인덱스인 경우
+		if(idx == A.length()) {
+			if(sb.toString().equals(B)) {
+				System.out.println(count);
+				System.exit(0);
+			}
+			return;
+		}
+		
+		//해당 인덱스의 스위치를 안 누른 경우
+		simulation(idx+1,count);
+		
+		make(sb,idx);
+		//누른 경우
+		simulation(idx+1,count+1);
+		make(sb,idx);
+	}
+
+	private static void make(StringBuilder sb, int idx) {
+		for (int i = -1; i <= 1; i++) {
+			if (idx + i < 0 || idx + i >= sb.length()) {
+				continue;
+			}
+			int tmpI = idx + i;
+			if (sb.charAt(tmpI) == '0') {
+				sb.deleteCharAt(tmpI);
+				sb.insert(tmpI, '1');
+			} else {
+				sb.deleteCharAt(tmpI);
+				sb.insert(tmpI, '0');
+			}
+		}
+	}
+}
