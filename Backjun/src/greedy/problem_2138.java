@@ -36,7 +36,7 @@ public class problem_2138 {
 
 		simulation(idx, count + 1);
 
-		if (count == IMPOSSIBLE)
+		if (answer == IMPOSSIBLE)
 			System.out.println(-1);
 		else
 			System.out.println(answer);

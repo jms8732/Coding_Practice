@@ -1,0 +1,77 @@
+package greedy;
+//동전 뒤집기
+import java.util.*;
+import java.io.*;
+
+public class problem_1285 {
+	static char[][] map;
+	public static void main(String[] args) throws IOException{
+		BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+		
+		int N = Integer.parseInt(br.readLine());
+		
+		for(int i =0 ; i <N ; i++) {
+			String tmp = br.readLine();
+			for(int j = 0 ; j< N ; j++)
+				map[i][j] = tmp.charAt(j);
+		}
+		
+		simulation(N);
+	}
+	
+	private static void simulation(int N) {
+		//행
+		for(int i =0 ; i < N ; i++) {
+			int count = 0;
+			
+			for(int j =0 ; j< N ; j++) {
+				if(map[i][j] == 'T')
+					count++;
+			}
+			
+			//T가 더 많을 경우, 뒤집는다.
+			if((N - count) < count) {
+				for(int idx = i ; i < N ; i++) {
+					for(int j =0 ; j < N ; j++) {
+						if(map[i][j] == 'T')
+							map[i][j] = 'H';
+						else
+							map[i][j] = 'T';
+					}
+				}
+			}
+		}
+		
+		//열
+		for(int i = 0 ; i< N ; i++) {
+			int count = 0;
+			for(int j =0 ; j <N ; j++) {
+				if(map[j][i] == 'T')
+					count++;
+			}
+			
+			//T가 더 많을 경우, 뒤집는다.
+			if((N - count) < count) {
+				for(int idx = i ; i < N ; i++) {
+					for(int j =0 ; j < N ; j++) {
+						if(map[j][i] == 'T')
+							map[j][i] = 'H';
+						else
+							map[j][i] = 'T';
+					}
+				}
+			}
+		}
+		
+		int totalCount = 0;
+		for(int i =0 ; i <  N ; i++) {
+			for(int j =0 ; j <N  ; j++) {
+				if(map[i][j] == 'T')
+					totalCount++;
+			}
+		}
+		
+		System.out.println(totalCount);
+	}
+	
+}
