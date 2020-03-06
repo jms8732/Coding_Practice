@@ -1,0 +1,66 @@
+package greedy;
+
+//º¸¼® µµµÏ
+import java.util.*;
+import java.io.*;
+
+public class problem_1202 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int N = Integer.parseInt(st.nextToken());
+		int K = Integer.parseInt(st.nextToken());
+		int[] jewelCount = new int[300001];
+
+		List<Integer> jewel[] = new ArrayList[300001];
+
+		for (int i = 1; i < jewel.length; i++)
+			jewel[i] = new ArrayList<>();
+
+		PriorityQueue<Integer> backpack = new PriorityQueue<Integer>();
+
+		long start = System.currentTimeMillis();
+		for (int i = 0; i < 300000; i++) {
+			/*
+			 * st = new StringTokenizer(br.readLine()); int w =
+			 * Integer.parseInt(st.nextToken()); int v = Integer.parseInt(st.nextToken());
+			 */
+			int v =i;
+			int w= i;
+			jewelCount[v] += 1;
+
+			for (int j = w; j < jewel.length; j++)
+				jewel[j].add(v);
+
+			Collections.sort(jewel[w], Collections.reverseOrder());
+		}
+		long end = System.currentTimeMillis();
+		
+		System.out.println("time : " + (end-start)/1000.0);
+
+		for (int i = 0; i < K; i++) {
+			backpack.add(Integer.parseInt(br.readLine()));
+		}
+
+		int totalValue = 0;
+		while (!backpack.isEmpty()) {
+			int curBag = backpack.poll();
+
+			while (!jewel[curBag].isEmpty()) {
+				int jewelValue = jewel[curBag].get(0);
+				if (jewelCount[jewelValue] != 0) {
+					jewelCount[jewelValue] -= 1;
+					totalValue += jewelValue;
+					jewel[curBag].remove(0);
+					break;
+				}
+			}
+
+		}
+
+		System.out.println(totalValue);
+
+	}
+}

@@ -2,20 +2,12 @@ package greedy;
 
 public class test {
 	public static void main(String[] args) {
-		for(int i = 0 ; i< 10000;i++) {
-			System.out.print(0);
+		int [] A = {1,2,3};
+		int [] C = A.clone();
+		
+		A[0] = 2;
+		for(int i =0 ; i < 3 ; i ++) {
+			System.out.print(" A: " + A[i] + " C: " + C[i]);
 		}
-		
-		System.out.println();
-		
-		for(int i = 0 ; i< 10000;i++) {
-			if(i % 5 == 0)
-				System.out.print(1);
-			else
-				System.out.print(0);
-		}
-		
-
-		
 	}
 }
