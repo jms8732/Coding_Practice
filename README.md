@@ -68,6 +68,8 @@
 * [11399. ATM](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_11399.java)
 * [1080. 행렬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1080.java)
 * [2138. 전구와 스위치](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2138.java)
+* [2109. 순회강연](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2109.java)
+* [1202. 보석 도둑](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1202.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
