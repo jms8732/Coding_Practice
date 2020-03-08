@@ -1,0 +1,38 @@
+package greedy;
+
+//가장 긴 증가하는 부분수열
+import java.util.*;
+import java.io.*;
+
+public class problem_12015 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int N = Integer.parseInt(br.readLine());
+		int[] input = new int[N];
+		int[][] dp = new int[N][N];
+		
+		
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		for (int i = 0; i < N; i++) {
+			input[i] = Integer.parseInt(st.nextToken());
+		}
+
+		int answer =0 ;
+		dp[0][0] = 1;
+		
+		for (int i = 0; i < N; i++) {
+			int cur = input[i];
+			if(i != 0)
+				dp[i][i] = d[i-1][i] + 1;
+			for(int j = i+1 ; j < N ; j++) {
+				if(cur < input[j])
+					dp[i][j] = dp[i][i] + 1;
+			}
+		}
+		
+		System.out.println(dp[N-1][N-1]);
+	}
+
+}
