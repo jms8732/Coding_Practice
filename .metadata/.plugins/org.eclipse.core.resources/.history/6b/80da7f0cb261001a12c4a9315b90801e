@@ -1,0 +1,32 @@
+package greedy;
+
+//이분 탐색 테스트
+import java.util.*;
+
+public class binary_search_test {
+	public static void main(String[] args) {
+		int [] array = {1,2,3,4,5,6,7,8,9,10};
+		Scanner sc = new Scanner(System.in);
+		int n =  sc.nextInt();
+		binary_search(array,n);
+	}
+	private static void binary_search(int [] array , int target) {
+		int left = 0;
+		int right = array.length-1;
+		
+		int mid = 0;
+		
+		while(left < right) {
+			mid = (left + right ) / 2;
+			if(array[mid] == target)
+				break;
+			
+			if(array[right] > target)
+				right = mid -1 ;
+			else
+				left = mid +1;
+		}
+		
+		System.out.println(array[mid]);
+	}
+}

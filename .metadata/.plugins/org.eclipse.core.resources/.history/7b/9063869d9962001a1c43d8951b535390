@@ -1,0 +1,165 @@
+package programmers2;
+
+//[3차] 방금 그곡
+import java.util.*;
+
+public class problem_13 {
+	static PriorityQueue<Node> music;
+
+	public static void main(String[] args) {
+		String m = "ABC";
+		String[] infos = { "12:00,12:14,HELLO,C#A#B#F#", "13:00,13:05,WORLD,ABCDEF" };
+
+		String result = solution(m, infos);
+		System.out.println(result);
+	}
+
+	public static String solution(String m, String[] musicinfos) {
+		music = new PriorityQueue<>();
+		String pattern = makeString(m);
+		int[] SP = new int[pattern.length()];
+
+		computeSP(SP, pattern);
+
+		for (int i = 0; i < musicinfos.length; i++) {
+			String cur = musicinfos[i];
+			String[] split = cur.split(",");
+
+			String startTime = split[0];
+			String endTime = split[1];
+
+			int totalMinutes = calculate(startTime, endTime);
+
+			String title = split[2];
+			String melody = split[3];
+
+			search(totalMinutes, melody, SP, pattern, title);
+		}
+
+		if (music.isEmpty()) {
+			return "(None)";
+		} else
+			return music.poll().title;
+	}
+
+	private static String makeString(String pattern) {
+		StringBuilder sb = new StringBuilder();
+
+		for (int i = 0; i < pattern.length(); i++) {
+			if (i + 1 < pattern.length() && pattern.charAt(i + 1) == '#') {
+				String tmp = pattern.substring(i, i + 2);
+				int j = 0;
+				if (tmp.equals("A#"))
+					j = 1;
+				else if (tmp.equals("C#"))
+					j = 2;
+				else if (tmp.equals("D#"))
+					j = 3;
+				else if (tmp.equals("F#"))
+					j = 4;
+				else if (tmp.equals("G#"))
+					j = 5;
+				
+				sb.append(j);
+				i += 1;
+			} else {
+				sb.append(pattern.charAt(i));
+			}
+
+		}
+
+		return sb.toString();
+	}
+
+	private static void search(int tm, String m, int[] SP, String pattern, String title) {
+		// 시간이 길이보다 큰 경우
+		StringBuilder sb = new StringBuilder();
+		String melody = makeString(m);
+		if (tm >= melody.length()) {
+			int div = tm / melody.length();
+			int mol = tm % melody.length();
+
+			for (int i = 0; i < div; i++) {
+				sb.append(melody);
+			}
+
+			sb.append(melody.substring(0, mol));
+		} else {
+			int mol = tm % melody.length();
+
+			sb.append(melody.substring(0, mol));
+		}
+
+		if (kmp(SP, pattern, sb.toString())) {
+			music.add(new Node(title, tm));
+		}
+	}
+
+	private static boolean kmp(int[] SP, String pattern, String target) {
+		int k = 0;
+
+		for (int i = 0; i < target.length(); i++) {
+			while (k > 0 && pattern.charAt(k) != target.charAt(i))
+				k = SP[k - 1];
+
+			if (pattern.charAt(k) == target.charAt(i))
+				k++;
+
+			// 현재 멜로디에 패턴 스트링이 존재하는 경우
+			if (k == pattern.length()) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	private static int calculate(String st, String et) {
+		int sHour = Integer.parseInt(st.substring(0, 2));
+		int sMin = Integer.parseInt(st.substring(3, 5));
+
+		int eHour = Integer.parseInt(et.substring(0, 2));
+		int eMin = Integer.parseInt(et.substring(3, 5));
+
+		return Math.abs(sHour - eHour) * 60 + Math.abs(sMin - eMin);
+	}
+
+	private static void computeSP(int[] SP, String pattern) {
+		int k = 0;
+		SP[k] = 0;
+
+		for (int i = 1; i < pattern.length(); i++) {
+			while (k > 0 && pattern.charAt(i) != pattern.charAt(k))
+				k = SP[k - 1];
+
+			if (pattern.charAt(i) == pattern.charAt(k))
+				k++;
+
+			SP[i] = k;
+		}
+	}
+
+	private static class Node implements Comparable<Node> {
+		String title;
+		int duration;
+
+		public Node(String t, int d) {
+			this.title = t;
+			this.duration = d;
+		}
+
+		@Override
+		public int compareTo(Node arg0) {
+			// TODO Auto-generated method stub
+			if(this.duration > arg0.duration)
+				return -1;
+			else if(this.duration == arg0.duration)
+				return 0;
+			else
+				return 1;
+		}
+		
+		
+	}
+
+}
