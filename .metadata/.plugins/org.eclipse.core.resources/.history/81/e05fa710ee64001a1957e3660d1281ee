@@ -1,0 +1,10 @@
+package search_algorithm;
+
+public class test {
+	public static void main(String[] args) {
+		int bit = Integer.parseInt("01111101",2);
+		int bit1 = bit>>1;
+		System.out.println("bit : " + bit );
+		System.out.println("1 << : " + bit1);
+	}
+}
