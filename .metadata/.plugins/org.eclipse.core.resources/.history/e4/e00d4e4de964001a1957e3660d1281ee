@@ -1,0 +1,9 @@
+package search_algorithm;
+
+public class test {
+	public static void main(String[] args) {
+		int bit = 0111;
+		String b = Integer.toBinaryString(bit <<0);
+		System.out.println(b);
+	}
+}

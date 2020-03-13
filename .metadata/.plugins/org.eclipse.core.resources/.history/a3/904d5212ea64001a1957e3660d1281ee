@@ -1,0 +1,9 @@
+package search_algorithm;
+
+public class test {
+	public static void main(String[] args) {
+		int bit = 10101111;
+		int bit1 = bit<<1;
+		System.out.println(bit + " " + bit1);
+	}
+}
