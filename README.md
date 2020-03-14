@@ -237,6 +237,7 @@
 * [9613. GCD 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9613.java)
 * [1978. 소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1978.java)
 * [6588. 골드바흐의 추측](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_6588.java)
+* [2933. 미네랄](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2933.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
