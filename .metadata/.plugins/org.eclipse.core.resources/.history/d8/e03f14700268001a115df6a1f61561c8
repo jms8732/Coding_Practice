@@ -64,11 +64,12 @@ public class problem_4902 {
 
 			System.out.println(step + ". " + big);
 			step++;
-			big = Integer.MIN_VALUE;
+			big = 0;
 		}
 	}
 
 	private static int calculate(boolean c, int step, int next, int x, int y) {
+
 		int value = cache[x][y];
 		if (!c) {
 			int left = y;
