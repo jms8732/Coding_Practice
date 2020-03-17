@@ -1,0 +1,76 @@
+package search_algorithm;
+
+//»ï°¢ÇüÀÇ °ª
+import java.util.*;
+import java.io.*;
+
+public class problem_4902 {
+	static int[][] triangle;
+	static int big = Integer.MIN_VALUE;
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String tmp = null;
+		StringTokenizer st = null;
+		int step = 1;
+		while (true) {
+			tmp = br.readLine();
+			
+			if(tmp.equals("0"))
+				break;
+			
+			st = new StringTokenizer(tmp);
+
+			int N = Integer.parseInt(st.nextToken());
+			triangle = new int[N][];
+
+			int idx = 1;
+			for (int i = 0; i < N; i++) {
+				int[] array = new int[idx];
+				for (int j = 0; j < array.length; j++) {
+					array[j] = Integer.parseInt(st.nextToken());
+				}
+				triangle[i] = array;
+				idx += 2;
+			}
+
+			for (int i = 1; i <= N; i++) {
+				calculate(i);
+			}
+			
+			System.out.println(step +". " + big);
+			step++;
+			big = 0;
+		}
+	}
+
+	private static void calculate(int step) {
+		if(step == 1) {
+			for(int i =0 ; i< triangle.length ; i++) {
+				for(int j =0 ; j< triangle[i].length ; j++) {
+					big = Math.max(big, triangle[i][j]);
+				}
+			}
+		}else {
+			for(int i = 0 ; i<= triangle.length-step ; i++) {
+				for(int j =0 ; j <triangle[i].length ; j++) {
+					if(j % 2 == 0) {
+						int tmp = triangle[i][j];
+						int left = j;
+						int right = j+2;
+						for(int k = 1 ; k < step; k++) {
+							for(int l = left ; l <= right ; l ++) {
+								tmp += triangle[i+k][l];
+							}
+							right += 2;
+						}
+						
+						big = Math.max(tmp, big);
+					}
+				}
+				
+			}
+		}
+	}
+	
+}
