@@ -121,6 +121,7 @@
 * [7562. 나이트의 이동](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_7562.java)
 * [15662. 톱니 바퀴(2)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_15662.java)
 * [2210. 숫자판 점프](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2210.java)
+* [2916. 자와 각도기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2916.java)
 
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
