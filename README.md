@@ -53,6 +53,7 @@
 * [카펫](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_33.java)
 * [숫자 야구](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_34.java)
 * [4902. 삼각형의 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_4902.java)
+* [2422. 한윤정이 이탈리아에 가서 아이스크림을 사먹는데](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2422.java)
 
 ## 탐욕법(Greedy)
 * [큰 수 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_13.java)
