@@ -1,0 +1,105 @@
+package search_algorithm;
+
+import java.util.*;
+import java.io.*;
+
+public class problem_9944 {
+	static boolean[][] visited;
+	static char[][] map;
+	static int N, M;
+	static int answer = -1;
+	static int[] ud = { -1, 0, 1, 0 };
+	static int[] rl = { 0, 1, 0, -1 };
+	static int totalCount = 0;
+	
+	
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int step = 1;
+		
+		while (true) {
+			String line = br.readLine();
+			
+			if(line.isEmpty())
+				break;
+			
+			StringTokenizer st = new StringTokenizer(line);
+
+			N = Integer.parseInt(st.nextToken());
+			M = Integer.parseInt(st.nextToken());
+
+			visited = new boolean[N][M];
+			map = new char[N][M];
+
+			for (int i = 0; i < N; i++) {
+				String tmp = br.readLine();
+				for (int j = 0; j < M; j++) {
+					char t = tmp.charAt(j);
+					if (t == '*') {
+						visited[i][j] = true;
+					}else
+						totalCount++;
+					
+					map[i][j] = t;
+				}
+			}
+
+			for(int i =0 ; i < N ; i++) {
+				for(int j =0 ; j <M ; j++) {
+					if(map[i][j] == '.') {
+						visited[i][j] = true;
+						int c = 1;
+						searchMin(i,j,-1,0,c);
+						visited[i][j] = false;
+					}
+				}
+			}
+			System.out.println("Case : " + step + ": " + answer);
+			step++;
+			answer = -1;
+		}
+	}
+
+	private static void searchMin(int x, int y, int direction, int count, int dotCount) {
+		if (totalCount == dotCount) {
+			if (answer == -1)
+				answer = count;
+			else
+				answer = Math.min(answer, count);
+			
+			return;
+		}
+
+		for (int i = 0; i < 4; i++) {
+			int nx = x + ud[i];
+			int ny = y + rl[i];
+
+			// 방문했던 곳이나 배열의 범위 밖과 다음 좌표가 벽인 경우
+			if (nx < 0 || nx >= N || ny < 0 || ny >= N || visited[nx][ny] || map[nx][ny] == '*')
+				continue;
+
+			visited[nx][ny] = true;
+			
+			// 전에 이동했던 방향과 동일할 경우
+			if (direction == i) {
+				searchMin(nx, ny, i, count,dotCount+1);
+			} else
+				searchMin(nx, ny, i, count + 1, dotCount+1);
+			
+			visited[nx][ny] = false;
+
+		}
+
+	}
+
+	private static boolean isAllVisited() {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				if (!visited[i][j])
+					return false;
+			}
+		}
+
+		return true;
+	}
+}
