@@ -9,10 +9,7 @@ public class test {
 		w[2] = 6;
 		
 		for(int i : array)
-			System.out.println(i);
-		
-		for(int i : w)
-			System.out.println(i);
+			System.out.println(array[i]);
 	}
 	
 }
