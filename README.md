@@ -48,6 +48,8 @@
 * [문자열 내림차순으로 배치하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_42.java)
 * [정수 내림차순으로 배치하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_2.java)
 * [2751. 수 정렬하기 2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_2751.java)
+* [11650. 좌표 정렬하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_11650.java)
+* [11651. 좌표 정렬하기2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_11651.java)
 
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
