@@ -1,0 +1,104 @@
+package programmers2;
+
+//[2020 카카오공채] 외벽 점검
+import java.util.*;
+
+public class problem_15 {
+	static int answer = -1;
+
+	public static void main(String[] args) {
+		int n = 12;
+		int[] weak = { 1, 5, 6, 10 };
+		int[] dist = { 1, 2, 3, 4 };
+
+		int result = solution(n, weak, dist);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[] weak, int[] dist) {
+		for (int i = 1; i < 1 << dist.length; i++) { // 현재 구성된 멤버
+			boolean[] visited = new boolean[n];
+			repair(0, Integer.bitCount(i), i, n, weak, dist, visited);
+		}
+
+		return answer;
+	}
+
+	private static boolean repair(int depth, int k, int member, int n, int[] weak, int[] dist, boolean[] visited) {
+		if (depth == k) {
+			if (isComplete(visited, weak)) {
+				if (answer == -1)
+					answer = depth;
+				else
+					answer = Math.min(depth, answer);
+
+				return true;
+			}
+
+			return false;
+		}
+
+		// 구해지면 바로 탈출하기 위해서 사용, 구성원은 필요없고 인원만 확인하면 되기 때문에
+		boolean check = false;
+		boolean[] tmpVisited = new boolean[n];
+
+		System.arraycopy(visited, 0, tmpVisited, 0, n);
+		outter: for (int i = 0; i < weak.length; i++) {
+			if (!visited[weak[i] - 1]) {
+				// 현재 시작점
+				for (int j = 0; j < dist.length; j++) {
+					if ((member & 1 << j) == 1 << j) {
+						// 현재 멤버
+						member &= ~(1 << j);
+						rightDirection(weak[i], dist[j], n, weak, visited);
+						check = repair(depth + 1, k, member, n, weak, dist, visited);
+						if (check)
+							break outter;
+
+						System.arraycopy(tmpVisited, 0, visited, 0, n);
+
+						reverseDirection(weak[i], dist[j], n, weak, visited);
+						check = repair(depth + 1, k, member, n, weak, dist, visited);
+						if (check)
+							break outter;
+
+						member |= (1 << j);
+						System.arraycopy(tmpVisited, 0, visited, 0, n);
+
+					}
+				}
+			}
+
+		}
+
+		return check;
+	}
+
+	private static boolean isComplete(boolean[] visited, int[] weak) {
+		for (int i = 0; i < weak.length; i++)
+			if (!visited[weak[i] - 1])
+				return false;
+
+		return true;
+	}
+
+	private static void rightDirection(int start, int dist, int n, int[] weak, boolean[] visited) {
+		int div = (start + dist) / n;
+		int mod = (start + dist) % n;
+
+		// 몫이 있는 경우는 한바퀴 다 돌 수 있다는 의미이므로 시작 지점에서부터 끝지점까지 다 채운다.
+		if (div != 0) {
+			Arrays.fill(visited, start, n, true);
+		}
+
+		// 그 이외의 나머지 부분에 true로 채운다.
+		Arrays.fill(visited, 0, mod + 1, true);
+	}
+
+	private static void reverseDirection(int start, int dist, int n, int[] weak, boolean[] visited) {
+		for(int i =0  ; i < dist ; i++) {
+			int idx = Math.floorMod(start-i, n);
+			visited[idx] = true;
+		}
+	}
+}
