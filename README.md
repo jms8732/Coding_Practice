@@ -278,6 +278,7 @@
 * [[2020 KAKAO BLIND] 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 * [[2020 KAKAO BLIND] 자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
 * [[2020 KAKAO BLIND] 블록 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_32.java)
+* [[2020 KAKAO BLIND] 외벽 점검](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_15.java)
 
 ## Samsung
 * [13458. 시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
