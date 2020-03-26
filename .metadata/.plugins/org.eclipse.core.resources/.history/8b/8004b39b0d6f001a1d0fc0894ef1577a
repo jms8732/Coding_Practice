@@ -1,0 +1,73 @@
+package programmers2;
+
+//[2020 카카오공채] 외벽 점검
+import java.util.*;
+
+public class problem_15 {
+	static int answer = -1;
+
+	public static void main(String[] args) {
+		int n = 50;
+		int[] weak = { 1, 5, 10, 12, 22, 25 };
+		int[] dist = { 4, 3, 2, 1 };
+
+		int result = solution(n, weak, dist);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[] weak, int[] dist) {
+		List<Integer> list =new ArrayList<>();
+		
+		simluation(0,n,list,dist,weak);)
+		return answer;
+	}
+
+	private static void simulation(int depth, int n, List<Integer> list, int[] dist, int[] weak) {
+		if (depth == dist.length) {
+			Queue<Integer> tmp = new LinkedList<>(list);
+			Queue<Integer> w = new LinkedList<>();
+
+			for (int i = 0; i < weak.length; i++)
+				w.add(weak[i]);
+
+			int start = w.poll();
+
+			while (!tmp.isEmpty() || !w.isEmpty()) {
+				int cur = tmp.poll();
+				inspect(start, cur, n, w);
+			}
+
+			if (w.isEmpty()) {
+				if (answer == -1)
+					answer = list.size() - tmp.size();
+				else
+					answer = Math.min(answer, list.size() - tmp.size());
+			}
+
+			return;
+		}
+
+		for (int i = depth; i < dist.length; i++) {
+			list.add(depth, dist[i]);
+			swap(depth, i, dist);
+			simulation(depth + 1, n, list, dist, weak);
+			swap(i, depth, dist);
+		}
+	}
+
+	private static void inspect(int start, int dist, int n, Queue<Integer> weak) {
+		while (!weak.isEmpty()) {
+			int target = Math.floorMod(weak.peek() - start, n);
+
+			if (0 <= target && target <= dist)
+				weak.poll();
+
+		}
+	}
+
+	private static void swap(int depth, int i, int[] dist) {
+		int tmp = dist[depth];
+		dist[depth] = dist[i];
+		dist[i] = tmp;
+	}
+}

@@ -1,0 +1,85 @@
+package programmers2;
+
+//[2020 카카오공채] 외벽 점검
+import java.util.*;
+
+public class problem_15 {
+	static int answer = -1;
+
+	public static void main(String[] args) {
+		int n = 12;
+		int[] weak = { 1,3,4,9,10};
+		int[] dist = { 3,5,7 };
+
+		int result = solution(n, weak, dist);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[] weak, int[] dist) {
+		for (int i = 1; i < (1<<dist.length); i++) { // 현재 구성된 멤버
+			List<Integer> member = new ArrayList<>();
+
+			for (int j = 0; j < dist.length; j++) {
+				if ((i & 1 << j) == 1 << j) {
+					member.add(j);
+				}
+			}
+			int[] array = new int[member.size()];
+			for (int j = 0; j < array.length; j++)
+				array[j] = dist[member.get(j)];
+
+			boolean[] visited = new boolean[weak.length];
+			if (simulation(0, array, n, weak, dist, visited)) {
+				if (answer == -1)
+					answer = Integer.bitCount(i);
+				else
+					answer = Math.min(answer, Integer.bitCount(i));
+			}
+
+			
+			if(answer == 1)
+				break;
+		}
+
+		return answer;
+	}
+
+	private static boolean simulation(int depth, int[] array, int n, int[] weak, int[] dist, boolean[] visited) {
+		if (depth == array.length) {
+			for (int i = 0; i < visited.length; i++) {
+				if (!visited[i])
+					return false;
+			}
+			return true;
+		}
+
+
+		boolean[] tmpVisited = new boolean[visited.length];
+		System.arraycopy(visited, 0, tmpVisited, 0, visited.length);
+
+		for (int i = 0; i < weak.length; i++) {
+			if (!visited[i]) { // 현재 수리된 취약한 부분
+				direction(weak[i], array[depth], n, weak, visited);
+				
+				if(simulation(depth + 1, array, n, weak, dist, visited))
+					return true;
+				
+				System.arraycopy(tmpVisited, 0, visited, 0, visited.length);
+			}
+		}
+		
+		return false;
+	}
+
+	private static void direction(int start, int dist, int n, int[] weak, boolean[] visited) {
+		for (int i = 0; i < weak.length; i++) {
+			if (!visited[i]) {
+				int target = Math.floorMod(weak[i] - start, n);
+
+				if (0 <= target && target <= dist)
+					visited[i] = true;
+
+			}
+		}
+	}
+}

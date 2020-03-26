@@ -7,93 +7,80 @@ public class problem_15 {
 	static int answer = -1;
 
 	public static void main(String[] args) {
-		int n = 50;
-		int[] weak = { 1, 5, 10, 12, 22, 25 };
-		int[] dist = { 4, 3, 2, 1 };
+		int n = 12;
+		int[] weak = { 1, 3, 4, 9, 10 };
+		int[] dist = { 3, 5, 7 };
 
 		int result = solution(n, weak, dist);
 		System.out.println(result);
 	}
 
 	public static int solution(int n, int[] weak, int[] dist) {
-		for (int i = (1 << dist.length) - 1; i >= 1; i--) { // 현재 구성된 멤버
-			List<Integer> member = new ArrayList<>();
+		List<Integer> list = new ArrayList<>();
 
-			for (int j = 0; j < dist.length; j++) {
-				if ((i & 1 << j) == 1 << j) {
-					member.add(j);
-				}
-			}
-			int[] array = new int[member.size()];
-			for (int j = 0; j < array.length; j++)
-				array[j] = dist[member.get(j)];
-
-			boolean[] visited = new boolean[weak.length];
-			if (simulation(0, array, n, weak, dist, visited)) {
-				if (answer == -1)
-					answer = Integer.bitCount(i);
-				else
-					answer = Math.min(answer, Integer.bitCount(i));
-			}
-
-			
-			if(answer == 1)
-				break;
-		}
-
+		simulation(0, n, list, dist, weak);
 		return answer;
 	}
 
-	private static boolean simulation(int depth, int[] array, int n, int[] weak, int[] dist, boolean[] visited) {
-		if (depth == array.length) {
-			for (int i = 0; i < visited.length; i++) {
-				if (!visited[i])
-					return false;
-			}
+	private static void simulation(int depth, int n, List<Integer> list, int[] dist, int[] weak) {
+		if (depth == dist.length) {
+			Queue<Integer> w = new LinkedList<>();
 
-			return true;
+			for (int i = 0; i < weak.length; i++) {
+				makeWeak(weak,n,i,w);
+				Queue<Integer> tmp = new LinkedList<>(list);
+				
+				while (!tmp.isEmpty() && !w.isEmpty()) {
+					int cur = tmp.poll();
+					int start = w.poll();
+					inspect(start, cur, n, w);
+				}
+
+				if (w.isEmpty()) {
+					if (answer == -1)
+						answer = list.size() - tmp.size();
+					else
+						answer = Math.min(answer, (list.size() - tmp.size()));
+				}
+				
+				w.clear();
+			}
+			return;
 		}
 
-		boolean check = false;
-
-		boolean[] tmpVisited = new boolean[visited.length];
-		System.arraycopy(visited, 0, tmpVisited, 0, visited.length);
-
-		for (int i = 0; i < weak.length; i++) {
-			if (!visited[i]) { // 현재 수리된 취약한 부분
-				check = Direction(weak[i], array[depth], n, weak, visited);
-				if (check)
-					break;
-
-				check = simulation(depth + 1, array, n, weak, dist, visited);
-
-				if (check)
-					break;
-
-				System.arraycopy(tmpVisited, 0, visited, 0, visited.length);
-			}
+		for (int i = depth; i < dist.length; i++) {
+			list.add(depth, dist[i]);
+			swap(depth, i, dist);
+			simulation(depth + 1, n, list, dist, weak);
+			swap(i, depth, dist);
+			list.remove(depth);
 		}
-
-		return check;
 	}
 
-	private static boolean Direction(int start, int dist, int n, int[] weak, boolean[] visited) {
-		for (int i = 0; i < weak.length; i++) {
-			if (!visited[i]) {
-				int target = Math.floorMod(weak[i] - start, n);
+	private static void makeWeak(int[] weak, int n, int start, Queue<Integer> w) {
+		while (w.size() != weak.length) {
+			int div = start / weak.length;
 
-				if (0 <= target && target <= dist)
-					visited[i] = true;
-
-			}
+			w.add(div * n + weak[start % weak.length]);
+			start++;
 
 		}
-		
-		for(int i =0 ; i < weak.length ; i++) {
-			if(!visited[i])
-				return false;
+	}
+
+	private static void inspect(int start, int dist, int n, Queue<Integer> weak) {
+		while (!weak.isEmpty()) {
+			int target = Math.floorMod(weak.peek() - start, n);
+
+			if (0 <= target && target <= dist)
+				weak.poll();
+			else
+				break;
 		}
-		
-		return true;
+	}
+
+	private static void swap(int depth, int i, int[] dist) {
+		int tmp = dist[depth];
+		dist[depth] = dist[i];
+		dist[i] = tmp;
 	}
 }
