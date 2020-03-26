@@ -1,0 +1,105 @@
+package programmers2;
+
+//[2020 카카오공채] 외벽 점검
+import java.util.*;
+
+public class problem_15 {
+
+	public static void main(String[] args) {
+		int n = 50;
+		int[] weak = { 1, 5, 10, 12, 22, 25 };
+		int[] dist = { 4, 3, 2, 1 };
+
+
+		int result = solution(n, weak, dist);
+		System.out.println(result);
+	}
+
+	public static int solution(int n, int[] weak, int[] dist) {
+		int answer = -1;
+
+		List<Integer> list = new ArrayList<>();
+		for(int i = 0 ; i < dist.length ; i++) {
+			list.add(dist[i]);
+		}
+		
+		Collections.sort(list,Collections.reverseOrder());
+		
+		for(int i =0 ; i< dist.length ; i++)
+			dist[i] = list.get(i);
+		
+		for (int i = 1; i <= dist.length; i++) {
+			int[] array = new int[i];
+
+			if (simulation(0, 0, n, dist, weak, array)) {
+				answer = i;
+				break;
+			}
+		}
+		return answer;
+	}
+
+	private static boolean simulation(int depth, int next, int n, int[] dist, int[] weak, int[] array) {
+		if (depth == array.length) {
+			boolean[] visited = new boolean[weak.length];
+			if (inspect(0, n, 0, weak, array, visited))
+				return true;
+
+			return false;
+		}
+
+		for (int i = next; i < dist.length; i++) {
+			array[depth] = dist[i];
+			if (simulation(depth + 1, i + 1, n, dist, weak, array))
+				return true;
+		}
+
+		return false;
+	}
+
+	private static boolean inspect(int cur, int n, int next, int[] weak, int[] array, boolean[] visited) {
+		if (cur == array.length) {
+			for (int i = 0; i < visited.length; i++) {
+				if (!visited[i])
+					return false;
+			}
+
+			return true;
+		}
+
+		boolean[] tmpVisited = new boolean[visited.length];
+		System.arraycopy(visited, 0, tmpVisited, 0, visited.length);
+
+		for (int i = next; i < weak.length; i++) {
+			if (!visited[i]) {
+				if(inspect_all(weak[i], n, array[cur], weak, visited))
+					return true;
+
+				if (inspect(cur + 1, n, Math.floorMod(i + 1, weak.length), weak, array, visited))
+					return true;
+
+				System.arraycopy(tmpVisited, 0, visited, 0, visited.length);
+			}
+		}
+
+		return false;
+	}
+
+	private static boolean inspect_all(int start, int n, int dist, int[] weak, boolean[] visited) {
+		for (int i = 0; i < weak.length; i++) {
+			if (!visited[i]) {
+				int target = Math.floorMod(weak[i]-start,n);
+				
+				if(0 <= target && target <= dist)
+					visited[i]= true;
+			}
+		}
+		
+		for(int i =0 ; i < visited.length ; i++) {
+			if(!visited[i])
+				return false;
+		}
+		
+		return true;
+	}
+}
