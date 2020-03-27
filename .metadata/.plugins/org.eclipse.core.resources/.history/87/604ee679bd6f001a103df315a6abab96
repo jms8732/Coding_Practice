@@ -1,0 +1,59 @@
+package bruteForce;
+
+//∫ŒµÓ»£
+import java.util.*;
+import java.io.*;
+
+public class problem_2529 {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int K = Integer.parseInt(br.readLine());
+		int oprCount = K + 1;
+
+		String op = br.readLine().replaceAll(" ", "");
+
+		StringBuilder sb = null;
+		for (int i = 0; i <= 9; i++) {
+			sb = new StringBuilder();
+			String min = makeMin(i, op, oprCount,sb);
+		}
+
+	}
+
+	private static void min(int opr, int idx, String op,StringBuilder sb) {
+		if (idx == op.length()) {
+			char tmp = op.charAt(idx - 1);
+			int last = -1;
+			if (tmp == '>') {
+				if(opr + 1 <= 9)
+					last = opr+1;
+			}else {
+				if(opr - 1>= 0)
+					last = opr -1;
+			}
+			
+			if(last != -1) {
+				sb.append(last);
+			}
+			
+			return;
+		}
+
+		char tmp = op.charAt(idx);
+
+		if (tmp == '>') {
+			for (int i = opr + 1; i <= 9; i++) {
+				sb.append(i);
+				min(i, idx + 1, op,sb);
+				sb.delete(sb.length()-1,sb.length());
+			}
+		} else {
+			for (int i = opr - 1; i >= 0; i--) {
+				sb.append(i);
+				min(i, idx + 1, op,sb);
+				sb.delete(sb.length()-1,sb.length());
+			}
+		}
+	}
+}
