@@ -38,6 +38,7 @@
 * [10971. 외판원순회2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_10971.java)
 * [15661. 링크와 스타트](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_15661.java)
 * [1062. 가르침](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_1062.java)
+* [14391. 종이 조각](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_14391.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
