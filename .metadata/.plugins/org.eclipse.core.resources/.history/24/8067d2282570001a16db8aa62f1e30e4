@@ -1,0 +1,113 @@
+package bitmask;
+
+//종이 조각
+import java.util.*;
+import java.io.*;
+
+public class problem_14391 {
+	static char map[][];
+	static boolean[][] combination;
+
+	static int answer = -1;
+	static int N, M;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		N = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
+
+		map = new char[N][M];
+		combination = new boolean[N][M];
+
+		for (int i = 0; i < N; i++) {
+			String tmp = br.readLine();
+			for (int j = 0; j < M; j++) {
+				map[i][j] = tmp.charAt(j);
+			}
+		}
+		boolean [][] visited =new boolean[N][M];
+		
+		findMax(visited,0);
+		System.out.println(answer);
+	}
+
+	private static void findMax(boolean[][] visited, int value) {
+		if(isCompleted(visited)) {
+			answer = Math.max(answer,value);
+			System.out.println(value);
+			return;
+		}
+		
+		boolean[][] tmpVisited = new boolean[N][M];
+		copyArray(visited,tmpVisited);
+		
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				if (!visited[i][j]) {
+					int tmp = makeHorizon(i, j, visited);
+					findMax(visited, value + tmp);
+					copyArray(tmpVisited,visited);
+
+					tmp = makeVertical(i, j, visited);
+					findMax(visited, value + tmp);
+					copyArray(tmpVisited,visited);
+
+				}
+			}
+		}
+	}
+	
+	private static void copyArray(boolean [][] src ,boolean [][] dest) {
+		int idx =0 ;
+		for(boolean [] tmp : src) {
+			System.arraycopy(tmp, 0, dest[idx++], 0, tmp.length);
+		}
+	}
+
+	private static int makeVertical(int x, int y, boolean[][] visited) {
+		StringBuilder sb = new StringBuilder();
+
+		boolean current = combination[x][y];
+
+		for (int j = x; j < N; j++) {
+			if (!visited[j][y] && current == combination[j][y]) {
+				visited[j][y] = true;
+				sb.append(map[j][y]);
+			}
+
+		}
+
+		return Integer.parseInt(sb.toString());
+	}
+
+	private static int makeHorizon(int x, int y, boolean[][] visited) {
+		StringBuilder sb = new StringBuilder();
+
+		boolean current = combination[x][y];
+
+		for (int j = y; j < M; j++) {
+			if (!visited[x][j] && current == combination[x][j]) {
+				visited[x][j] = true;
+				sb.append(map[x][j]);
+			}
+
+		}
+
+		return Integer.parseInt(sb.toString());
+	}
+
+	private static boolean isCompleted(boolean[][] visited) {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				if (!visited[i][j])
+					return false;
+			}
+		}
+
+		return true;
+	}
+
+}
