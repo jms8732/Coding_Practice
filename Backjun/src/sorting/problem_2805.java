@@ -1,6 +1,6 @@
 package sorting;
 
-//수 이어쓰기2
+//나무 자르기
 import java.util.*;
 import java.io.*;
 
