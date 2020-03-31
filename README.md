@@ -265,25 +265,37 @@
 * [13023. ABCDE](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_13023.java)
 
 ## Kakao
-* [[2017 카카오코드 본선]단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
-* [[2017 카카오코드 본선]리틀 프랜즈 사천성](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_17.java)
+### 2017 카카오 코드 본선
+* [단체사진찍기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_14.java)
+* [리틀 프랜즈 사천성](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_17.java)
 
-* [[2018 KAKAO BLIND] [1차] 뉴스 클러스터링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java) 
-* [[2018 KAKAO BLIND] [1차] 캐시](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_42.java)
-* [[2018 KAKAO BLIND] [1차] 프렌즈4블록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_43.java)
-* [[2018 KAKAO BLIND] [1차] 비밀지도](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_35.java)
-* [[2018 KAKAO BLIND] [1차]추석 트레픽](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_11.java)
-* [[2018 KAKAO BLIND] [1차] 다트 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_11.java)
-* [[2018 KAKAO BLIND] [3차] 방금 그곡](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_13.java)
-* [[2018 KAKAO BLIND] [3차] 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_14.java)
-* [[2019 KAKAO BLIND] 후보키](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_38.java)
-* [[2019 KAKAO BLIND] 무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
-* [[2019 KAKAO BLIND] 길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
-* [[2020 KAKAO BLIND] 문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
-* [[2020 KAKAO BLIND] 괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
-* [[2020 KAKAO BLIND] 자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
-* [[2020 KAKAO BLIND] 블록 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_32.java)
-* [[2020 KAKAO BLIND] 외벽 점검](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_15.java)
+### 2018 Kakao Blind Recruitment
+* [뉴스 클러스터링](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_40.java) 
+* [캐시](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_42.java)
+* [프렌즈4블록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_43.java)
+* [비밀지도](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_35.java)
+* [추석 트레픽](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_11.java)
+* [다트 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_11.java)
+* [방금 그곡](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_13.java)
+* [압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_14.java)
+
+### 2019 Kakao Blind Recruitment
+* [후보키](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_38.java)
+* [무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
+
+### 2020 Kakao Blind Recruitment
+* [길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
+* [문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
+* [괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
+* [자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
+* [블록 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_32.java)
+* [외벽 점검](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_15.java)
+
+### 2019 카카오 개발자 겨울 인턴십
+* [크레인 인형뽑기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_16.java)
+* [튜플](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_17.java)
+* [불량 사용자](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_18.java)
+* [호텔 방 배정](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_19.java)
 
 ## Samsung
 * [13458. 시험감독](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_13458.java)
