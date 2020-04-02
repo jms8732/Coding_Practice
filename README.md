@@ -258,6 +258,7 @@
 * [6588. 골드바흐의 추측](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_6588.java)
 * [2933. 미네랄](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2933.java)
 * [2290. LCD Test](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2290.java)
+* [1929. 소수 구하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1929.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
