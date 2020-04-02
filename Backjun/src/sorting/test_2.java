@@ -1,6 +1,6 @@
 package sorting;
 
-//이분 정렬
+//이분 탐색
 
 public class test_2 {
 	public static void main(String[] args) { 
@@ -8,8 +8,8 @@ public class test_2 {
 		binarySearch(3,array);
 		
 		int [] array1 = {1,2,3,3,3,5,6,7,8};
-		upperBound(6,array1);
-		lowerBound(6,array1);
+		upperBound(5,array1);
+		lowerBound(5,array1);
 	}
 	
 	/*
@@ -45,7 +45,7 @@ public class test_2 {
 	//찾는 값 바로 뒤에 있는 값을 찾는 upperBound
 	private static void upperBound(int target ,int [] array) {
 		int left =0 ;
-		int right = array.length;
+		int right = array[array.length-1];
 		int mid =0 ;
 		
 		while(left < right) {
@@ -64,7 +64,7 @@ public class test_2 {
 	//찾는 값과 동일한 값 혹은 그보다 큰 값
 	private static void lowerBound(int target ,int [] array) {
 		int left =0 ;
-		int right = array.length;
+		int right = array[array.length-1];
 		int mid =0 ;
 		
 		while(left < right) {
