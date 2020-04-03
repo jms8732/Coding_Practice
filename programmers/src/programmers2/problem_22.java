@@ -1,42 +1,46 @@
 package programmers2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class test {
-	public static void main(String[] args) {
-		String[] tmp = { "word", "war" };
-
+public class problem_22 {
+	public static void main(String []args) {
+		String[] words = {"go","gone","guild"};
+		
+		System.out.println(solution(words));
+	}
+	public static int solution(String[] words) {
 		Trie head = new Trie(' ');
-
-		for (int i = 0; i < tmp.length; i++) {
-			buildTree(tmp[i], head);
-		}
-
-		int answer =0 ;
-		for (int i = 0; i < tmp.length; i++) {
-			answer += findMin(tmp[i], head);
+		for(int i =0 ; i< words.length ; i++) {
+			buildTree(words[i],head);
 		}
 		
-		System.out.println(answer);
-
+		int answer = 0;
+		for(int i =0 ; i < words.length ; i++) {
+			answer += findMin(words[i],head);
+		}
+		
+		return answer;
 	}
 
 	private static int findMin(String target, Trie parent) {
 		int idx = 0;
 		Trie tmp = null;
-		
-		while (!parent.isFinish) {
+
+		while (idx < target.length()) {
 			int index = parent.isContain(target.charAt(idx));
 
 			tmp = parent.children.get(index);
-			if(tmp.count == 1)
+			if (tmp.count == 1) {
+				idx++;
 				break;
-			
+			}
+
 			parent = tmp;
 			idx++;
 		}
-		
-		return idx+1;
+
+		return idx;
 	}
 
 	private static void buildTree(String target, Trie parent) {
@@ -93,7 +97,7 @@ public class test {
 		public void insert(Trie child) {
 			children.add(child);
 		}
-		
+
 		public void setCount() {
 			this.count += 1;
 		}
