@@ -208,10 +208,6 @@
 * [문자열을 정수로 바꾸기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_45.java)
 * [3568. iSharp](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_3568.java)
 
-## 크루즈칼
-* [1922. 네트워크 연결](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kruskal/problem_1922.java)
-* [섬 연결하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_31.java)
-
 ## 설계 문제
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
@@ -265,6 +261,10 @@
 * [4963. 섬의 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_4963.java)
 * [7576. 토마토](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_7576.java)
 * [13023. ABCDE](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_13023.java)
+* [1647. 도시 분할 계획](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_1647.java)
+* [1922. 네트워크 연결](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/kruskal/problem_1922.java)
+* [섬 연결하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_31.java)
+
 
 ## Kakao
 ### 2017 카카오 코드 본선
