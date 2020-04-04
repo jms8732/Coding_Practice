@@ -1,4 +1,4 @@
-package kruskal;
+package graph;
 
 //네트워크 연결
 import java.util.*;
