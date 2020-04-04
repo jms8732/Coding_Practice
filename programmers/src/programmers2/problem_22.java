@@ -61,12 +61,9 @@ public class problem_22 {
 			parent = tmp;
 			idx++;
 		}
-
-		parent.isFinish = true;
 	}
 
 	private static class Trie {
-		boolean isFinish;
 		char value;
 		List<Trie> children;
 		int count;
@@ -78,11 +75,6 @@ public class problem_22 {
 
 		}
 
-		public void isFinsih(int idx, String target) {
-			if (idx >= target.length())
-				this.isFinish = true;
-
-		}
 
 		public int isContain(char c) {
 			int idx = -1;
