@@ -81,7 +81,7 @@
 * [2109. 순회강연](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2109.java)
 * [1202. 보석 도둑](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1202.java)
 * [12015. 가장 긴 증가하는 부분수열2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_12015.java)
-* [1449. 수리고 항승](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1449.java)
+* [1449. 수리공 항승](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1449.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
