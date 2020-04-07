@@ -325,6 +325,7 @@
 * [5373. 큐빙](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_5373.java)
 * [16234. 인구 이동](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_16234.java)
 * [16236. 아기 상어](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_16236.java)
+* [17143. 낚시왕](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17143.java)
 
 ## Samsung 코딩 대비 기출문제
 * [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
