@@ -137,6 +137,7 @@
 * [16197. 두 동전](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_16197.java)
 * [9944. NxM 보드 완주하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9944.java)
 * [1697. 숨박꼭질](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1697.java)
+* [2206. 벽 부수고 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2206.java)
 
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
