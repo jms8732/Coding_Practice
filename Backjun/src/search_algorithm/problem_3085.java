@@ -1,5 +1,6 @@
 package search_algorithm;
 
+//사탕 게임 1:30 -> 1:03 (27분 소요)
 import java.util.*;
 import java.io.*;
 
