@@ -3,16 +3,14 @@ package search_algorithm;
 public class test {
 	public static void main(String[] args) {
 		
-		int [] array = {1,2,3,4};
-		int [] w = array.clone();
+		int b1 = 1<<(3);
 		
-		w[2] = 6;
+		int b2 = 1<<3;
+		b2 |= 1<<6;
 		
-		for(int i : array)
-			System.out.println(i);
+		System.out.println(Integer.toBinaryString(b1));
+		System.out.println(Integer.toBinaryString(b2));
 		
-		for(int i : w)
-			System.out.println(i);
 	}
 	
 }
