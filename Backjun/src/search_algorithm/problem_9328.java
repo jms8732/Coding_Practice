@@ -34,7 +34,7 @@ public class problem_9328 {
 			int key = 0;
 
 			String k = br.readLine();
-			if (k.length() != 1 && k.charAt(0) != '0') {
+			if ( k.charAt(0) != '0') {
 				for (int j = 0; j < k.length(); j++) {
 					key |= 1 << (k.charAt(j) - 'a');
 				}
