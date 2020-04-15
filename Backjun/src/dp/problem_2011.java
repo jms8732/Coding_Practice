@@ -1,4 +1,4 @@
-package search_algorithm;
+package dp;
 
 //암호 코드
 import java.util.*;
