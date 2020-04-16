@@ -1,6 +1,6 @@
 package search_algorithm;
 
-//다리 만들기
+//다리 만들기, 1:30 -> 46:04 (44분 소요)
 import java.util.*;
 import java.io.*;
 
