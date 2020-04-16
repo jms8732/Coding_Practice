@@ -59,7 +59,7 @@ public class problem_3055 {
 			// 물을 먼저 퍼뜨린다.
 			w = waterflood(R, C, forest, w);
 			q = move(R, C, forest, board, visited, q);
-			//print(forest, visited);
+			print(forest, visited);
 		}
 		if (board[endX][endY] != 0)
 			ans = Integer.toString(board[endX][endY]);
