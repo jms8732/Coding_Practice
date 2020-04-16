@@ -144,6 +144,7 @@
 * [9328. 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9328.java)
 * [3055. 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_3055.java)
 * [2146. 다리 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2146.java)
+* [14442. 벽 부수고 이동하기2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_14442.java)
 
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
