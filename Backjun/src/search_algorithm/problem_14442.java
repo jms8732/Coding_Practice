@@ -1,6 +1,6 @@
 package search_algorithm;
 
-//벽 부수고 이동하기 2
+//벽 부수고 이동하기 2 1:30 -> 41:14 (49분 소요)
 import java.util.*;
 import java.io.*;
 
