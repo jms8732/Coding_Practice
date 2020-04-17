@@ -147,6 +147,7 @@
 * [14442. 벽 부수고 이동하기2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_14442.java)
 * [7569. 토마토](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_7569.java)
 * [7576. 토마토](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_7576.java)
+* [2573. 빙산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2573.java)
 
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
