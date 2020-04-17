@@ -270,6 +270,7 @@
 * [2174. 로봇 시뮬레이션](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2174.java)
 * [11559. PuyoPuyo](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_11559.java)
 * [1018. 체스판 다시 칠하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1018.java)
+* [10815. 숫자 카드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10815.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
