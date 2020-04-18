@@ -14,6 +14,7 @@
 * [다리위를 지나는 트럭](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_4.java)
 * [쇠 막대기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_5.java)
 * [주식 가격](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_8.java)
+* [짝지어 제거하기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_24.java)
 
 ## 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
