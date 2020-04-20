@@ -170,6 +170,9 @@
 * [가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_12.java)
 * [16161. 가장 긴 증가하는 팰린드롬 부분 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_16161.java)
 
+## 투 포인터
+* [1806. 부분 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1806.java)
+
 ## 위상정렬
 * [2623. 음악프로그램](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2623.java)
 * [2252. 줄 세우기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2252.java)
