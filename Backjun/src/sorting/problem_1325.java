@@ -31,27 +31,27 @@ public class problem_1325 {
 		simulation(N);
 	}
 
-	private static void simulation(int N)  {
+
+	private static void simulation(int N) {
 		int[] val = new int[N];
 
 		boolean[] visited = new boolean[N];
 
-
-		int big = Integer.MAX_VALUE;
 		for (int i = 0; i < list.length; i++) {
-			search(i,val, visited);
-			big = Math.min(big, val[i]);
-			visited= new boolean[N];
+			search(i, val, visited);
+			visited = new boolean[N];
 		}
 
-		StringBuilder sb = new StringBuilder();
+		int small= Integer.MAX_VALUE;
 		for (int i = 0; i < val.length; i++) {
-			if (big == val[i]) {
-				sb.append(i+1).append(' ');
+			small = Math.min(small, val[i]);
+		}
+
+		for (int i = 0; i < val.length; i++) {
+			if (small == val[i]) {
+				System.out.print(i+1 + " ");
 			}
 		}
-
-		System.out.println(sb.toString());
 	}
 
 	private static void search(int cur, int[] val, boolean[] visited) {
@@ -63,5 +63,4 @@ public class problem_1325 {
 			}
 		}
 	}
-
 }
