@@ -268,6 +268,7 @@
 * [10815. 숫자 카드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10815.java)
 * [하샤드 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_26.java)
 * [핸드폰 번호 가리기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_27.java)
+* [1157. 단어 공부](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1157.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
