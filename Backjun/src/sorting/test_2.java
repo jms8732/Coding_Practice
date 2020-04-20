@@ -5,11 +5,13 @@ package sorting;
 public class test_2 {
 	public static void main(String[] args) { 
 		int [] array = {1,2,3,5,6,7,8,9,10};
-		binarySearch(3,array);
+		//binarySearch(3,array);
 		
 		int [] array1 = {1,2,3,3,3,5,6,7,8};
-		upperBound(5,array1);
-		lowerBound(5,array1);
+		upperBound(4,array1);
+		System.out.println();
+		
+		lowerBound(4,array1);
 	}
 	
 	/*
@@ -45,11 +47,12 @@ public class test_2 {
 	//찾는 값 바로 뒤에 있는 값을 찾는 upperBound
 	private static void upperBound(int target ,int [] array) {
 		int left =0 ;
-		int right = array[array.length-1];
+		int right = array.length;
 		int mid =0 ;
 		
 		while(left < right) {
 			mid = (left + right) /2;
+			print(left,right,mid);
 			
 			if(array[mid] <= target)
 				left = mid+1;
@@ -64,11 +67,12 @@ public class test_2 {
 	//찾는 값과 동일한 값 혹은 그보다 큰 값
 	private static void lowerBound(int target ,int [] array) {
 		int left =0 ;
-		int right = array[array.length-1];
+		int right = array.length;
 		int mid =0 ;
 		
 		while(left < right) {
 			mid = (left+ right) /2;
+			print(left,right,mid);
 			
 			if(array[mid] < target)
 				left = mid+1;
@@ -77,5 +81,9 @@ public class test_2 {
 		}
 		
 		System.out.println("index : " + left + " value : " + array[left]);
+	}
+	
+	private static void print(int left , int right, int mid) {
+		System.out.println("left : " + left + ", right : " + right + ", mid : " + mid);
 	}
 }
