@@ -174,6 +174,9 @@
 ## 투 포인터
 * [1806. 부분 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1806.java)
 
+## 네트워크 플로우
+* [2188. 축사 배정](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/network_flow/problem_2188.java)
+
 ## 위상정렬
 * [2623. 음악프로그램](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2623.java)
 * [2252. 줄 세우기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2252.java)
