@@ -176,6 +176,7 @@
 
 ## 네트워크 플로우
 * [2188. 축사 배정](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/network_flow/problem_2188.java)
+* [11375. 열혈 강호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/network_flow/problem_11375.java)
 
 ## 위상정렬
 * [2623. 음악프로그램](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/topology_sort/problem_2623.java)
