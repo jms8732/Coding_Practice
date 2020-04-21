@@ -1,0 +1,58 @@
+package search_algorithm;
+
+//¼¼ ¿ë¾×
+import java.util.*;
+import java.io.*;
+
+public class problem_2473 {
+	static PriorityQueue<Integer> ans;
+	static long gap;
+	
+	public static void main(String[] args)throws IOException{
+		BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
+		
+		int N = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int [] array = new int[N];
+		ans = new PriorityQueue<Integer>();
+		
+		for(int i =0 ; i < N ; i++)
+			array[i] = Integer.parseInt(st.nextToken());
+		
+		simulation(array,N);
+	}
+	
+	private static void simulation(int [] array, int N) {
+		
+		int list [] = new int[3];
+		long val = 0;
+		search(0,0,array,list,N,val);
+		
+		while(!ans.isEmpty())
+			System.out.print(ans.poll() + " ");
+	}
+	
+	private static void search(int depth , int next , int [] array, int [] list,  int N, long val) {
+		if(depth == 3) {
+			long tmp = Math.abs(val);
+			long tmp_gap = Math.abs(tmp - 0);
+			
+			if(gap > tmp_gap) {
+				gap = tmp_gap;
+				ans.clear();
+				
+				for(int i = 0 ; i < list.length ; i++) {
+					ans.add(list[i]);
+				}
+			}
+			
+			return ;
+		}
+		
+		for(int i = next ; i < N ; i++) {
+			list[depth] = array[i];
+			search(depth+1,i+1,array,list,N,val+array[i]);
+		}
+	}
+}
