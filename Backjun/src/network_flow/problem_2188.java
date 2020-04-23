@@ -41,6 +41,8 @@ public class problem_2188 {
 			Arrays.fill(check, false);
 		}
 		
+		for(int i = 1 ; i <= N ; i++)
+			System.out.println(i + " -> " + (target[i]+1));
 		System.out.println(count);
 	}
 	
