@@ -13,7 +13,7 @@ public class problem_6086 {
 
 		int N = Integer.parseInt(br.readLine());
 
-		// 초기화
+		//대문자, 소문자 구분
 		link = new ArrayList[52];
 		d = new int[52];
 		f = new int[52][52];
@@ -32,9 +32,12 @@ public class problem_6086 {
 			link[s].add(e);
 			link[e].add(s);
 
+			//중복된 파이프가 들어올 경우, 양방향이므로
 			c[s][e] += cc;
+			c[e][s] += cc;
 		}
 
+		//A에서 Z까지 
 		maxFlow(0, 25);
 	}
 
@@ -42,7 +45,7 @@ public class problem_6086 {
 		if (a >= 'A' && a <= 'Z')
 			return a - 'A';
 		else
-			return 26 + a - 'a';
+			return a - 'a' + 26;
 	}
 
 	private static void maxFlow(int start, int end) {
