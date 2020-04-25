@@ -41,7 +41,7 @@ public class problem_17412 {
 	//플로우의 가장 큰 특징은 간선의 용량이 있다는 점이다.
 	private static void maxFlow(int start , int end) {
 		int result = 0;
-		int INF = 10000000;
+		
 		while(true) {
 			Queue<Integer> q = new LinkedList<>();
 			q.add(start);
@@ -64,7 +64,7 @@ public class problem_17412 {
 			if(d[end] == -1)
 				break;
 			
-			int flow = INF;
+			int flow = 1;
 			for(int i = end ; i !=start ; i = d[i])
 				flow = Math.min(flow, c[d[i]][i] - f[d[i]][i]);
 			
