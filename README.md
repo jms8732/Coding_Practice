@@ -64,6 +64,7 @@
 * [16198. 에너지 모으기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_16198.java)
 * [게임판 덮기(BOARDCOVER)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/boardCover.java)
 * [소풍 (PICNIC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/picnic.java)
+* [시계 맞추기(CLOCKSYNC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/clocksync.java)
 
 ## 탐욕법(Greedy)
 * [큰 수 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_13.java)
