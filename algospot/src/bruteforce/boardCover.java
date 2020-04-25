@@ -105,8 +105,8 @@ public class boardCover {
 		y += shape[k][0][1];
 
 		// 범위에 존재하지 않은 경우
-		if (x < 0 || x >= H || x1 < 0 || x1 >= H || x2 < 0 || x2 >= H || y < 0 || y >= W || y1 < 0 || y1 >= W || y1 < 0
-				|| y1 >= W)
+		if (x < 0 || x >= H || x1 < 0 || x1 >= H || x2 < 0 || x2 >= H || y < 0 || y >= W || y1 < 0 || y1 >= W || y2 < 0
+				|| y2 >= W)
 			return false;
 		
 		//해당 좌표에 검은색이 존재하는 경우
