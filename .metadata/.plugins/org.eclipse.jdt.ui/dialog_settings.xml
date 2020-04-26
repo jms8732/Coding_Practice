@@ -5,6 +5,8 @@
 	<item key="TypeHierarchyViewPart.linkeditors" value="false"/>
 	<item key="TypeHierarchyViewPart.hierarchyview" value="2"/>
 	<item key="org.eclipse.jdt.ui.last.external.project" value="C:\Users\jms87\Desktop\test"/>
+	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
+	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-1.8"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
