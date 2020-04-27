@@ -176,6 +176,9 @@
 ## 절단점(Cut Vertex)
 * [11266. 단절점](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/cutVertex/problem_11266.java)
 
+## 강한 요소 연결(Strong Connected Component)
+* [2150. Strong connected component](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/scc/problem_2150.java)
+
 ## 팰린드롬
 * [13285. 가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_13275.java)
 * [가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_12.java)
