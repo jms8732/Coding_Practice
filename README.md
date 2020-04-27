@@ -172,6 +172,9 @@
 * [11404. 플로이드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_11404.java)
 * [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
 
+## 절단점(Cut Vertex)
+* [11266. 단절점](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/cutVertex/problem_11266.java)
+
 ## 팰린드롬
 * [13285. 가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_13275.java)
 * [가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_12.java)
