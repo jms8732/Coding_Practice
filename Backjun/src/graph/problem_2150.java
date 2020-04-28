@@ -1,4 +1,4 @@
-package scc;
+package graph;
 
 //strongly connected component
 import java.util.*;

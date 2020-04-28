@@ -1,4 +1,4 @@
-package network_flow;
+package graph;
 
 import java.util.*;
 import java.io.*;

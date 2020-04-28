@@ -1,4 +1,4 @@
-package network_flow;
+package graph;
 
 //도시 왕복하기 1
 
