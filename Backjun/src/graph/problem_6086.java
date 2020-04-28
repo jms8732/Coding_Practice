@@ -1,4 +1,4 @@
-package network_flow;
+package graph;
 
 //최대 유량
 import java.util.*;
