@@ -116,6 +116,8 @@
 * [11053. 가장 긴 증가하는 부분 수열(1)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11053.java)
 * [2011. 암호 코드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2011.java)
 * [와일드카드(wildcard)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/wildcard.java)
+* [원주율 외우기(pi)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/pi.java)
+* [합친 LIS(jlis)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/jlis.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
