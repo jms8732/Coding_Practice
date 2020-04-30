@@ -119,6 +119,8 @@
 * [원주율 외우기(pi)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/pi.java)
 * [합친 LIS(jlis)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/jlis.java)
 * [qunatization(quantize)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/quantization.java)
+* [비대칭 타일링(ASYMTILING)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/asymtiling.java)
+* [폴리오미노(POLY)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/poly.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
