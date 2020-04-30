@@ -8,7 +8,6 @@
 /graph/
 /greedy/
 /kmp/
-/network_flow/
 /others/
 /palindrome/
 /rotation/
@@ -16,5 +15,3 @@
 /samsung_Atype/
 /search_algorithm/
 /sorting/
-/cutVertex/
-/scc/
