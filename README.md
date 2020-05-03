@@ -125,6 +125,7 @@
 * [여행 짐 싸기](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/packing.java)
 * [11048. 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11048.java)
 * [1890. 점프](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_1890.java)
+* [15989. 1,2,3 더하기 4](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_15989.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
