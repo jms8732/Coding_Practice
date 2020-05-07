@@ -257,8 +257,6 @@
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
 * [2016년](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_22.java)
-* [실패율](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_37.java)
-* [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
 * [같은 숫자는 싫어](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_9.java)
 * [보행자 천국](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_11.java)
 * [올바른 괄호](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_18.java)
@@ -353,10 +351,12 @@
 * [후보키](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_38.java)
 * [무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
 * [매칭 점수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_28.java)
-* [](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_29.java)
+* [블록 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_29.java)
+* [실패율](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_37.java)
+* [오픈채팅방](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_36.java)
+* [길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
 
 ### 2020 Kakao Blind Recruitment
-* [길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
 * [문자열 압축](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_17.java)
 * [괄호 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_24.java)
 * [자물쇠와 열쇠](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_8.java)
