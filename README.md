@@ -352,6 +352,8 @@
 ### 2019 Kakao Blind Recruitment
 * [후보키](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_38.java)
 * [무지의 먹방 라이브](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_39.java)
+* [매칭 점수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_28.java)
+* [](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_29.java)
 
 ### 2020 Kakao Blind Recruitment
 * [길 찾기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_44.java)
