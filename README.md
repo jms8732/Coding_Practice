@@ -127,6 +127,7 @@
 * [1890. 점프](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_1890.java)
 * [15989. 1,2,3 더하기 4](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_15989.java)
 * [10942. 펠린드롬?](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_10942.java)
+* [2293. 동전 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2293.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
