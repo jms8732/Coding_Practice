@@ -1,4 +1,4 @@
-package kmp;
+package string;
 
 //Ã£±â
 import java.util.*;

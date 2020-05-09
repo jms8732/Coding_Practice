@@ -1,4 +1,4 @@
-package kmp;
+package string;
 //kmp 알고리즘 테스트
 
 import java.util.*;
