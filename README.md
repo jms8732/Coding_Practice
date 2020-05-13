@@ -91,6 +91,7 @@
 * [2805. 나무 자르기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_2805.java)
 * [1654. 랜선 자르기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1654.java)
 * [1325. 상자 넣기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1965.java)
+* [1590. 캠프가는 영식](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1590.java)
 
 ## 동적 계획법(Dynamic Programming)
 * [N으로 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_10.java)
