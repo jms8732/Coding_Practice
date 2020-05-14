@@ -262,6 +262,8 @@
 * [1152. 단어의 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1152.java)
 * [11654. 아스키코드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_11654.java)
 * [1360. 되돌리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1360.java)
+* [5622. 다이얼](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_5622.java)
+* [2908. 상수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_2908.java)
 
 ## 설계 문제
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
