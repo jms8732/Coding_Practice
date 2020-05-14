@@ -258,6 +258,10 @@
 * [6581. HTML](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_6581.java)
 * [2733. brainFuck](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_2733.java)
 * [5177. 출력형식이 잘못되었습니다.](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_5177.java)
+* [10809. 알파벳 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_10809.java)
+* [1152. 단어의 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1152.java)
+* [11654. 아스키코드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_11654.java)
+* [1360. 되돌리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1360.java)
 
 ## 설계 문제
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
@@ -267,7 +271,7 @@
 * [보행자 천국](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_11.java)
 * [올바른 괄호](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_18.java)
 * [최고의 집합](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_31.java)
-* [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_30.java)
+* [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programDㅏㄹmers1/problem_30.java)
 * [[찾아라 프로그래밍 마에스터]폰켓몬](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_34.java)
 * [숫자의 표현](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_36.java)
 * [다음 큰 숫자](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_39.java)
