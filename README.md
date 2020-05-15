@@ -39,6 +39,7 @@
 * [10971. 외판원순회2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_10971.java)
 * [15661. 링크와 스타트](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_15661.java)
 * [14391. 종이 조각](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_14391.java)
+* [1062. 가르침](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_1062.java)
 
 ## 정렬
 * [k번째 수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_21.java)
@@ -130,6 +131,7 @@
 * [2293. 동전 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2293.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
+* [3055. 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_3055.java)
 * [타겟 넘버](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_29.java)
 * [네트워크](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_28.java)
 * [단어 변환](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_45.java)
@@ -265,16 +267,12 @@
 
 
 ## 시뮬레이션
+* [1018. 체스판 다시 칠하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1018.java)
+* [2174. 로봇 시뮬레이션](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2174.java)
 * [1966. 프린터 큐](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/simulation/problem_1966.java)
 * [2164. 카드 2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/simulation/problem_2164.java)
 * [1021. 회전하는 큐](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/simulation/problem_1021.java)
-* [1018. 체스판 다시 칠하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1018.java)
-* [3055. 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_3055.java)
 * [11559. PuyoPuyo](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_11559.java)
-* [1062. 가르침](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bitmask/problem_1062.java)
-* [2174. 로봇 시뮬레이션](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2174.java)
-
-## 설계 문제
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
 * [2016년](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_22.java)
