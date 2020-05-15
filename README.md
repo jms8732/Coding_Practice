@@ -65,6 +65,9 @@
 * [게임판 덮기(BOARDCOVER)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/boardCover.java)
 * [소풍 (PICNIC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/picnic.java)
 * [시계 맞추기(CLOCKSYNC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/clocksync.java)
+* [1065. 한수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1065.java)
+* [1107. 리모컨](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1107.java)
+* [2231. 분해합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_2231.java)
 
 ## 탐욕법(Greedy)
 * [큰 수 만들기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_13.java)
