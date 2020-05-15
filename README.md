@@ -265,6 +265,12 @@
 * [5622. 다이얼](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_5622.java)
 * [2908. 상수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_2908.java)
 
+
+## 시뮬레이션
+* [1966. 프린터 큐](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/simulation/problem_1966.java)
+* [2164. 카드 2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/simulation/problem_2164.java)
+* [1021. 회전하는 큐](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/simulation/problem_1021.java)
+
 ## 설계 문제
 * [가운데 글자 가져오기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_2.java)
 * [124 나라](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_9.java)
