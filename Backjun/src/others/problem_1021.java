@@ -1,4 +1,4 @@
-package simulation;
+package others;
 
 //회전하는 큐
 import java.util.*;
