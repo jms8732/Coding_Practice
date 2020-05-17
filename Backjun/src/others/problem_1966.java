@@ -1,4 +1,4 @@
-package simulation;
+package others;
 
 //프린터 큐
 import java.util.*;

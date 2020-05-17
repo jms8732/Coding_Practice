@@ -1,4 +1,4 @@
-package simulation;
+package others;
 
 //Ä«µå 2
 import java.util.*;
