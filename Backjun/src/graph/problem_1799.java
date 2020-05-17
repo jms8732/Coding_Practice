@@ -1,4 +1,4 @@
-package search_algorithm;
+package graph;
 
 //ºñ¼ó
 import java.util.*;
