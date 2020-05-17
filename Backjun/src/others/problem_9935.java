@@ -33,7 +33,7 @@ public class problem_9935 {
 				}
 			}
 		}
-
+		
 		if (!stack.isEmpty()) {
 			StringBuilder sb = new StringBuilder();
 			for(Character c : stack)
