@@ -15,6 +15,7 @@
 * [쇠 막대기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_5.java)
 * [주식 가격](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_8.java)
 * [1427. 소트인사이드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1427.java)
+* [9012. 괄호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9012.java)
 
 ## 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
