@@ -66,9 +66,6 @@
 * [2422. 한윤정이 이탈리아에 가서 아이스크림을 사먹는데](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2422.java)
 * [14225. 부분수열의 합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_14225.java)
 * [16198. 에너지 모으기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_16198.java)
-* [게임판 덮기(BOARDCOVER)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/boardCover.java)
-* [소풍 (PICNIC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/picnic.java)
-* [시계 맞추기(CLOCKSYNC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/clocksync.java)
 * [1065. 한수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1065.java)
 * [1107. 리모컨](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1107.java)
 * [2231. 분해합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_2231.java)
@@ -123,14 +120,6 @@
 * [16500. 문자열 판별](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_16500.java)
 * [11053. 가장 긴 증가하는 부분 수열(1)](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11053.java)
 * [2011. 암호 코드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2011.java)
-* [와일드카드(wildcard)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/wildcard.java)
-* [원주율 외우기(pi)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/pi.java)
-* [합친 LIS(jlis)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/jlis.java)
-* [qunatization(quantize)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/quantization.java)
-* [비대칭 타일링(ASYMTILING)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/asymtiling.java)
-* [폴리오미노(POLY)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/poly.java)
-* [두니발 박사의 탈옥](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/numb3rs.java)
-* [여행 짐 싸기](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/packing.java)
 * [11048. 이동하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_11048.java)
 * [1890. 점프](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_1890.java)
 * [15989. 1,2,3 더하기 4](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_15989.java)
@@ -172,9 +161,7 @@
 * [2573. 빙산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2573.java)
 * [1405. 미친 로봇](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1405.java)
 * [9205. 맥주 마시면서 걸어가기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9205.java)
-* [단어 제한 끝말잇기(workchain)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/graph/dfs/wordchain.java)
-* [고대어 사전(dictionary)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/graph/dfs/dictionary.java)
-* [Soring Game(sortgame)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/graph/bfs/sortgame.java)
+* [1325. 효율적인 해킹](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1325.java)
 
 ## 브루트포스
 * [10972. 다음 순열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/combination/problem_10972.java)
@@ -193,6 +180,7 @@
 * [2458. 키순서](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_2458.java)
 * [11404. 플로이드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_11404.java)
 * [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
+* [1389. 케빈 베이컨의 6단계 법칙](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_1389.java)
 
 ## 절단점(Cut Vertex)
 * [11266. 단절점](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/cutVertex/problem_11266.java)
@@ -431,3 +419,24 @@
 * [17471. 게리 맨더링](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17471.java)
 * [17406. 배열 돌리기4](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17406.java)
 * [17281. 야구공](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17281.java)
+
+## 알고스팟
+### 완전 탐색
+* [게임판 덮기(BOARDCOVER)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/boardCover.java)
+* [소풍 (PICNIC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/picnic.java)
+* [시계 맞추기(CLOCKSYNC)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/bruteforce/clocksync.java)
+
+### DFS / BFS
+* [단어 제한 끝말잇기(workchain)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/graph/dfs/wordchain.java)
+* [고대어 사전(dictionary)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/graph/dfs/dictionary.java)
+* [Soring Game(sortgame)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/graph/bfs/sortgame.java)
+
+### DP
+* [와일드카드(wildcard)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/wildcard.java)
+* [원주율 외우기(pi)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/pi.java)
+* [합친 LIS(jlis)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/jlis.java)
+* [qunatization(quantize)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/quantization.java)
+* [비대칭 타일링(ASYMTILING)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/asymtiling.java)
+* [폴리오미노(POLY)](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/poly.java)
+* [두니발 박사의 탈옥](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/numb3rs.java)
+* [여행 짐 싸기](https://github.com/jms8732/Coding_Practice/blob/master/algospot/src/dp/packing.java)
