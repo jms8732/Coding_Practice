@@ -17,6 +17,8 @@
 * [1427. 소트인사이드](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1427.java)
 * [9012. 괄호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9012.java)
 * [9935. 문자열 폭발](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9935.java)
+* [1874. 스택 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1874.java)
+* [5397. 키로거](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_5397.java)
 ## 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
 * [완주하지 못한 선수](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_16.java)
