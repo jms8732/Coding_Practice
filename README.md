@@ -325,6 +325,9 @@
 * [핸드폰 번호 가리기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_27.java)
 * [1157. 단어 공부](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1157.java)
 * [2606. 바이러스](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2606.java)
+* [1063. 킹](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1063.java)
+* [1057. 토너먼트](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1057.java)
+* [2455. 지능형 기차](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2455.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
