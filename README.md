@@ -92,6 +92,9 @@
 * [12015. 가장 긴 증가하는 부분수열2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_12015.java)
 * [1449. 수리공 항승](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1449.java)
 * [1325. 오르막](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1325.java)
+* [10610. 30](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_10610.java)
+* [5585. 거스름돈](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_5585.java)
+* [2217. 로프](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2217.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
@@ -166,6 +169,7 @@
 * [1405. 미친 로봇](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1405.java)
 * [9205. 맥주 마시면서 걸어가기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9205.java)
 * [1325. 효율적인 해킹](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1325.java)
+* [9019. DSLR](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9019.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
