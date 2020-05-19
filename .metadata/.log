@@ -8136,3 +8136,6 @@ com.sun.jdi.VMDisconnectedException: Got IOException from Virtual Machine
 
 !ENTRY org.eclipse.jdt.debug 2 0 2020-05-19 14:44:28.190
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2020-05-19 17:37:19.612
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
