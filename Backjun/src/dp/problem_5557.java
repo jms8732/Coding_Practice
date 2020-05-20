@@ -1,4 +1,4 @@
-package combination;
+package dp;
 
 //1ÇÐ³â
 import java.util.*;
