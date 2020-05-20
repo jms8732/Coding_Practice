@@ -30,16 +30,8 @@ public class problem_5557 {
 
 		System.out.println(find_case(1,array[0]));
 
-		print();
 	}
-	
-	private static void print() {
-		for(int i =0 ; i < N ; i++) {
-			for(int j =0  ; j < cache[i].length ; j++)
-				System.out.print(cache[i][j] + " ");
-			System.out.println();
-		}
-	}
+
 	
 	private static long find_case(int cur, int val) {
 		if(cur == N -1) {
@@ -52,7 +44,7 @@ public class problem_5557 {
 		if(cache[cur][val] != -1)
 			return cache[cur][val];
 		
-		int ret =0 ;
+		long ret =0 ;
 		
 		if(val + array[cur] <= 20)
 			ret += find_case(cur+1,val+array[cur]);
