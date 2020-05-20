@@ -142,6 +142,7 @@
 * [15989. 1,2,3 더하기 4](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_15989.java)
 * [10942. 펠린드롬?](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_10942.java)
 * [2293. 동전 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2293.java)
+* [5557. 1학년](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_5557.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [3055. 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_3055.java)
@@ -252,6 +253,8 @@
 * [1360. 되돌리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1360.java)
 * [5622. 다이얼](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_5622.java)
 * [2908. 상수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_2908.java)
+* [1316. 그룹 단어 체커](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1316.java)
+* [1475. 방 번호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1475.java)
 
 
 ## 시뮬레이션
