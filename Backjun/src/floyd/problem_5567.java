@@ -44,7 +44,6 @@ public class problem_5567 {
 			}
 		}
 
-		print(N);
 		int count = 0;
 		for (int i = 2; i < N; i++) {
 			if (adj[1][i] != INF && adj[1][i] <= 2) {
@@ -53,17 +52,5 @@ public class problem_5567 {
 		}
 
 		System.out.println(count);
-	}
-
-	private static void print(int N) {
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (adj[i][j] == INF)
-					System.out.print(INF + " ");
-				else
-					System.out.print(adj[i][j] + " ");
-			}
-			System.out.println();
-		}
 	}
 }
