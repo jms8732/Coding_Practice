@@ -143,6 +143,9 @@
 * [10942. 펠린드롬?](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_10942.java)
 * [2293. 동전 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2293.java)
 * [5557. 1학년](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_5557.java)
+* [1003. 피보나치 함수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_1003.java)
+* [2579. 계단 오르기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_2579.java)
+* [1932. 정수 삼각형](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dp/problem_1932.java)
 
 ## 깊이/넓이 우선 탐색(DFS/BFS)
 * [3055. 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_3055.java)
