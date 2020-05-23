@@ -19,6 +19,7 @@
 * [9935. 문자열 폭발](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9935.java)
 * [1874. 스택 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1874.java)
 * [5397. 키로거](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_5397.java)
+* [10828. 스택](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10828.java)
 
 ## 해시
 * [전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_26.java)
@@ -62,6 +63,7 @@
 * [1766. 문제집](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1766.java)
 * [1516. 게임 개발](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1516.java)
 * [1005. ACM Craft](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1005.java)
+* [1181. 단어 정렬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/sorting/problem_1181.java)
 
 ## 완전 탐색
 * [소수 찾기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_14.java)
@@ -192,6 +194,7 @@
 * [1238. 파티](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1238.java)
 * [1261. 알고스팟](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1261.java)
 * [가장 먼 노드](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_51.java)
+* [5719. 거의 최단 경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_5719.java)
 
 ## 플로이드와샬
 * [2458. 키순서](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_2458.java)
