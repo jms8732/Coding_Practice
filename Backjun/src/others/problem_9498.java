@@ -1,4 +1,4 @@
-package search_algorithm;
+package others;
 
 //시험 성적
 import java.util.*;
