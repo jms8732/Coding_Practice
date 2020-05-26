@@ -325,7 +325,7 @@
 * [9498. 시험 점수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9498.java)
 * [10871. X보다 작은 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10871.java)
 * [2577. 숫자의 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2577.java)
-* [2844. 알람 시계](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2844.java)
+* [2884. 알람 시계](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2884.java)
 * [1188. 음식 평론가](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1188.java)
 
 ## 그래프
