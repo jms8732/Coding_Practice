@@ -1,6 +1,5 @@
 package bruteForce;
 
-//새로운 수
 import java.util.*;
 
 public class problem_1748 {
