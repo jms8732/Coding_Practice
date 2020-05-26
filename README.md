@@ -322,6 +322,11 @@
 * [1063. 킹](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1063.java)
 * [1057. 토너먼트](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1057.java)
 * [2455. 지능형 기차](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2455.java)
+* [9498. 시험 점수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_9498.java)
+* [10871. X보다 작은 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_10871.java)
+* [2577. 숫자의 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2577.java)
+* [2844. 알람 시계](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2844.java)
+* [1188. 음식 평론가](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1188.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
