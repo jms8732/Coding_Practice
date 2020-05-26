@@ -84,6 +84,9 @@
 * [7568. 덩치](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_7568.java)
 * [1038. 감소하는 수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1038.java)
 * [1120. 문자열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1120.java)
+* [1748. 수 이어쓰기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1748.java)
+* [10488. 유레카 이론](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_10488.java)
+* [7453. 합이 0인 네 정수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_7453.java)
 
 
 ## 탐욕법(Greedy)
