@@ -4,7 +4,7 @@ package bruteForce;
 import java.util.*;
 import java.io.*;
 
-public class problem_10448 {
+public class problem_10488 {
 	static int[] tri;
 
 	public static void main(String[] args) throws IOException {
