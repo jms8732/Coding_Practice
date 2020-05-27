@@ -5,7 +5,7 @@ import java.util.*;
 import java.io.*;
 
 public class problem_14888_1 {
-	static int big = 0, small = Integer.MAX_VALUE;
+	static int big = Integer.MIN_VALUE, small = Integer.MAX_VALUE;
 	static List<Integer> list;
 
 	public static void main(String[] args) throws IOException {
