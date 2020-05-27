@@ -28,7 +28,7 @@ public class problem_1613 {
 		}
 
 		floyd(array, N);
-		print(array,N);
+		//print(array,N);
 		int S = Integer.parseInt(br.readLine());
 
 		for (int i = 0; i < S; i++) {
