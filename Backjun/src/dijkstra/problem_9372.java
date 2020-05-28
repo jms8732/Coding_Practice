@@ -1,4 +1,4 @@
-package search_algorithm;
+package dijkstra;
 
 //상근이의 여행
 import java.util.*;
