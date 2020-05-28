@@ -206,7 +206,7 @@
 * [순위](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_10.java)
 * [1389. 케빈 베이컨의 6단계 법칙](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_1389.java)
 * [5567. 결혼식](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_5567.java)
-* [1618. 역사](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_1618.java)
+* [1613. 역사](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_1613.java)
 
 ## 팰린드롬
 * [13285. 가장 긴 팰린드롬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/palindrome/problem_13275.java)
