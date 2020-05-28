@@ -74,7 +74,7 @@ public class problem_1600 {
 					int nx = cur.x + d_ud[i];
 					int ny = cur.y + d_rl[i];
 
-					if (nx < 0 || nx >= M || ny < 0 || ny >= N || visited[nx][ny][cur.k] || map[nx][ny] == 1)
+					if (nx < 0 || nx >= M || ny < 0 || ny >= N || visited[nx][ny][cur.k-1] || map[nx][ny] == 1)
 						continue;
 
 					if (score[nx][ny] == 0)
