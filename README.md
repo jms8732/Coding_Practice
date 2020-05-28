@@ -191,6 +191,8 @@
 * [9019. DSLR](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9019.java)
 * [5427. 불](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_5427.java)
 * [2668. 숫자 고르기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2668.java)
+* [1600. 말이 되고픈 원숭이](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1600.java)
+* [2589. 보물섬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2589.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
@@ -199,6 +201,7 @@
 * [1261. 알고스팟](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1261.java)
 * [가장 먼 노드](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_51.java)
 * [5719. 거의 최단 경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_5719.java)
+* [9372. 상근이의 여행](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_9372.java)
 
 ## 플로이드와샬
 * [2458. 키순서](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/floyd/problem_2458.java)
