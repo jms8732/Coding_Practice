@@ -110,6 +110,9 @@
 * [10610. 30](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_10610.java)
 * [5585. 거스름돈](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_5585.java)
 * [2217. 로프](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2217.java)
+* [1541. 잃어버린 괄호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1541.java)
+* [2875. 대회 or 인턴](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2875.java)
+* [1946. 신입 사원](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1946.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
