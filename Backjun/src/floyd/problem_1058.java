@@ -22,7 +22,7 @@ public class problem_1058 {
 			}
 		}
 		floyd(map, N);
-		print(map, N);
+		//print(map, N);
 	}
 
 	private static void print(int[][] map, int N) {
