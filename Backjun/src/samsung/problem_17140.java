@@ -23,8 +23,7 @@ public class problem_17140 {
 			}
 		}
 		int time = 0;
-		while (time < 100) {
-			System.out.println("row : " + array.length + " , " + "col : " + array[0].length);
+		while (time <= 100) {
 			print(array);
 
 			if (is_val(array)) {
