@@ -1,4 +1,4 @@
-package graph;
+package floyd;
 
 //±√±›«— πŒ»£
 import java.util.*;

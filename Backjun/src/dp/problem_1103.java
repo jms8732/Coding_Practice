@@ -1,4 +1,4 @@
-package search_algorithm;
+package dp;
 
 //∞‘¿”
 import java.util.*;
@@ -34,7 +34,7 @@ public class problem_1103 {
 		}
 
 		System.out.println(simulation(0, 0));
-		print(N,M);
+		//print(N,M);
 	}
 	private static void print(int N , int M) {
 		for(int i=0 ; i < N ;i++) {
