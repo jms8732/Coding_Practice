@@ -197,6 +197,7 @@
 * [2668. 숫자 고르기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2668.java)
 * [1600. 말이 되고픈 원숭이](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1600.java)
 * [2589. 보물섬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2589.java)
+* [4179. 불!](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_4179.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
@@ -343,6 +344,9 @@
 * [5532. 방학 숙제](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_5532.java)
 * [1547. 공](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1547.java)
 * [2161. 카드 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2161.java)
+* [1592. 영식이와 친구들](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1592.java)
+* [1526. 가장 큰 금민수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1526.java)
+* [1357. 뒤집힌 덧셈](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1357.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
@@ -449,6 +453,8 @@
 * [12100. 2048](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_12100_1.java)
 * [14890. 경사로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14890.java)
 * [17140. 이차원 배열과 연산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17140.java)
+* [17837. 새로운 게임2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17837.java)
+* [17779. 게리 맨더링2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17779.java)
 
 ## Samsung 코딩 대비 기출문제
 * [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
