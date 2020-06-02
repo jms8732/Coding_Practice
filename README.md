@@ -339,6 +339,10 @@
 * [2577. 숫자의 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2577.java)
 * [2884. 알람 시계](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2884.java)
 * [1188. 음식 평론가](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1188.java)
+* [1331. 나이트 투어](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1331.java)
+* [5532. 방학 숙제](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_5532.java)
+* [1547. 공](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1547.java)
+* [2161. 카드 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_2161.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
@@ -444,6 +448,7 @@
 * [17142. 연구소3](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17142.java)
 * [12100. 2048](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_12100_1.java)
 * [14890. 경사로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_14890.java)
+* [17140. 이차원 배열과 연산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17140.java)
 
 ## Samsung 코딩 대비 기출문제
 * [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
