@@ -87,6 +87,7 @@
 * [1748. 수 이어쓰기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1748.java)
 * [10488. 유레카 이론](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_10488.java)
 * [7453. 합이 0인 네 정수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_7453.java)
+* [1072. 게임](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1072.java)
 
 
 ## 탐욕법(Greedy)
@@ -113,6 +114,9 @@
 * [1541. 잃어버린 괄호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1541.java)
 * [2875. 대회 or 인턴](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2875.java)
 * [1946. 신입 사원](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1946.java)
+* [1049. 기타줄](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1049.java)
+* [2352. 반도체 설계](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2352.java)
+* [1138. 한 줄로 서기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1138.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
@@ -455,6 +459,7 @@
 * [17140. 이차원 배열과 연산](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17140.java)
 * [17837. 새로운 게임2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17837.java)
 * [17779. 게리 맨더링2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17779.java)
+* [17822. 원판 돌리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17822ava)
 
 ## Samsung 코딩 대비 기출문제
 * [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
