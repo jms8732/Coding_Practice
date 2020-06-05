@@ -18,7 +18,10 @@ public class problem_16637_1 {
 			simulation(N, 1, sb);
 			System.out.println(answer);
 		} else {
-			System.out.println(calculate(line));
+			if (line.length() == 1)
+				System.out.println(line);
+			else
+				System.out.println(calculate(line));
 		}
 
 	}
