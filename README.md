@@ -202,6 +202,8 @@
 * [1600. 말이 되고픈 원숭이](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1600.java)
 * [2589. 보물섬](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2589.java)
 * [4179. 불!](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_4179.java)
+* [1963. 소수 경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1963.java)
+* [2251. 물통](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2251.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
@@ -351,6 +353,11 @@
 * [1592. 영식이와 친구들](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1592.java)
 * [1526. 가장 큰 금민수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1526.java)
 * [1357. 뒤집힌 덧셈](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1357.java)
+* [1008. A/B](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1008.java)
+* [1110. 더하기 사이클](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1110.java)
+* [1912. 연속합](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1912.java)
+* [1085. 직사각형에서 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1085.java)
+* [1712. 손익 분기점](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1712.java)
 
 ## 그래프
 * [11724. 연결요소 개수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_11724.java)
