@@ -377,6 +377,7 @@
 * [6086. 최대 유량](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_6086.java)
 * [17412. 도시 왕복하기 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_17412.java)
 * [1068. 트리](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_1068.java)
+* [2150. Strong connected component](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_2150.java)
 
 ## 2018 Summer/Winter Coding(~2018)
 * [스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
@@ -388,7 +389,6 @@
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_29.java)
 * [숫자 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_22.java)
 * [배달](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_21.java)
-* [2150. Strong connected component](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_2150.java)
 
 ## 2019 Summer/Winter Coding(2019)
 * [[2019 서머/윈터코딩] 종이접기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_41.java
