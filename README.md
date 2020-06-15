@@ -268,7 +268,7 @@
 * [2239. 스도쿠](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2239.java)
 * [1248. 맞춰봐](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_1248.java)
 * [1342. 행운의 문자열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_1342.java)
-* [2661. 좋은 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2261.java)
+* [2661. 좋은 수열](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/backTracking/problem_2661.java)
 
 ## 문자열 [파싱, 문자열 검색]
 * [1786. 찾기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/string/problem_1786.java)
