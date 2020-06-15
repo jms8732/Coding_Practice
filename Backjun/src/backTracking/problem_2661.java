@@ -31,17 +31,17 @@ public class problem_2661 {
 
 	private static boolean isPerfect(String line) {
 		int len = line.length();
-		
-		for(int i = 1 ; i <= len/2 ; i++) {
-			StringBuilder sb1=  new StringBuilder();
+
+		for (int i = 1; i <= len / 2; i++) {
+			StringBuilder sb1 = new StringBuilder();
 			StringBuilder sb2 = new StringBuilder();
-			
-			for(int j =0 ; j < i ; j++) {
-				sb1.append(line.charAt(len-(2*i)+j));
-				sb2.append(line.charAt(len-i+j));
+
+			for (int j = 0; j < i; j++) {
+				sb1.append(line.charAt(len - (2 * i) + j));
+				sb2.append(line.charAt(len - i + j));
 			}
-			
-			if(sb1.toString().equals(sb2.toString()))
+
+			if (sb1.toString().equals(sb2.toString()))
 				return false;
 		}
 
