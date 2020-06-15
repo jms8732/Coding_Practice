@@ -40,7 +40,6 @@ public class problem_2239 {
 				for (int select = 1; select <= 9; select++) {
 					if (isRow_ok(select, x, board) && isCol_ok(select, y, board) && isBoard_ok(select, x, y, board)) {
 						board[x][y] = select;
-						//print(board);
 						backtracking(board,i+1, zeroCount - 1);
 						board[x][y] = 0;
 
