@@ -369,7 +369,7 @@
 
 ## 출력
 * [10172. 개](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_10172.java)
-* [7282. 등록](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_7282.java)
+* [7287. 등록](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_7287.java)
 * [11718. 그대로 출력하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_11718.java)
 * [1022. 소용돌이 예쁘게 출력하기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_1022.java)
 * [1237. 정ㅋ벅ㅋ](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_1237.java)
