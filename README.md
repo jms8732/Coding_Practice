@@ -117,6 +117,9 @@
 * [1049. 기타줄](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1049.java)
 * [2352. 반도체 설계](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2352.java)
 * [1138. 한 줄로 서기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1138.java)
+* [1543. 문서 검색](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1543.java)
+* [2437. 저울](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2437.java)
+* [1700. 멀티탭 스케줄링](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1700.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
