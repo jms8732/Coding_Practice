@@ -120,6 +120,8 @@
 * [1543. 문서 검색](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1543.java)
 * [2437. 저울](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2437.java)
 * [1700. 멀티탭 스케줄링](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1700.java)
+* [1969. DNA](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1969.java)
+* [9576. 책 나눠주기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_9576.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
