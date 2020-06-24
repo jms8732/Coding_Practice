@@ -122,7 +122,9 @@
 * [1700. 멀티탭 스케줄링](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1700.java)
 * [1969. DNA](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1969.java)
 * [9576. 책 나눠주기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_9576.java)
-
+* [2812. 크게 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2812.java)
+* [1439. 뒤집기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1439.java)
+* [8980. 택배](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_8980.java)
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
 * [입국 심사](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_4.java)
