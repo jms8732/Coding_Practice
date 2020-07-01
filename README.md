@@ -89,6 +89,7 @@
 * [7453. 합이 0인 네 정수](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_7453.java)
 * [1072. 게임](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1072.java)
 * [1051. 숫자 정사각형](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1051.java)
+* [1343. 폴리오미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1343.java)
 
 
 ## 탐욕법(Greedy)
