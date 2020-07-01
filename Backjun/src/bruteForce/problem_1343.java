@@ -1,4 +1,4 @@
-package greedy;
+package bruteForce;
 
 //폴리오미노
 import java.io.*;
