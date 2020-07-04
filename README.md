@@ -92,6 +92,7 @@
 * [1343. 폴리오미노](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1343.java)
 * [4641. Double](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_4641.java)
 * [2503. 숫자 야구](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_2503.java)
+* [2966. 찍기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_2966.java)
 
 
 ## 탐욕법(Greedy)
