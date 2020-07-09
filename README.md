@@ -130,6 +130,10 @@
 * [2812. 크게 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_2812.java)
 * [1439. 뒤집기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1439.java)
 * [8980. 택배](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_8980.java)
+* [1092. 배](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1092.java)
+* [1781. 컵라면](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1781.java)
+
+
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
 * [입국 심사](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_4.java)
