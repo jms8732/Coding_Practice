@@ -408,6 +408,8 @@
 * [17412. 도시 왕복하기 1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_17412.java)
 * [1068. 트리](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_1068.java)
 * [2150. Strong connected component](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_2150.java)
+* [1043. 거짓말](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1043.java)
+* [5214. 환승](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_5214.java)
 
 ## 2018 Summer/Winter Coding(~2018)
 * [스킬트리](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_6.java)
