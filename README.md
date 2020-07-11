@@ -464,6 +464,11 @@
 * [외벽 점검](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_15.java)
 * [가사 검색](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_23.java)
 
+### 2020 Kakao 인턴십
+* [보석 쇼핑](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_33.java)
+* [수식 최대화](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_32.java)
+* [키패드 누르기](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_31.java)
+
 ### 2019 카카오 개발자 겨울 인턴십
 * [크레인 인형뽑기 게임](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_16.java)
 * [튜플](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers2/problem_17.java)
