@@ -8,8 +8,8 @@
 		<item key="wholeword" value="false"/>
 		<item key="selection" value="make"/>
 		<list key="findhistory">
-			<item value="this"/>
 			<item value="e"/>
+			<item value="this"/>
 			<item value="min"/>
 			<item value="F1"/>
 			<item value="package programmers;"/>
