@@ -11904,3 +11904,9 @@ Java Model Exception: Java Model Status [bfs(char[][], int, int) [in problem_937
 
 !ENTRY org.eclipse.jdt.debug 2 0 2020-07-20 21:36:38.891
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2020-07-21 13:03:53.039
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2020-07-21 13:05:22.288
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
