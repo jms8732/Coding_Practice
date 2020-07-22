@@ -8,6 +8,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="selection" value="make"/>
 		<list key="findhistory">
+			<item value="s"/>
 			<item value="e"/>
 			<item value="this"/>
 			<item value="min"/>
