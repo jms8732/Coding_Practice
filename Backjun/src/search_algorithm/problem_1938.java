@@ -41,7 +41,7 @@ public class problem_1938 {
 		while (!q.isEmpty()) {
 			Node cur = q.poll();
 
-			print(cur.b, cur.c, map);
+			//print(cur.b, cur.c, map);
 			if (finish(cur.b, map)) {
 				if (answer == 0)
 					answer = cur.c;
