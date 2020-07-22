@@ -225,6 +225,9 @@
 * [1939. 중량 제한](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1939.java)
 * [2636. 치즈](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2636.java)
 * [9376. 탈옥](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_9376.java)
+* [3184. 양](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_3184.java)
+* [2234. 성곽](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_2234.java)
+* [1938. 통나무 옮기기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/search_algorithm/problem_1938.java)
 
 ## 다익스트라
 * [1753. 최단경로](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/dijkstra/problem_1753.java)
