@@ -93,6 +93,8 @@
 * [4641. Double](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_4641.java)
 * [2503. 숫자 야구](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_2503.java)
 * [2966. 찍기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_2966.java)
+* [6679. 싱기한 네 자리 숫자](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_6679.java)
+* [1213. 펠린드롬 만들기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/bruteForce/problem_1213.java)
 
 
 ## 탐욕법(Greedy)
@@ -389,6 +391,7 @@
 * [1085. 직사각형에서 탈출](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1085.java)
 * [1712. 손익 분기점](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_1712.java)
 * [5052. 전화번호 목록](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_5052.java)
+* [3425. 고스택](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/others/problem_3425.java)
 
 ## 출력
 * [10172. 개](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/print/problem_10172.java)
