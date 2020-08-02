@@ -7,8 +7,7 @@
 
 클릭하시면 해당 소스 코드로 넘어갑니다.
 
-## 스택 / 큐
-* (https://github.com/jms8732/Coding_Practice/wiki/%EC%8A%A4%ED%83%9D---%ED%81%90)
+## [스택 / 큐](https://github.com/jms8732/Coding_Practice/wiki/%EC%8A%A4%ED%83%9D---%ED%81%90)
 * [프린터](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_3.java)
 * [기능 개발](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_7.java)
 * [탑](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers/problem_2.java)
