@@ -134,7 +134,10 @@
 * [8980. 택배](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_8980.java)
 * [1092. 배](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1092.java)
 * [1781. 컵라면](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1781.java)
+* [1758. 알바생 강호](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/greedy/problem_1758.java)
 
+## 기하 알고리즘
+* [2162. 선분 그룹](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/graph/problem_2162.java)
 
 ## 이분법(Binary Search)
 * [예산](https://github.com/jms8732/Coding_Practice/blob/master/programmers/src/programmers1/problem_3.java)
@@ -515,6 +518,7 @@
 * [17837. 새로운 게임2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17837.java)
 * [17779. 게리 맨더링2](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17779.java)
 * [17822. 원판 돌리기](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_17822.java)
+* [19236. 청소년상어](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung/problem_19236.java)
 
 ## Samsung 코딩 대비 기출문제
 * [17070. 파이브 옮기기1](https://github.com/jms8732/Coding_Practice/blob/master/Backjun/src/samsung_Atype/problem_17070.java)
