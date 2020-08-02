@@ -5,7 +5,7 @@
 
 환경: Eclipse
 
-클릭하시면 해당 소스 코드로 넘어갑니다.
+클릭하시면 해당 위키로 넘어갑니다.
 
 * [스택 / 큐](https://github.com/jms8732/Coding_Practice/wiki/%EC%8A%A4%ED%83%9D---%ED%81%90)
 * [해시](https://github.com/jms8732/Coding_Practice/wiki/%ED%95%B4%EC%8B%9C)
