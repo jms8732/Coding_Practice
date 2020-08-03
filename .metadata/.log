@@ -1068,3 +1068,9 @@ com.sun.jdi.VMDisconnectedException: Got com.sun.jdi.connect.spi.ClosedConnectio
 
 !ENTRY org.eclipse.jdt.debug 2 0 2020-08-02 13:03:07.007
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2020-08-03 15:40:03.239
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2020-08-03 15:41:46.189
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
