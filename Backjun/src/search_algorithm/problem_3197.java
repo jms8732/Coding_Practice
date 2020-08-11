@@ -52,8 +52,6 @@ public class problem_3197 {
 				break;
 			
 			q = melting(q, pool, N, M, visited);
-			// print(pool);
-
 			days++;
 		}
 		return days;
@@ -84,16 +82,6 @@ public class problem_3197 {
 		}
 
 		return ret;
-	}
-
-	private static void print(char[][] pool) {
-		for (int i = 0; i < pool.length; i++) {
-			for (int j = 0; j < pool[i].length; j++) {
-				System.out.print(pool[i][j]);
-			}
-			System.out.println();
-		}
-		System.out.println();
 	}
 
 	// 백조가 다른 백조에게 도달 할 수 있는 지 판단하는 메소드
