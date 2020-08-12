@@ -1,4 +1,4 @@
-package others;
+package graph;
 
 //행성 터널
 import java.util.*;
