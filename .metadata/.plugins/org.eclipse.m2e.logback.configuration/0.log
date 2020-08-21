@@ -1238,3 +1238,7 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2020-08-18 21:38:55,782 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2020-08-18 22:58:42,413 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
 2020-08-18 23:00:15,499 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-08-20 17:25:15,019 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-08-20 17:25:47,968 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-08-21 15:46:45,059 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-08-21 15:47:21,204 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
