@@ -5,70 +5,58 @@ import java.io.*;
 import java.util.*;
 
 public class problem_9252 {
-	static String a, b;
-	static StringBuilder sb;
-	static int[][] dp;
-	static int IMPOSSIBLE = -1000000;
-	static String answer= "";
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-		a = br.readLine();
-		b = br.readLine();
-		sb = new StringBuilder();
-
-		dp = new int[a.length()][b.length()];
-
-		for (int i[] : dp)
-			Arrays.fill(i, IMPOSSIBLE);
-
-		int aPos = 0;
-		int bPos = 0;
-
-		int result = dfs(aPos, bPos);
-		System.out.println(result);
 		
-		reconstruction(a.length()-1,b.length()-1);
+		String A = br.readLine();
+		String B = br.readLine();
 		
-		StringBuilder sb = new StringBuilder(answer);
-		sb = sb.reverse();
-		answer = sb.toString();
-		System.out.println(answer.trim());
+		int [][] lcs = new int[A.length()+1][B.length()+1];
+		String [][] dir = new String[A.length()+1][B.length()+1];
+		for(int i = 1; i  <lcs.length ; i++) {
+			for(int j = 1; j < lcs[i].length;  j++) {
+				if(A.charAt(i-1) == B.charAt(j-1)) {
+					lcs[i][j] = lcs[i-1][j-1]+1;
+					dir[i][j] = "diagonal";
+				}else {
+					lcs[i][j] = Math.max(lcs[i-1][j], lcs[i][j-1]);
+					
+					if(lcs[i][j] == lcs[i-1][j]) {
+						dir[i][j] = "top";
+					}else
+						dir[i][j] = "left";
+				}
+			}
+		}
+		
+		System.out.println(lcs[A.length()][B.length()]);
+		System.out.println(reconstruction(dir,A,B));
+	}
+	private static String reconstruction(String[][] dir, String A, String B) {
+		StringBuilder sb = new StringBuilder();
+		
+		int x = A.length();
+		int y = B.length();
+		
+		while(dir[x][y] != null) {
+			if(dir[x][y].equals("diagonal")) {
+				sb.append(A.charAt(x-1));
+				
+				x--;
+				y--;
+			}else {
+				if(dir[x][y].equals("top")) {
+					x--;
+				}else if(dir[x][y].equals("left")) {
+					y--;
+				}
+			}
+		}
+		
+		return sb.reverse().toString();
 	}
 	
-	private static void reconstruction(int aPos, int bPos) {
-		if(aPos < 0 || bPos < 0)
-			return;
-		
-		if(a.charAt(aPos) == b.charAt(bPos)) {
-			answer += a.charAt(aPos);
-			reconstruction(aPos-1,bPos-1);
-		}else if(aPos - 1 >= 0 && bPos-1 >= 0 &&dp[aPos-1][bPos] >= dp[aPos][bPos-1]) {
-			reconstruction(aPos-1,bPos);
-		}else
-			reconstruction(aPos,bPos-1);
-		
-		return;
-	}
-
-	private static int dfs(int aPos, int bPos) {
-		if (aPos >= a.length() || bPos >= b.length()) {
-			return 0;
-		}
-
-		if (dp[aPos][bPos] != IMPOSSIBLE)
-			return dp[aPos][bPos];
-
-		if (a.charAt(aPos) == b.charAt(bPos)) {
-			dp[aPos][bPos] = 1;
-			dp[aPos][bPos] += dfs(aPos + 1, bPos + 1);
-		}
-
-		dp[aPos][bPos] = Math.max(dp[aPos][bPos], Math.max(dfs(aPos + 1, bPos), dfs(aPos, bPos + 1)));
-
-		return dp[aPos][bPos];
-
-	}
+	
 
 }
