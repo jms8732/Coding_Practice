@@ -1,4 +1,4 @@
-package graph;
+package dp;
 
 /*
  * 뉴스 전하기
