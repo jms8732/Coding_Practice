@@ -10,7 +10,7 @@ package graph;
 import java.util.*;
 import java.io.*;
 
-public class problem_2024 {
+public class problem_2048 {
 	static long[] sum_array, array;
 
 	public static void main(String[] args) throws IOException {
