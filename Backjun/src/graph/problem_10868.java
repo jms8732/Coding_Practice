@@ -7,7 +7,7 @@ package graph;
 import java.util.*;
 import java.io.*;
 
-public class problem_10686 {
+public class problem_10868 {
 	static long[] tree, array;
 
 	public static void main(String[] args) throws IOException {
