@@ -1,4 +1,4 @@
-package search_algorithm;
+package dp;
 
 /*
  * 다리 놓기
