@@ -1297,3 +1297,11 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2020-10-23 15:15:31,325 [Worker-16: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2020-10-24 13:35:49,785 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
 2020-10-24 14:22:53,817 [Worker-18: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-31 13:35:13,468 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-10-31 13:35:50,553 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-03 15:46:32,428 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-03 15:47:02,636 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-13 11:42:44,957 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-13 11:44:23,706 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-13 13:35:20,036 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2020-11-13 13:35:44,906 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
