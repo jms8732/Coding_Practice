@@ -8,7 +8,7 @@ package greedy;
 import java.util.*;
 import java.io.*;
 
-public class problem_2457 {
+public class problem_11000 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
