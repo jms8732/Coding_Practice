@@ -1,6 +1,9 @@
 package greedy;
 
-//팬덤이 넘쳐 흘러
+/*
+ * 팬덤이 넘쳐 흘러
+ * 가장 일찍 하교한 시간 - 가장 늦게 등교한 시간
+ */
 import java.util.*;
 import java.io.*;
 
