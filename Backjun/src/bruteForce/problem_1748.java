@@ -8,24 +8,31 @@ public class problem_1748 {
 		
 		int number = sc.nextInt();
 		
-		int [] array = new int[10];
-		
-		for(int i = 1; i <= number; i++) {
-			
-			int cur = i;
-			while(cur / 10 != 0) {
-				array[cur%10] += 1;
-				cur /= 10;
+		if(number <= 9)
+			System.out.println(number);
+		else {
+			long ans = 9;
+			for(int i = 10 ; i<= number ; i++) {
+				if(i < 100)
+					ans += 2;
+				else if(i < 1000)
+					ans += 3;
+				else if(i < 10000)
+					ans += 4;
+				else if(i < 100000)
+					ans += 5;
+				else if(i < 1000000)
+					ans += 6;
+				else if(i < 10000000)
+					ans += 7;
+				else if(i < 100000000)
+					ans += 8;
+				else
+					ans += 9;
 			}
+			System.out.println(ans);
 			
-			array[cur %10] += 1;
 		}
-		
-		int answer = 0;
-		
-		for(int i= 0 ; i < array.length ; i++) {
-			answer += array[i];
-		}
-		System.out.println(answer);
+	
 	}
 }
