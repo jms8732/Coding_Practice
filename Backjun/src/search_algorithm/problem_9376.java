@@ -1,13 +1,16 @@
 package search_algorithm;
 
-//Å»¿Á
+/*
+ * Å»¿Á
+ * Deque¸¦ ÀÌ¿ëÇÏ¿© BFS¸¦ ÁøÇàÇÑ´Ù.
+ * 
+ */
 import java.util.*;
 import java.io.*;
 
 public class problem_9376 {
 	static int ud[] = { -1, 0, 1, 0 };
 	static int rl[] = { 0, 1, 0, -1 };
-	static int N, M;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,96 +19,104 @@ public class problem_9376 {
 
 		for (int i = 0; i < tc; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			N = Integer.parseInt(st.nextToken());
-			M = Integer.parseInt(st.nextToken());
-			char[][] jail = new char[N + 2][M + 2];
+
+			int R = Integer.parseInt(st.nextToken());
+			int C = Integer.parseInt(st.nextToken());
+
+			char[][] map = new char[R + 2][C + 2];
+			fill(R, C, map);
 
 			List<Point> prisoner = new ArrayList<>();
-			for (int j = 0; j < N; j++) {
+			for (int j = 1; j < R + 1; j++) {
 				String temp = br.readLine();
-				for (int k = 0; k < M; k++) {
-					if (temp.charAt(k) == '$') {
-						prisoner.add(new Point(j + 1, k + 1, 0));
-					}
-					jail[j + 1][k + 1] = temp.charAt(k);
+				for (int k = 1; k < C + 1; k++) {
+					if (temp.charAt(k - 1) == '$')
+						prisoner.add(new Point(j, k, 0));
+					map[j][k] = temp.charAt(k - 1);
 				}
 			}
 
-			bfs(jail, N + 2, M + 2, prisoner);
+			// print(map);
+			exit(R, C, map, prisoner);
 		}
 	}
 
-	private static void bfs(char[][] jail, int N, int M, List<Point> prisoner) {
+	private static void exit(int R, int C, char[][] map, List<Point> prisoner) {
 
-		int[][] door1 = bfs(jail, N, M, 0, 0);
-
-		int x1 = prisoner.get(0).x;
-		int y1 = prisoner.get(0).y;
-
-		int x2 = prisoner.get(1).x;
-		int y2 = prisoner.get(1).y;
-
-		int[][] door2 = bfs(jail, N, M, x1, y1);
-		int[][] door3 = bfs(jail, N, M, x2, y2);
-
-		int min = Integer.MAX_VALUE;
-
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				if (jail[i][j] != '*') {
-					int result = door1[i][j] + door2[i][j] + door3[i][j];
-
-					min = Math.min(min, jail[i][j] == '#' ? result - 2 : result);
+		int[][] map1 = bfs(R, C, map, prisoner.get(0).x, prisoner.get(0).y);
+		int[][] map2 = bfs(R, C, map, prisoner.get(1).x, prisoner.get(1).y);
+		int [][] map3 = bfs(R,C,map,0,0);
+		
+		int answer = Integer.MAX_VALUE;
+		for(int i =0 ; i < map.length ; i++) {
+			for(int j =0 ; j < map[i].length ; j++) {
+				if(map[i][j] != '*' && map1[i][j] != -1) {
+					int res = map1[i][j] + map2[i][j] + map3[i][j];
+					answer = Math.min(answer, map[i][j] == '#' ? res -2 : res);
 				}
 			}
 		}
-
-		System.out.println(min);
+		
+		System.out.println(answer);
 	}
 
-	private static int[][] bfs(char[][] jail, int N, int M, int x, int y) {
-		int[][] door = new int[N][M];
+	private static int[][] bfs(int R, int C, char[][] map, int startX, int startY) {
+		int[][] board = new int[R + 2][C + 2];
 
-		for (int[] d : door) {
-			Arrays.fill(d, -1);
+		for (int[] temp : board) {
+			Arrays.fill(temp, -1);
 		}
 
-		Deque<Point> q = new LinkedList<>();
-		q.add(new Point(x, y, 0));
-		door[x][y] = 0;
+		Deque<Point> dq = new LinkedList<>();
+		dq.add(new Point(startX, startY, 0));
+		board[startX][startY] = 0;
 
-		while (!q.isEmpty()) {
-			Point cur = q.poll();
+		while (!dq.isEmpty()) {
+			Point cur = dq.poll();
 
 			for (int i = 0; i < 4; i++) {
 				int nx = cur.x + ud[i];
 				int ny = cur.y + rl[i];
-				int door_count = cur.door_count;
+				int cc = cur.c;
 
-				if (nx < 0 || nx >= N || ny < 0 || ny >= M || jail[nx][ny] == '*')
+				if (nx <= -1 || nx >= R + 2 || ny <= -1 || ny >= C + 2)
 					continue;
 
-				if (door[nx][ny] > -1)
+				if (map[nx][ny] == '*')
 					continue;
 
-				door[nx][ny] = door_count;
-				if (jail[nx][ny] == '#') {
-					door[nx][ny]++;
-					q.addLast(new Point(nx, ny,door[nx][ny]));
-				} else {
-					door[nx][ny] = door_count;
-					q.addFirst(new Point(nx, ny, door[nx][ny]));
+				if (board[nx][ny] == -1) {
+					if (map[nx][ny] == '.' || map[nx][ny] == '$') {
+						board[nx][ny] = cc;
+						dq.addFirst(new Point(nx, ny, cc));
+					} else if (map[nx][ny] == '#') {
+						board[nx][ny] = cc + 1;
+						dq.addLast(new Point(nx, ny, cc + 1));
+					}
 				}
 			}
+
 		}
 
-		return door;
+		return board;
 	}
 
-	private static void print(int[][] jail) {
-		for (int i = 0; i < jail.length; i++) {
-			for (int j = 0; j < jail[i].length; j++) {
-				System.out.print(jail[i][j] + " ");
+	private static void fill(int R, int C, char[][] map) {
+		Arrays.fill(map[0], '.');
+		Arrays.fill(map[R + 1], '.');
+
+		for (int i = 1; i < R + 1; i++)
+			map[i][0] = '.';
+
+		for (int i = 1; i < R + 1; i++)
+			map[i][C + 1] = '.';
+	}
+
+	private static void print(int[][] map) {
+		System.out.println();
+		for (int i = 0; i < map.length; i++) {
+			for (int j = 0; j < map[i].length; j++) {
+				System.out.print(map[i][j] + " ");
 			}
 			System.out.println();
 		}
@@ -113,13 +124,12 @@ public class problem_9376 {
 	}
 
 	private static class Point {
-		int x, y, door_count;
+		int x, y, c;
 
-		public Point(int x, int y, int dc) {
+		public Point(int x, int y, int c) {
 			this.x = x;
 			this.y = y;
-			this.door_count = dc;
+			this.c = c;
 		}
 	}
-
 }
