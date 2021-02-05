@@ -1,3 +1,5 @@
+package dp;
+
 /*
  * 돌 게임
  * 입력된 값이 홀수일 경우 SK, 짝수일 경우 CY가 이긴다.
@@ -14,6 +16,5 @@ public class problem_9655 {
 			System.out.println("CY");
 		else
 			System.out.println("SK");
-	}
-	
+	}	
 }
