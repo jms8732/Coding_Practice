@@ -1,4 +1,4 @@
-package graph;
+package greedy;
 
 import java.util.*;
 import java.io.*;
