@@ -1,4 +1,4 @@
-package graph;
+package greedy;
 
 /*
  * 스네이크버드
