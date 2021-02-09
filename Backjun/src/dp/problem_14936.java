@@ -1,6 +1,9 @@
 package dp;
 
-//엘레베이터 장난
+/*
+ * 엘레베이터 장난
+ * 조건을 나눠서 진행해야 한다.
+ */
 import java.util.*;
 
 public class problem_14936 {
@@ -50,7 +53,7 @@ public class problem_14936 {
 					}
 
 					if (temp >= 0) {
-						System.out.println(i + ": " + Integer.toBinaryString(i));
+					//	System.out.println(i + ": " + Integer.toBinaryString(i));
 						count++;
 					}
 				}
