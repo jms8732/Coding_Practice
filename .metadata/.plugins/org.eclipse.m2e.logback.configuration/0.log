@@ -1330,11 +1330,21 @@ Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find
 2021-02-12 13:11:14,936 [Worker-11: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-02-12 13:59:35,583 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2021-02-12 19:41:19,556 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+<<<<<<< Updated upstream
 2021-02-15 17:14:44,329 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
 2021-02-15 17:15:13,555 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-02-16 19:57:23,396 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
 2021-02-16 19:57:50,867 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-02-18 15:36:26,345 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
 2021-02-18 15:37:06,373 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+<<<<<<< HEAD
 2021-02-24 20:10:51,980 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
 2021-02-24 20:11:40,090 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+=======
+=======
+2021-02-14 12:59:20,513 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+>>>>>>> Stashed changes
+2021-02-19 13:35:10,551 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+>>>>>>> 2032346314b075b4cb8ccc793f2700009063d378
+2021-02-26 13:53:28,024 [main] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2021-02-26 13:53:47,909 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
