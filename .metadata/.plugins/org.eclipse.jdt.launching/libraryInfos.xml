@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+    <libraryInfo home="C:\Users\Jms\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955\jre" version="15.0.2"/>
     <libraryInfo home="C:\Program Files\Java\jre1.8.0_181" version="1.8.0_181">
         <bootpath>
             <entry path="C:\Program Files\Java\jre1.8.0_181\lib\resources.jar"/>
@@ -19,6 +20,7 @@
             <entry path="C:\Program Files\Java\jre1.8.0_181\lib\endorsed"/>
         </endorsedDirs>
     </libraryInfo>
+    <libraryInfo home="C:\Users\Jms\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.2.v20210201-0955" version="15.0.2"/>
     <libraryInfo home="C:\Program Files\Java\jre1.8.0_241" version="1.8.0_241">
         <bootpath>
             <entry path="C:\Program Files\Java\jre1.8.0_241\lib\resources.jar"/>
