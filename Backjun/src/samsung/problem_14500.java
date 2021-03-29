@@ -1,98 +1,98 @@
 package samsung;
 
 import java.util.*;
+import java.io.*;
+
+/*
+ * 테트로미노
+ * DFS + 구현 문제
+ * DFS를 이용하여 ㅗ 모양을 제외하고 순회하면서 가장 큰 값을 찾는다.
+ * ㅗ 모양은 따로 처리한다.
+ */
 
 public class problem_14500 {
-	static int[][] map;
-	static int N, M;
-	static int big;
-	static boolean[][] visited;
 	static int[] ud = { -1, 0, 1, 0 };
 	static int[] rl = { 0, 1, 0, -1 };
 
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		N = scanner.nextInt();
-		M = scanner.nextInt();
-		map = new int[N][M];
-		visited = new boolean[N][M];
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				int tmp = scanner.nextInt();
-				map[i][j] = tmp;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+
+		int[][] board = new int[n][m];
+
+		for (int i = 0; i < n; i++) {
+			st = new StringTokenizer(br.readLine());
+			for (int j = 0; j < m; j++) {
+				board[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		int count = 0;
-		int sum = 0;
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < M; j++) {
-				sum += map[i][j];
-				visited[i][j] = true;
-				dfs(i, j, count, sum);
-				specialBlock(i, j);
-				visited[i][j] = false;
-				sum = 0;
-			}
-		}
-		System.out.println(big);
+
+		simulation(board, n, m);
+
 	}
 
-	// ㅗ를 제외한 나머지
-	static void dfs(int x, int y, int count, int sum) {
-		int tmp = 0;
-		if (count == 3) {
-			big = Math.max(big, sum);
-			return;
+	private static void simulation(int[][] board, int n, int m) {
+		int ans = 0;
+		boolean[][] visited = new boolean[n][m];
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < m; j++) {
+				ans = Math.max(ans, dfs(0, i, j, 0, board, visited, n, m));
+
+				// ㅗ, ㅜ, ㅓ, ㅏ모양
+				ans = Math.max(ans, specialCase(i, j, board, n, m));
+			}
 		}
-		for (int i = 0; i < rl.length; i++) {
+		System.out.println(ans);
+	}
+
+	private static int specialCase(int x, int y, int[][] board, int n, int m) {
+		int ret = 0;
+		// ㅏ 모양
+		if (x - 1 >= 0 && x + 1 < n && y >= 0 && y + 1 < m) {
+			ret = Math.max(ret, board[x - 1][y] + board[x][y] + board[x + 1][y] + board[x][y + 1]);
+		}
+
+		// ㅓ 모양
+		if (x - 1 >= 0 && x + 1 < n && y - 1 >= 0 && y < m) {
+			ret = Math.max(ret, board[x - 1][y] + board[x][y] + board[x + 1][y] + board[x][y - 1]);
+		}
+
+		// ㅗ 모양
+		if (x - 1 >= 0 && x < n && y - 1 >= 0 && y + 1 < m) {
+			ret = Math.max(ret, board[x][y - 1] + board[x][y] + board[x][y + 1] + board[x - 1][y]);
+		}
+
+		// ㅜ 모양
+		if (x >= 0 && x + 1 < n && y - 1 >= 0 && y + 1 < m) {
+			ret = Math.max(ret, board[x][y - 1] + board[x][y] + board[x][y + 1] + board[x + 1][y]);
+		}
+
+		return ret;
+
+	}
+
+	private static int dfs(int depth, int x, int y, int c, int[][] board, boolean[][] visited, int n, int m) {
+		if (depth == 4) {
+			// 기저 사례
+			return c;
+		}
+
+		int ret = 0; // 최댓값 반환
+		for (int i = 0; i < 4; i++) {
+			// 다음 좌표
 			int nx = x + ud[i];
 			int ny = y + rl[i];
 
-			if (nx < 0 || nx >= N || ny < 0 || ny >= M)
-				continue; // 범위를 넘었으면
-			else {
-				// 범위를 안넘었으면
-				if (!visited[nx][ny]) { // 지나간 곳이 아니면
-					visited[nx][ny] = true;
-					sum += map[nx][ny]; // 현재 값 더한다.
-					dfs(nx, ny, count + 1, sum); // dfs
-					sum -= map[nx][ny];
-					visited[nx][ny] = false;
-				}
-			}
-		}
-	}
+			if (nx < 0 || nx >= n || ny < 0 || ny >= m || visited[nx][ny])
+				continue; // 배열의 범위를 벗어난 경우, 겹치는 부분이 있는 경우
 
-	// ㅗ
-	static void specialBlock(int x, int y) {
-		int sum = 0;
-		if ((x == 0 || x == N - 1) && (y == 0 || y == M - 1))
-			return;
-		if (x == 0) {
-			// 맨 상단일 경우 ㅜ
-			sum = map[x][y - 1] + map[x][y] + map[x][y + 1] + map[x + 1][y];
-			big = Math.max(sum, big);
-		} else if (x == N - 1) {
-			// 맨 하단 일경우 ㅗ
-			sum = map[x][y - 1] + map[x][y] + map[x][y + 1] + map[x - 1][y];
-			big = Math.max(sum, big);
-		} else if (y == 0) {
-			// 맨 좌측일 경우 ㅏ
-			sum = map[x - 1][y] + map[x][y] + map[x + 1][y] + map[x][y + 1];
-			big = Math.max(sum, big);
-		} else if (y == M - 1) {
-			// 맨 우측일 경우 ㅓ
-			sum = map[x - 1][y] + map[x][y] + map[x + 1][y] + map[x][y - 1];
-			big = Math.max(sum, big);
-		} else {
-			sum = map[x][y - 1] + map[x][y] + map[x][y + 1] + map[x + 1][y];
-			big = Math.max(sum, big);
-			sum = map[x][y - 1] + map[x][y] + map[x][y + 1] + map[x - 1][y];
-			big = Math.max(sum, big);
-			sum = map[x - 1][y] + map[x][y] + map[x + 1][y] + map[x][y + 1];
-			big = Math.max(sum, big);
-			sum = map[x - 1][y] + map[x][y] + map[x + 1][y] + map[x][y - 1];
-			big = Math.max(sum, big);
+			visited[x][y] = true;
+			ret = Math.max(dfs(depth + 1, nx, ny, c + board[x][y], board, visited, n, m), ret);
+			visited[x][y] = false;
 		}
+
+		return ret;
 	}
 }
