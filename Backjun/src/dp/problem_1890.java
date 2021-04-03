@@ -6,49 +6,50 @@ import java.io.*;
 import java.math.*;
 
 public class problem_1890 {
-	static int N, map[][]; 
-	static BigInteger cache[][];
-	
-	public static void main(String[] args) throws IOException{
+	static int [][] array;
+	static BigInteger [][] cache;
+	public static void main(String []args)throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		N = Integer.parseInt(br.readLine());
-		cache = new BigInteger[N][N];
-		map = new int[N][N];
+		int n = Integer.parseInt(br.readLine());
+		array=  new int[n][n];
+		cache = new BigInteger[n][n];
 		
-		for(int i =0 ; i < N ; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			for(int j =0 ; j < N ; j ++) {
-				map[i][j] = Integer.parseInt(st.nextToken());
-			}
+		
+		for(int i = 0 ; i <n  ;i++) {
+			for(int j =0 ; j < n ;j++)
+				cache[i][j] = new BigInteger("-1");
 		}
 		
-		for(int i =0 ; i < N ; i++) {
-			for(int j = 0 ; j < N ; j++) {
-				cache[i][j] = new BigInteger("-1"); 
+		StringTokenizer st = null;
+		
+		for(int i =0 ; i < n ;i++) {
+			st = new StringTokenizer(br.readLine());
+			
+			for(int j =0 ; j < n ; j++) {
+				array[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		
-		System.out.println(path(0,0));
+
+		System.out.println(dp(0,0));
 	}
 	
-	private static BigInteger path(int x, int y) {
-		if(x >= N|| y >= N)
-			return BigInteger.valueOf(0);
+	private static BigInteger dp(int x, int y) {
+		if(x >= array.length || y >= array.length)
+			return new BigInteger("0");
 		
-		//현재 지점이 점프가 0인 경우
-		if(map[x][y] == 0) {
-			return (x== N-1 && y == N-1 ? BigInteger.valueOf(1) : BigInteger.valueOf(0));
+		if(array[x][y] == 0) {
+			if(x== array.length-1 && y == array.length-1)
+			return new BigInteger("1");
+			else
+				return new BigInteger("0");
 		}
 		
-		if(cache[x][y].compareTo(BigInteger.valueOf(-1)) != 0)
+		if(cache[x][y].compareTo(new BigInteger("-1")) != 0)
 			return cache[x][y];
 		
-		BigInteger ret = new BigInteger("0");
 		
-		//오른쪽 혹은 아래로 이동하는 경로
-		ret = ret.add((path(x+map[x][y],y)));
-		ret = ret.add(path(x,y+map[x][y]));
+		BigInteger ret = dp(x+array[x][y],y).add(dp(x,array[x][y]+y));
 		
 		return cache[x][y] = ret;
 	}
