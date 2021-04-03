@@ -8,42 +8,42 @@ import java.util.*;
 import java.io.*;
 
 public class problem_1010 {
-	static int cache[][];
-	static int N, M;
-
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static int [][] cache;
+	static int n,m;
+	public static void main(String []args) throws IOException{
+		BufferedReader br=  new BufferedReader(new InputStreamReader(System.in));
 		int tc = Integer.parseInt(br.readLine());
-
-		for (int i = 0; i < tc; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			N = Integer.parseInt(st.nextToken());
-			M = Integer.parseInt(st.nextToken());
-
-			cache = new int[N][M];
-			for (int c[] : cache)
-				Arrays.fill(c, -1);
+		StringTokenizer st = null;
+		for(int i =0 ; i < tc ; i++) {
+			st = new StringTokenizer(br.readLine());
+			
+			n = Integer.parseInt(st.nextToken());
+			m = Integer.parseInt(st.nextToken());
+			
+			cache = new int[n][m];
+			
+			for(int [] c : cache)
+				Arrays.fill(c,-1);
 			
 			System.out.println(dp(0,0));
 		}
 	}
-
-	private static int dp(int A, int B) {
-		if (A == N) // 서쪽에 있는 다리가 다 연결될 경우
+	
+	private static int dp(int x ,int y) {
+		if(x == n) //다리를 겹치지 않게 다 이은 경우
 			return 1;
 		
-		if(B == M) //동쪽의 다리가 범위를 벗어난 경우 
+		if(y == m)
 			return 0;
-
-		if (cache[A][B] != -1)
-			return cache[A][B];
-
+		
+		if(cache[x][y] != -1)
+			return cache[x][y];
+		
 		int ret = 0;
-
-		//반복문을 돌면서 서쪽 -> 동쪽 다리를 연결한다
-		for (int i = B; i < M; i++) {
-			ret += dp(A+1,i+1); //다리 연결
+		for(int i= y; i < m ; i++) {
+			ret += dp(x+1,i+1);
 		}
 		
-		return cache[A][B]=ret;
-}}
+		return cache[x][y] = ret;
+	}
+}

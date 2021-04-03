@@ -1,167 +1,127 @@
 package others;
 
-//로봇 시뮬레이션
+/*
+ * 로봇 시뮬레이션
+ * 가로와 세로 개념이 다르다는 점을 유의해서 문제를 접근한다.
+ */
 import java.util.*;
 import java.io.*;
 
 public class problem_2174 {
-	static List<robot> list;
-	static int A, B;
+	static Map<Integer, Robot> factory;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int tc = Integer.parseInt(br.readLine());
-		for (int k = 0; k < tc; k++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
 
-			A = Integer.parseInt(st.nextToken());
-			B = Integer.parseInt(st.nextToken());
+		int a = Integer.parseInt(st.nextToken());
+		int b = Integer.parseInt(st.nextToken());
 
-			list = new ArrayList<>();
+		String[][] map = new String[b][a];
+		factory = new HashMap<>();
 
+		st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+
+		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
 
-			int N = Integer.parseInt(st.nextToken());
-			int M = Integer.parseInt(st.nextToken());
+			int x = Integer.parseInt(st.nextToken()) - 1;
+			int y = (b - 1) - (Integer.parseInt(st.nextToken()) - 1);
 
-			for (int i = 0; i < N; i++) {
-				st = new StringTokenizer(br.readLine());
-				int x = Integer.parseInt(st.nextToken());
-				int y = Integer.parseInt(st.nextToken());
-				char dir = st.nextToken().charAt(0);
-				String name = String.valueOf(i + 1);
+			map[y][x] = "R" + (i + 1);
+			char dir = st.nextToken().charAt(0);
 
-				list.add(new robot(x, y, dir, name));
-			}
+			factory.put(i, new Robot(y, x, dir));
+		}
 
-			boolean check = false;
-			for (int i = 0; i < M; i++) {
-				st = new StringTokenizer(br.readLine());
-				int number = Integer.parseInt(st.nextToken()) - 1;
+		boolean check = true;
+		for (int i = 0; i < m; i++) {
+			st = new StringTokenizer(br.readLine());
+			if (check) {
+				int num = Integer.parseInt(st.nextToken()) - 1;
 				char op = st.nextToken().charAt(0);
 				int count = Integer.parseInt(st.nextToken());
 
-				if (!check) {
-					for (int j = 0; j < count; j++) {
-						if (!simulation(list.get(number), number + 1, op)) {
-							check = true;
-							break;
-						}
-					}
+				String ret = simulation(num, op, a, b, count, map);
+
+				if (ret != null) {
+					System.out.println(ret);
+					check = false;
 				}
-
 			}
-			if (!check)
-				System.out.println("OK");
 		}
+
+		if (check)
+			System.out.println("OK");
+
 	}
 
-	private static boolean simulation(robot rb, int number, char op) {
-		boolean check = false;
-		if (op == 'F') {
-			if (!move(rb, number))
-				return false;
+	private static String simulation(int num, char op, int a, int b, int count, String[][] map) {
+		for (int i = 0; i < count; i++) {
+			String ret = rotation(num, op, a, b, map);
+
+			if (ret != null) {
+				return ret;
+			}
+		}
+		return null;
+	}
+
+	private static String rotation(int num, char op, int a, int b, String[][] map) {
+		Robot temp = factory.get(num); // 로봇을 가져옴
+		char[] rotation = { 'N', 'E', 'S', 'W' };
+		int[] ud = { -1, 0, 1, 0 };
+		int[] rl = { 0, 1, 0, -1 };
+
+		int start = 0;
+		for (int i = 0; i < rotation.length; i++) {
+			if (rotation[i] == temp.dir) {
+				start = i;
+				break;
+			}
+		}
+
+		if (op == 'L' || op == 'R') {
+			char next_dir = ' ';
+			if (op == 'L')
+				next_dir = rotation[Math.floorMod(start - 1, rotation.length)];
+			else
+				next_dir = rotation[Math.floorMod(start + 1, rotation.length)];
+
+			temp.dir = next_dir; // 방향 조절
 		} else {
-			if (op == 'R')
-				check = true;
+			int nx = temp.x + ud[start];
+			int ny = temp.y + rl[start];
 
-			rotation(rb, check);
-		}
+			if (nx < 0 || nx >= b || ny < 0 || ny >= a)
+				return "Robot " + (num + 1) + " crashes into the wall";
 
-		return true;
-	}
-
-	private static void rotation(robot rb, boolean check) {
-
-		// R
-		if (check) {
-			switch (rb.dir) {
-			case 'N':
-				rb.dir = 'E';
-				break;
-			case 'E':
-				rb.dir = 'S';
-				break;
-			case 'S':
-				rb.dir = 'W';
-				break;
-			case 'W':
-				rb.dir = 'N';
-				break;
+			if (map[nx][ny] != null) {
+				String another = map[nx][ny].substring(1);
+				return "Robot " + (num + 1) + " crashes into robot " + another;
 			}
-		} else { // L
-			switch (rb.dir) {
-			case 'N':
-				rb.dir = 'W';
-				break;
-			case 'E':
-				rb.dir = 'N';
-				break;
-			case 'S':
-				rb.dir = 'E';
-				break;
-			case 'W':
-				rb.dir = 'S';
-				break;
-			}
+
+			String cur_robot = map[temp.x][temp.y];
+			map[temp.x][temp.y] = null;
+			map[nx][ny] = cur_robot;
+			temp.x = nx;
+			temp.y = ny;
 		}
+
+		return null;
 	}
 
-	private static boolean move(robot rb, int number) {
-		int nx = rb.x, ny = rb.y;
-		switch (rb.dir) {
-		case 'N':
-			ny += 1;
-			break;
-		case 'E':
-			nx += 1;
-			break;
-		case 'S':
-			ny -= 1;
-			break;
-		case 'W':
-			nx -= 1;
-			break;
-		}
-
-		if (nx < 1 || nx > A || ny < 1 || ny > B) {
-			System.out.println("Robot " + number + " crashes into the wall");
-			return false;
-		}
-
-		if (checkCrash_robot(number, nx, ny)) {
-			return false;
-		}
-
-		rb.x = nx;
-		rb.y = ny;
-
-		return true;
-
-	}
-
-	private static boolean checkCrash_robot(int number, int x, int y) {
-		for (int i = 0; i < list.size(); i++) {
-			if ((number - 1) != i && x == list.get(i).x && y == list.get(i).y) {
-				System.out.println("Robot " + list.get(number - 1).name + " crashes into robot " + list.get(i).name);
-				return true;
-			}
-		}
-
-		return false;
-	}
-
-	private static class robot {
+	private static class Robot {
 		int x, y;
 		char dir;
-		String name;
 
-		public robot(int x, int y, char d, String n) {
+		public Robot(int x, int y, char d) {
 			this.x = x;
 			this.y = y;
 			this.dir = d;
-			this.name = n;
 		}
 	}
 }
