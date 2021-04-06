@@ -14,7 +14,7 @@ public class problem_2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] orders = {"ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"};
+		String[] orders = { "ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD" };
 		int[] course = { 2, 3, 5 };
 
 		for (String s : solution(orders, course)) {
@@ -57,12 +57,9 @@ public class problem_2 {
 			temp.clear();
 		}
 
-		String[] ret = new String[ans.size()];
 		Collections.sort(ans);
-
-		for (int i = 0; i < ret.length; i++) {
-			ret[i] = ans.get(i);
-		}
+		String[] ret = ans.toArray(new String[ans.size()]);
+				
 
 		return ret;
 	}
